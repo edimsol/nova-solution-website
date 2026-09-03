@@ -25,7 +25,7 @@ if (companyLink) {
       <a href="./company.html#about"><small>01</small><span>About NOVA Solution</span></a>
       <a href="./company.html#mission"><small>02</small><span>Mission & Vision</span></a>
       <a href="./company.html#history"><small>03</small><span>History</span></a>
-      <a href="./company.html#heritage"><small>04</small><span>Business Heritage</span></a>
+      <a href="./company.html#foundation"><small>04</small><span>Manufacturing Foundation</span></a>
       <a href="./company.html#location"><small>05</small><span>Location</span></a>
     </div>
   `;
@@ -90,21 +90,25 @@ if (solutionsLink) {
   const dropdown = document.createElement('div');
   dropdown.className = 'nav-dropdown';
   const submenu = document.createElement('div');
-  submenu.className = 'submenu solutions-mega';
+  submenu.className = 'submenu company-menu section-menu solutions-menu';
   submenu.setAttribute('aria-label', 'Solutions 하위 메뉴');
   submenu.innerHTML = `
-    <section class="mega-area mega-hvac" aria-labelledby="mega-hvac-title">
-      <a class="mega-title" id="mega-hvac-title" href="./hvac.html"><span><small>01 / SOLUTION</small>HVAC</span><b>공조 하드웨어 전체보기 →</b></a>
-      <div class="mega-groups">
-        <div class="mega-group"><a class="mega-category" href="./ventilation.html">Ventilation →</a><a href="./ventilation.html#eurus">Eurus Impeller</a><a href="./ventilation.html#partial">Partial Impeller</a><a href="./ventilation.html#pullout">Pull-Out Impeller</a><a href="./ventilation.html#fan-model">Fan Model 라인업</a></div>
-        <div class="mega-group"><a class="mega-category" href="./air-system.html">Air System →</a><a href="./air-system.html#ahu-rtu">AHU / RTU</a><a href="./air-system.html#bio-hvac">Bio HVAC</a><a href="./air-system.html#ief">IEF 전기집진필터</a><a href="./air-system.html#iaqs">IAQS 실내공기질</a></div>
-        <div class="mega-group"><a class="mega-category" href="./parts-control.html">Parts & Control →</a><a href="./parts-control.html#clt">CLT 배수 트랩</a><a href="./parts-control.html#fcm">FCM 팬 제어</a><a href="./parts-control.html#ecm">ECM 공조기 제어</a></div>
-      </div>
-    </section>
-    <section class="mega-area mega-edim" aria-labelledby="mega-edim-title">
-      <a class="mega-title" id="mega-edim-title" href="./edim.html"><span><small>02 / SOLUTION</small>EDIM</span><b>제조 데이터 플랫폼 →</b></a>
-      <div class="mega-group"><strong>Manufacturing Data</strong><a href="./edim.html#cpq">CPQ <small>제품 선정</small></a><a href="./edim.html#plm">PLM <small>도면 자동화</small></a><a href="./edim.html#rccs">RCCS™ <small>관계형 BOM</small></a><a href="./edim.html#erp">ERP 연계 <small>생산·원가</small></a></div>
-    </section>
+    <a class="company-overview" href="./solutions.html"><span><small>SOLUTIONS</small>What We Deliver</span><b>솔루션 전체보기 →</b></a>
+    <div class="solution-menu-grid">
+      <section class="solution-menu-group" aria-labelledby="solution-hvac-title">
+        <a class="solution-menu-title" id="solution-hvac-title" href="./hvac.html"><small>01</small><span>HVAC<b>공조 하드웨어</b></span></a>
+        <a href="./ventilation.html"><small>01–04</small><span>Ventilation</span></a>
+        <a href="./air-system.html"><small>05–08</small><span>Air System</span></a>
+        <a href="./parts-control.html"><small>09–11</small><span>Parts & Control</span></a>
+      </section>
+      <section class="solution-menu-group" aria-labelledby="solution-edim-title">
+        <a class="solution-menu-title" id="solution-edim-title" href="./edim.html"><small>02</small><span>EDIM<b>제조 데이터 플랫폼</b></span></a>
+        <a href="./edim.html#cpq"><small>01</small><span>CPQ</span></a>
+        <a href="./edim.html#plm"><small>02</small><span>PLM</span></a>
+        <a href="./edim.html#rccs"><small>03</small><span>RCCS™</span></a>
+        <a href="./edim.html#erp"><small>04</small><span>ERP 연계</span></a>
+      </section>
+    </div>
   `;
 
   solutionsLink.classList.add('dropdown-trigger');
