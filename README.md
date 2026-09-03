@@ -17,6 +17,10 @@ VS Code에서는 `novaweb.code-workspace`를 연 다음 **터미널 → 작업 �
 
 `build-site.mjs`는 `partials/header.html`과 `partials/footer.html`을 모든 HTML 페이지에 생성합니다. 공통 헤더나 푸터를 변경한 뒤에는 먼저 빌드 명령을 실행하세요.
 
+## 배포
+
+`main` 브랜치에 push하면 GitHub Actions가 배포 전용 `dist`를 새로 생성합니다. 배포본 HTML의 로컬 `styles.css`와 `script.js` 참조에 short commit SHA를 추가하고 검증한 뒤, `dist`만 GitHub Pages에 배포합니다. 소스 HTML과 로컬 실행 경로는 변경하지 않습니다.
+
 ## 현재 구현 범위
 
 - 고정형 반응형 내비게이션

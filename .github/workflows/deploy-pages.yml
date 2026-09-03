@@ -30,10 +30,17 @@ jobs:
         with:
           enablement: true
 
+      - name: Set short commit SHA
+        shell: bash
+        run: echo "SHORT_SHA=${GITHUB_SHA::7}" >> "$GITHUB_ENV"
+
+      - name: Build and verify Pages artifact
+        run: node scripts/build-pages.mjs "$SHORT_SHA"
+
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: dist
 
       - name: Deploy
         id: deployment
