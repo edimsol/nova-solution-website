@@ -15,28 +15,24 @@
     <a class="skip-link" href="#main">본문으로 바로가기!!</a>
 
     <header class="site-header" data-header>
-      <div class="container header-inner">
-        <a class="brand" href="./index.html" aria-label="NOVA Solution 홈">
-          <svg class="brand-mark" viewBox="0 0 38 38" aria-hidden="true">
-            <path d="M7 29.5 19 6l12 23.5M12 23h14" />
-          </svg>
-          <span><strong>NOVA</strong> SOLUTION</span>
-        </a>
-
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
-          <span></span><span></span><span></span><span class="sr-only">메뉴 열기</span>
-        </button>
-
-        <nav id="site-nav" class="site-nav" aria-label="주요 메뉴" data-nav>
-          <a href="./company.html">Company</a>
-          <a href="./solutions.html">Solutions</a>
-          <a href="./technology.html">Technology</a>
-          <a href="./resources.html">Resources</a>
-          <a href="./contact.html">Contact</a>
-          <a class="nav-cta" href="./contact.html">Contact Us</a>
-        </nav>
-      </div>
-    </header>
+  <div class="container header-inner">
+    <a class="brand" href="./index.html" aria-label="NOVA Solution 홈">
+      <img class="brand-mark" src="./assets/nova-symbol-source.png" alt="" width="1254" height="1254" />
+      <span><strong>NOVA</strong> SOLUTION</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+      <span></span><span></span><span></span><span class="sr-only">메뉴 열기</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="주요 메뉴" data-nav>
+      <a href="./company.html" data-nav-page="company">Company</a>
+      <a href="./solutions.html" data-nav-page="solutions">Solutions</a>
+      <a href="./technology.html" data-nav-page="technology">Technology</a>
+      <a href="./resources.html" data-nav-page="resources">Resources</a>
+      <a href="./contact.html" data-nav-page="contact">Contact</a>
+      <a class="nav-cta" href="./contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
 
     <main id="main">
       <section id="home" class="hero grid-surface">
@@ -53,15 +49,15 @@
           </div>
 
           <div id="workflow" class="workflow reveal" aria-label="제품에서 ERP까지의 제조 데이터 흐름">
-            <div class="workflow-step"><span class="step-icon">▱</span><small>Product</small></div>
-            <span class="flow-arrow">→</span>
-            <div class="workflow-step"><span class="step-icon">▣</span><small>Design</small></div>
-            <span class="flow-arrow">→</span>
-            <div class="workflow-step"><span class="step-icon">☷</span><small>BOM</small></div>
-            <span class="flow-arrow">→</span>
-            <div class="workflow-step"><span class="step-icon">♙</span><small>Production</small></div>
-            <span class="flow-arrow">→</span>
-            <div class="workflow-step"><span class="step-icon">◎</span><small>ERP</small></div>
+            <article class="workflow-step"><div class="step-top"><span class="step-number">01</span><span class="step-icon" aria-hidden="true">▱</span></div><div><small>PRODUCT</small><strong>제품 정의</strong><p>요구 조건과 제품 사양을 기준으로 시작합니다.</p><em>사양 · 요구사항</em></div></article>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <article class="workflow-step"><div class="step-top"><span class="step-number">02</span><span class="step-icon" aria-hidden="true">▣</span></div><div><small>DESIGN</small><strong>설계 연결</strong><p>도면과 설계 정보를 하나의 기준으로 관리합니다.</p><em>도면 · 설계 데이터</em></div></article>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <article class="workflow-step"><div class="step-top"><span class="step-number">03</span><span class="step-icon" aria-hidden="true">☷</span></div><div><small>BOM</small><strong>구성 표준화</strong><p>부품 구성과 변경 이력을 생산 기준에 반영합니다.</p><em>구성 · BOM</em></div></article>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <article class="workflow-step"><div class="step-top"><span class="step-number">04</span><span class="step-icon" aria-hidden="true">♙</span></div><div><small>PRODUCTION</small><strong>생산 실행</strong><p>현장 조건에 맞춰 제조 정보가 실행으로 이어집니다.</p><em>작업 · 생산 이력</em></div></article>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <article class="workflow-step"><div class="step-top"><span class="step-number">05</span><span class="step-icon" aria-hidden="true">◎</span></div><div><small>ERP</small><strong>경영 연계</strong><p>축적된 데이터를 ERP와 연결해 다음 판단을 돕습니다.</p><em>실적 · 의사결정</em></div></article>
           </div>
         </div>
       </section>
@@ -131,11 +127,14 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <a class="brand" href="./index.html"><svg class="brand-mark" viewBox="0 0 38 38" aria-hidden="true"><path d="M7 29.5 19 6l12 23.5M12 23h14" /></svg><span><strong>NOVA</strong> SOLUTION</span></a>
-        <p>Engineering Manufacturing, From Product to Data.</p>
-        <p class="copyright">© <span data-year></span> NOVA Solution. All rights reserved.</p>
-      </div>
-    </footer>
+  <div class="container footer-inner">
+    <a class="brand" href="./index.html" aria-label="NOVA Solution 홈">
+      <img class="brand-mark" src="./assets/nova-symbol-source.png" alt="" width="1254" height="1254" />
+      <span><strong>NOVA</strong> SOLUTION</span>
+    </a>
+    <p>Engineering Manufacturing, From Product to Data.</p>
+    <p class="copyright">© <span data-year></span> NOVA Solution. All rights reserved.</p>
+  </div>
+</footer>
   </body>
 </html>

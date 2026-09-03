@@ -11,12 +11,24 @@
   <body>
     <a class="skip-link" href="#main">본문으로 바로가기</a>
     <header class="site-header" data-header>
-      <div class="container header-inner">
-        <a class="brand" href="./index.html" aria-label="NOVA Solution 홈"><span><strong>NOVA</strong> SOLUTION</span></a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span></span><span></span><span></span><span class="sr-only">메뉴 열기</span></button>
-        <nav id="site-nav" class="site-nav" aria-label="주요 메뉴" data-nav><a href="./company.html">Company</a><a href="./solutions.html">Solutions</a><a href="./technology.html" aria-current="page">Technology</a><a href="./resources.html">Resources</a><a href="./contact.html">Contact</a><a class="nav-cta" href="./contact.html">Contact Us</a></nav>
-      </div>
-    </header>
+  <div class="container header-inner">
+    <a class="brand" href="./index.html" aria-label="NOVA Solution 홈">
+      <img class="brand-mark" src="./assets/nova-symbol-source.png" alt="" width="1254" height="1254" />
+      <span><strong>NOVA</strong> SOLUTION</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+      <span></span><span></span><span></span><span class="sr-only">메뉴 열기</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="주요 메뉴" data-nav>
+      <a href="./company.html" data-nav-page="company">Company</a>
+      <a href="./solutions.html" data-nav-page="solutions">Solutions</a>
+      <a href="./technology.html" data-nav-page="technology" aria-current="page">Technology</a>
+      <a href="./resources.html" data-nav-page="resources">Resources</a>
+      <a href="./contact.html" data-nav-page="contact">Contact</a>
+      <a class="nav-cta" href="./contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
 
     <main id="main" class="page-main technology-page">
       <section class="technology-hero grid-surface">
@@ -30,10 +42,6 @@
           </div>
         </div>
       </section>
-
-      <nav class="technology-index" aria-label="Technology 바로가기">
-        <div class="container"><a href="#manufacturing">Manufacturing Engineering</a><a href="#automation">Engineering Automation</a><a href="#architecture">Product Data Architecture</a><a href="#rccs">RCCS™</a><a href="#integration">System Integration</a></div>
-      </nav>
 
       <section class="technology-intro">
         <div class="container tech-intro-grid reveal">
@@ -84,6 +92,15 @@
       <section class="technology-cta"><div class="container reveal"><div><p class="eyebrow">TECHNICAL CONVERSATION</p><h2>제조 현장의 문제를<br />기술 관점에서 검토합니다.</h2></div><a class="button button-primary" href="./contact.html">Contact Us <span>↗</span></a></div></section>
     </main>
 
-    <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="./index.html"><span><strong>NOVA</strong> SOLUTION</span></a><p>Engineering Manufacturing, From Product to Data.</p><p class="copyright">© <span data-year></span> NOVA Solution. All rights reserved.</p></div></footer>
+    <footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="brand" href="./index.html" aria-label="NOVA Solution 홈">
+      <img class="brand-mark" src="./assets/nova-symbol-source.png" alt="" width="1254" height="1254" />
+      <span><strong>NOVA</strong> SOLUTION</span>
+    </a>
+    <p>Engineering Manufacturing, From Product to Data.</p>
+    <p class="copyright">© <span data-year></span> NOVA Solution. All rights reserved.</p>
+  </div>
+</footer>
   </body>
 </html>
