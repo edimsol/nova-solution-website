@@ -1,3 +1,58 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="NOVA Solution 문의"><title>Contact | NOVA Solution</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="./styles.css"><script src="./script.js" defer></script></head>
-<body><a class="skip-link" href="#main">본문으로 바로가기</a><header class="site-header" data-header><div class="container header-inner"><a class="brand" href="./index.html"><span><strong>NOVA</strong> SOLUTION</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span></span><span></span><span></span><span class="sr-only">메뉴 열기</span></button><nav id="site-nav" class="site-nav" aria-label="주요 메뉴" data-nav><a href="./company.html">Company</a><a href="./solutions.html">Solutions</a><a href="./technology.html">Technology</a><a href="./resources.html">Resources</a><a href="./contact.html" aria-current="page">Contact</a><a class="nav-cta" href="./contact.html" aria-current="page">Contact Us</a></nav></div></header><main id="main" class="page-main"><section class="page-hero grid-surface"><div class="container reveal"><p class="eyebrow">Contact NOVA</p><h1>Let’s Build a Better<br>Manufacturing Flow.</h1></div></section><section class="page-content"><div class="container content-grid reveal"><h2>프로젝트에 대해<br>이야기해 주세요.</h2><div class="content-copy"><p>필요한 공조 환경이나 제조 데이터 관리의 고민을 알려주시면 프로젝트에 맞는 방향을 함께 검토하겠습니다.</p><div class="contact-list"><a href="mailto:hello@novasolution.co.kr">hello@novasolution.co.kr</a><p>대한민국 · Korea</p></div></div></div></section></main><footer class="site-footer"><div class="container footer-inner"><a class="brand" href="./index.html"><span><strong>NOVA</strong> SOLUTION</span></a><p>Engineering Manufacturing, From Product to Data.</p><p class="copyright">© <span data-year></span> NOVA Solution. All rights reserved.</p></div></footer></body></html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="NOVA Solution HVAC 제품, EDIM 도입 및 파트너십 문의" />
+    <title>Contact Us | NOVA Solution</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 바로가기</a>
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="NOVA Solution 홈"><span><strong>NOVA</strong> SOLUTION</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span></span><span></span><span></span><span class="sr-only">메뉴 열기</span></button>
+        <nav id="site-nav" class="site-nav" aria-label="주요 메뉴" data-nav><a href="./company.html">Company</a><a href="./solutions.html">Solutions</a><a href="./technology.html">Technology</a><a href="./resources.html">Resources</a><a class="nav-cta" href="./contact.html" aria-current="page">Contact Us</a></nav>
+      </div>
+    </header>
+
+    <main id="main" class="page-main contact-page">
+      <section class="contact-hero grid-surface">
+        <div class="container reveal"><p class="eyebrow">CONTACT NOVA SOLUTION</p><h1>What can we<br />help you with?</h1><p>문의 목적을 선택하고 프로젝트에 대해 알려주세요.<br />확인 후 적합한 담당자가 연락드리겠습니다.</p></div>
+      </section>
+
+      <section class="inquiry-section">
+        <form class="container inquiry-form reveal" data-inquiry-form>
+          <fieldset class="inquiry-types">
+            <legend><span>01</span> Inquiry Type <b>*</b></legend>
+            <label class="inquiry-type-card"><input type="radio" name="inquiryType" value="hvac" required><span><small>01 / PRODUCT</small><strong>HVAC Product</strong><em>제품 · 견적 · 납품 · 기술 문의</em></span><i>↗</i></label>
+            <label class="inquiry-type-card"><input type="radio" name="inquiryType" value="edim"><span><small>02 / PLATFORM</small><strong>EDIM</strong><em>도입 · Demo · PoC · 시스템 연계</em></span><i>↗</i></label>
+            <label class="inquiry-type-card"><input type="radio" name="inquiryType" value="partnership"><span><small>03 / COLLABORATION</small><strong>Partnership</strong><em>기술 협력 · 제조 협력 · 사업 제휴</em></span><i>↗</i></label>
+          </fieldset>
+
+          <fieldset class="contact-fields">
+            <legend><span>02</span> Contact Information</legend>
+            <label><span>Company Name <b>*</b></span><input type="text" name="companyName" autocomplete="organization" required></label>
+            <label><span>Name <b>*</b></span><input type="text" name="name" autocomplete="name" required></label>
+            <label><span>Position</span><input type="text" name="position" autocomplete="organization-title"></label>
+            <label><span>Email <b>*</b></span><input type="email" name="email" autocomplete="email" required></label>
+            <label><span>Phone</span><input type="tel" name="phone" autocomplete="tel"></label>
+          </fieldset>
+
+          <fieldset class="inquiry-detail">
+            <legend><span>03</span> Inquiry Details</legend>
+            <label><span>Product / Solution <b>*</b></span><select name="product" data-product-field required disabled><option value="">먼저 문의 유형을 선택해 주세요</option></select></label>
+            <label class="message-field"><span>Message <b>*</b></span><textarea name="message" rows="7" placeholder="프로젝트 배경, 필요한 제품 또는 검토 사항을 적어주세요." required></textarea></label>
+          </fieldset>
+
+          <div class="form-footer"><p><b>*</b> 필수 입력 항목입니다.<br>현재 폼은 화면 검토용이며 서버 전송 기능은 연결되지 않았습니다.</p><button class="button button-primary" type="submit">Submit Inquiry <span>↗</span></button></div>
+          <p class="form-message" data-form-message tabindex="-1" hidden>입력 내용을 확인했습니다. 문의 전송 서버를 연결하면 이 단계에서 담당자에게 전달됩니다.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="./index.html"><span><strong>NOVA</strong> SOLUTION</span></a><p>Engineering Manufacturing, From Product to Data.</p><p class="copyright">© <span data-year></span> NOVA Solution. All rights reserved.</p></div></footer>
+  </body>
+</html>
