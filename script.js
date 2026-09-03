@@ -96,9 +96,9 @@ if (solutionsLink) {
     <section class="mega-area mega-hvac" aria-labelledby="mega-hvac-title">
       <a class="mega-title" id="mega-hvac-title" href="./hvac.html"><span><small>01 / SOLUTION</small>HVAC</span><b>공조 하드웨어 전체보기 →</b></a>
       <div class="mega-groups">
-        <div class="mega-group"><strong>Ventilation</strong><a href="./hvac.html#eurus">Eurus Impeller</a><a href="./hvac.html#partial">Partial Impeller</a><a href="./hvac.html#pullout">Pull-Out Impeller</a><a href="./hvac.html#fan-model">Fan Model 라인업</a></div>
-        <div class="mega-group"><strong>Air System</strong><a href="./hvac.html#ahu-rtu">AHU / RTU</a><a href="./hvac.html#bio-hvac">Bio HVAC</a><a href="./hvac.html#ief">IEF 전기집진필터</a><a href="./hvac.html#iaqs">IAQS 실내공기질</a></div>
-        <div class="mega-group"><strong>Parts & Control</strong><a href="./hvac.html#clt">CLT 배수 트랩</a><a href="./hvac.html#fcm">FCM 팬 제어</a><a href="./hvac.html#ecm">ECM 공조기 제어</a></div>
+        <div class="mega-group"><a class="mega-category" href="./ventilation.html">Ventilation →</a><a href="./ventilation.html#eurus">Eurus Impeller</a><a href="./ventilation.html#partial">Partial Impeller</a><a href="./ventilation.html#pullout">Pull-Out Impeller</a><a href="./ventilation.html#fan-model">Fan Model 라인업</a></div>
+        <div class="mega-group"><a class="mega-category" href="./air-system.html">Air System →</a><a href="./air-system.html#ahu-rtu">AHU / RTU</a><a href="./air-system.html#bio-hvac">Bio HVAC</a><a href="./air-system.html#ief">IEF 전기집진필터</a><a href="./air-system.html#iaqs">IAQS 실내공기질</a></div>
+        <div class="mega-group"><a class="mega-category" href="./parts-control.html">Parts & Control →</a><a href="./parts-control.html#clt">CLT 배수 트랩</a><a href="./parts-control.html#fcm">FCM 팬 제어</a><a href="./parts-control.html#ecm">ECM 공조기 제어</a></div>
       </div>
     </section>
     <section class="mega-area mega-edim" aria-labelledby="mega-edim-title">
