@@ -83,20 +83,19 @@ createDropdown('a[href="./resources.html"]', 'submenu-resources', 'Resources 하
   </div>
 `);
 createDropdown('a[href="./solutions.html"]', 'submenu-solutions', 'Solutions 하위 메뉴', `
-  <a class="company-overview" href="./solutions.html"><span><small>SOLUTIONS</small>What We Deliver</span><b>솔루션 전체보기 →</b></a>
-  <div class="solution-menu-grid">
-    <section class="solution-menu-group" aria-labelledby="solution-hvac-title">
-      <a class="solution-menu-title" id="solution-hvac-title" href="./hvac.html"><small>01</small><span>HVAC<b>공조 하드웨어</b></span></a>
-      <a class="solution-menu-category" href="./ventilation.html"><small>01–04</small><span>Ventilation</span></a>
-      <a href="./air-system.html"><small>05–08</small><span>Air System</span></a>
-      <a href="./parts-control.html"><small>09–11</small><span>Parts & Control</span></a>
+  <div class="solution-tier-head"><span><small>SOLUTIONS</small>What We Deliver</span><a href="./solutions.html">전체보기 →</a></div>
+  <div class="solution-tier-menu">
+    <section class="solution-tier-item has-flyout">
+      <a class="solution-tier-trigger hvac-trigger" href="./hvac.html"><small>01</small><span><b>HVAC</b>공조 하드웨어</span></a>
+      <div class="product-flyout category-flyout" aria-label="HVAC 카테고리">
+        <section class="category-tier-item"><a class="category-tier-trigger" href="./ventilation.html"><small>01</small><span><b>Ventilation</b>Impeller &amp; Fan</span></a><div class="category-product-flyout"><a href="./ventilation.html#eurus"><small>01</small><span>Eurus Impeller</span></a><a href="./ventilation.html#partial"><small>02</small><span>Partial Impeller</span></a><a href="./ventilation.html#pullout"><small>03</small><span>Pull-Out Impeller</span></a><a href="./ventilation.html#fan-model"><small>04</small><span>Fan Model Line-Up</span></a></div></section>
+        <section class="category-tier-item"><a class="category-tier-trigger" href="./air-system.html"><small>02</small><span><b>Air System</b>Air Treatment</span></a><div class="category-product-flyout"><a href="./air-system.html#ahu"><small>05</small><span>Eco AHU / RTU</span></a><a href="./air-system.html#bio-hvac"><small>06</small><span>Bio HVAC</span></a><a href="./air-system.html#ief"><small>07</small><span>IEF Filter</span></a><a href="./air-system.html#other-systems"><small>08</small><span>IAQS</span></a></div></section>
+        <section class="category-tier-item"><a class="category-tier-trigger" href="./parts-control.html"><small>03</small><span><b>Parts &amp; Control</b>Components</span></a><div class="category-product-flyout"><a href="./parts-control.html#clt"><small>09</small><span>CLT 배수 트랩</span></a><a href="./parts-control.html#fcm"><small>10</small><span>FCM 팬 제어</span></a><a href="./parts-control.html#ecm"><small>11</small><span>ECM 공조기 제어</span></a></div></section>
+      </div>
     </section>
-    <section class="solution-menu-group" aria-labelledby="solution-edim-title">
-      <a class="solution-menu-title" id="solution-edim-title" href="./edim.html"><small>02</small><span>EDIM<b>제조 데이터 플랫폼</b></span></a>
-      <a href="./edim.html#cpq"><small>01</small><span>CPQ</span></a>
-      <a href="./edim.html#plm"><small>02</small><span>PLM</span></a>
-      <a href="./edim.html#rccs"><small>03</small><span>RCCS™</span></a>
-      <a href="./edim.html#erp"><small>04</small><span>ERP 연계</span></a>
+    <section class="solution-tier-item has-flyout">
+      <a class="solution-tier-trigger edim-trigger" href="./edim.html"><small>02</small><span><b>EDIM</b>제조 데이터 플랫폼</span></a>
+      <div class="product-flyout category-flyout edim-category-flyout" aria-label="EDIM 카테고리"><section class="category-tier-item"><a class="category-tier-trigger" href="./edim.html"><small>01</small><span><b>EDIM Platform</b>Manufacturing Data</span></a><div class="category-product-flyout"><a href="./edim.html#cpq"><small>01</small><span>CPQ</span></a><a href="./edim.html#plm"><small>02</small><span>PLM</span></a><a href="./edim.html#rccs"><small>03</small><span>RCCS™</span></a><a href="./edim.html#erp"><small>04</small><span>ERP 연계</span></a></div></section></div>
     </section>
   </div>
 `, 'submenu company-menu section-menu solutions-menu');
@@ -200,6 +199,16 @@ if (operatingCasesMetric) {
 const counters = document.querySelectorAll('[data-counter]');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const formatCounter = (value) => new Intl.NumberFormat('en-US').format(value);
+
+// Re-align deep links after product imagery and web fonts finish loading.
+if (window.location.hash) {
+  window.addEventListener('load', async () => {
+    const target = document.querySelector(window.location.hash);
+    if (document.fonts?.ready) await document.fonts.ready;
+    window.setTimeout(() => target?.scrollIntoView({ block: 'start' }), 120);
+  }, { once: true });
+}
+
 function animateCounter(element) {
   const target = Number(element.dataset.counter);
   if (reducedMotion) {
@@ -230,6 +239,41 @@ const checkCounterVisibility = () => {
 };
 window.addEventListener('scroll', checkCounterVisibility, { passive: true });
 requestAnimationFrame(checkCounterVisibility);
+
+const fanCarousel = document.querySelector('[data-fan-carousel]');
+if (fanCarousel) {
+  const modelOrder = ['kad', 'kap', 'kas'];
+  const cards = [...fanCarousel.querySelectorAll('[data-fan-model]')];
+  const panels = [...document.querySelectorAll('[data-fan-panel]')];
+  const currentLabel = fanCarousel.querySelector('[data-fan-current]');
+  let activeIndex = modelOrder.indexOf(cards.find((card) => card.classList.contains('is-active'))?.dataset.fanModel);
+  if (activeIndex < 0) activeIndex = 1;
+
+  const selectFanModel = (index, shouldScroll = true) => {
+    activeIndex = (index + modelOrder.length) % modelOrder.length;
+    const activeModel = modelOrder[activeIndex];
+    cards.forEach((card) => {
+      const selected = card.dataset.fanModel === activeModel;
+      card.classList.toggle('is-active', selected);
+      card.setAttribute('aria-pressed', String(selected));
+      if (selected && shouldScroll && window.matchMedia('(max-width: 900px)').matches) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    });
+    panels.forEach((panel) => {
+      const selected = panel.dataset.fanPanel === activeModel;
+      panel.hidden = !selected;
+      panel.classList.toggle('is-active', selected);
+    });
+    if (currentLabel) currentLabel.textContent = String(activeIndex + 1).padStart(2, '0');
+  };
+
+  cards.forEach((card, index) => card.addEventListener('click', () => selectFanModel(index)));
+  fanCarousel.querySelector('[data-fan-prev]')?.addEventListener('click', () => selectFanModel(activeIndex - 1));
+  fanCarousel.querySelector('[data-fan-next]')?.addEventListener('click', () => selectFanModel(activeIndex + 1));
+  selectFanModel(activeIndex, false);
+}
+
 document.querySelectorAll('[data-year]').forEach((element) => {
   element.textContent = new Date().getFullYear();
 });
