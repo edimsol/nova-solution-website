@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./styles.css?v=20260904-ahu-scope" />
     <script src="./script.js?v=20260904-hvac-icons" defer></script>
   </head>
-  <body>
+  <body class="home-body">
     <a class="skip-link" href="#main">본문으로 바로가기!!</a>
 
     <header class="site-header" data-header>
@@ -35,8 +35,8 @@
   </div>
 </header>
 
-    <main id="main">
-      <section id="home" class="hero grid-surface">
+    <main id="main" class="home-swipe" data-home-slider>
+      <section id="home" class="hero grid-surface" data-home-slide data-slide-label="Home">
         <div class="container hero-inner">
           <div class="hero-copy reveal">
             <p class="eyebrow">Manufacturing, Connected.</p>
@@ -63,7 +63,7 @@
         </div>
       </section>
 
-      <section id="company" class="intro section">
+      <section id="company" class="intro section" data-home-slide data-slide-label="Company">
         <div class="container section-heading reveal">
           <p class="eyebrow">One Flow, Better Manufacturing</p>
           <h2>현장과 데이터를 연결해<br />제조의 다음 기준을 만듭니다.</h2>
@@ -71,7 +71,7 @@
         </div>
       </section>
 
-      <section id="solutions" class="solutions section">
+      <section id="solutions" class="solutions section" data-home-slide data-slide-label="Solutions">
         <div class="container">
           <a class="solution-panel hvac reveal" href="./hvac.html" aria-label="HVAC 솔루션 상세 페이지">
             <div>
@@ -97,7 +97,7 @@
         </div>
       </section>
 
-      <section id="technology" class="strengths section grid-surface">
+      <section id="technology" class="strengths section grid-surface" data-home-slide data-slide-label="Technology">
         <div class="container">
           <div class="section-heading light reveal">
             <p class="eyebrow">Why NOVA Solution</p>
@@ -112,14 +112,14 @@
         </div>
       </section>
 
-      <section id="resources" class="industry-bar">
+      <section id="resources" class="industry-bar" data-home-slide data-slide-label="Industries">
         <div class="container industry-inner reveal">
           <p>Built for ETO Manufacturing</p>
           <div class="tags"><span>HVAC</span><span>Semiconductor</span><span>Display</span><span>Battery</span><span>Smart Factory</span></div>
         </div>
       </section>
 
-      <section id="contact" class="contact section">
+      <section id="contact" class="contact section" data-home-slide data-slide-label="Contact">
         <div class="container contact-inner reveal">
           <div><p class="eyebrow">Start a Conversation</p><h2>더 나은 제조의 흐름,<br />NOVA와 시작하세요.</h2></div>
           <a class="button button-primary" href="mailto:ys.lee@edimsol.com?subject=NOVA%20Solution%20Inquiry">Contact Us <span>↗</span></a>

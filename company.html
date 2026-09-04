@@ -6,7 +6,9 @@
     <meta name="description" content="제조 기술을 기반으로 제조 데이터까지 연결하는! NOVA Solution을 소개합니다." />
     <title>Company | NOVA Solution</title>
     <link rel="icon" href="./assets/nova-symbol.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <link rel="stylesheet" href="./styles.css?v=20260904-ahu-scope" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
     <script src="./script.js?v=20260904-hvac-icons" defer></script>
   </head>
   <body>
@@ -43,7 +45,17 @@
         </div>
       </section>
 
-      <section class="company-section company-about" id="about">
+      <section class="company-card-index" aria-labelledby="company-index-title">
+        <div class="container"><div class="company-card-heading reveal"><p class="section-no">EXPLORE NOVA SOLUTION</p><h2 id="company-index-title">Select a story.<br />See who we are.</h2><p>카드를 선택하면 각 이야기가 화면 위로 확장됩니다.</p></div><div class="company-flip-grid">
+          <button class="company-flip-card company-card-about reveal" type="button" data-company-open="about"><span>01 / COMPANY</span><div><small>About Nova Solution</small><h3>현장을 아는 기술과<br />연결을 만드는 데이터</h3></div><b>Open <i>↗</i></b></button>
+          <button class="company-flip-card company-card-mission reveal" type="button" data-company-open="mission"><span>02 / DIRECTION</span><div><small>Mission &amp; Vision</small><h3>끊김 없는 제조를<br />만드는 방향</h3></div><b>Open <i>↗</i></b></button>
+          <button class="company-flip-card company-card-history reveal" type="button" data-company-open="history"><span>03 / JOURNEY</span><div><small>History</small><h3>짧지만 분명한<br />출발점</h3></div><b>Open <i>↗</i></b></button>
+          <button class="company-flip-card company-card-foundation reveal" type="button" data-company-open="foundation"><span>04 / FOUNDATION</span><div><small>Manufacturing Foundation</small><h3>제조 현장에서 시작한<br />기술 기반</h3></div><b>Open <i>↗</i></b></button>
+          <button class="company-flip-card company-card-location reveal" type="button" data-company-open="location"><span>05 / HEAD OFFICE</span><div><small>Location</small><h3>Dongtan,<br />Hwaseong</h3></div><b>Open Map <i>↗</i></b></button>
+        </div></div>
+      </section>
+
+      <section class="company-section company-about" id="about" data-company-panel>
         <div class="container company-split reveal">
           <div><p class="section-no">01 / ABOUT NOVA SOLUTION</p><h2>현장을 아는 기술과<br />연결을 만드는 데이터</h2></div>
           <div class="company-copy"><p class="lead">NOVA Solution은 제조 설비에 대한 이해를 바탕으로 제품과 공정에서 발생하는 데이터를 하나의 흐름으로 연결하는 제조 기술 기업입니다.</p><p>우리는 소프트웨어만 제공하거나 장비만 납품하는 데 머물지 않습니다. 실제 제조 현장의 조건과 엔지니어링 구조를 이해하고, 그 위에 활용 가능한 데이터를 쌓아 더 빠르고 정확한 제조 의사결정을 지원합니다.</p></div>
@@ -51,22 +63,22 @@
         <div class="container identity-flow reveal" aria-label="NOVA Solution의 사업 정체성"><div><small>01</small><strong>Manufacturing</strong><span>제조 현장과 공정 이해</span></div><i>→</i><div><small>02</small><strong>Engineering</strong><span>제품과 설비 엔지니어링</span></div><i>→</i><div><small>03</small><strong>Data</strong><span>연결된 제조 데이터</span></div></div>
       </section>
 
-      <section class="company-section company-mission" id="mission">
+      <section class="company-section company-mission" id="mission" data-company-panel>
         <div class="container"><div class="section-label reveal"><p class="section-no">02 / MISSION &amp; VISION</p><h2>현장에서 데이터까지,<br />끊김 없는 제조를 만듭니다.</h2></div>
           <div class="mission-grid"><article class="reveal"><span>MISSION</span><h3>Connect the Real Factory</h3><p>설계, 제품, 설비와 생산 데이터를 실제 현장의 언어로 연결해 제조 과정의 단절을 줄입니다.</p></article><article class="reveal"><span>VISION</span><h3>Make Manufacturing Clear</h3><p>누구나 신뢰할 수 있는 제조 정보와 실행 가능한 기술로 더 선명한 의사결정 환경을 만듭니다.</p></article><article class="reveal"><span>VALUE</span><h3>Practical by Design</h3><p>화려한 기술보다 현장에 적용되고 지속적으로 운영되는 실용적인 해답을 우선합니다.</p></article></div>
         </div>
       </section>
 
-      <section class="company-section company-history" id="history">
+      <section class="company-section company-history" id="history" data-company-panel>
         <div class="container company-split reveal"><div><p class="section-no">03 / HISTORY</p><h2>짧지만 분명한<br />출발점</h2></div><div class="history-list"><article><span>FOUNDATION</span><h3>제조 기술을 기반으로 출발</h3><p>현장에서 축적한 제조·공조 엔지니어링 역량을 NOVA Solution의 기술 기반으로 정립했습니다.</p></article><article><span>BUILD</span><h3>HVAC 제품 체계 구축</h3><p>공기의 흐름, 처리, 품질과 제어를 아우르는 HVAC 제품 체계를 구축하고 있습니다.</p></article><article><span>NEXT</span><h3>제조 데이터 영역으로 확장</h3><p>제품 선정, 설계, BOM과 ERP 데이터를 연결하는 EDIM 플랫폼으로 사업 범위를 확장하고 있습니다.</p></article></div></div>
       </section>
 
-      <section class="company-section company-foundation" id="foundation">
+      <section class="company-section company-foundation" id="foundation" data-company-panel>
         <div class="container heritage-grid reveal"><div><p class="section-no">04 / MANUFACTURING FOUNDATION</p><h2>제조 현장에서 시작한<br />NOVA의 기술 기반</h2></div><div><p class="lead">NOVA Solution은 제품과 공조 시스템을 설계하고 제조 현장의 조건을 해석하는 엔지니어링 역량에서 출발합니다.</p><p>하드웨어의 구조와 실제 운전 환경에 대한 이해를 바탕으로, 공조 제품과 제조 데이터를 연결하는 기술과 서비스를 만들어갑니다.</p><div class="transfer-flow"><span>HVAC ENGINEERING<small>제품·설비·공조 설계</small></span><i>+</i><span>MANUFACTURING DATA<small>사양·도면·BOM·시스템 연결</small></span></div><p class="heritage-notice">현장에 적용할 수 있는 기술과 신뢰할 수 있는 데이터 구조를 함께 설계하는 것이 NOVA의 핵심 접근 방식입니다.</p></div></div>
       </section>
 
-      <section class="company-section company-location" id="location">
-        <div class="container"><div class="section-label reveal"><p class="section-no">05 / LOCATION</p><h2>Where Technology<br />Meets Manufacturing.</h2></div><div class="location-panel reveal"><div><span>HEAD OFFICE</span><h3>Seoul, Republic of Korea</h3><p>상세 주소 및 방문 안내는 회사 정보 확정 후 업데이트됩니다.</p></div><a class="button button-primary" href="./contact.html">Contact for Visit <span>↗</span></a></div></div>
+      <section class="company-section company-location" id="location" data-company-panel>
+        <div class="container"><div class="section-label reveal"><p class="section-no">05 / LOCATION</p><h2>Where Technology<br />Meets Manufacturing.</h2></div><div class="location-map-wrap reveal" data-location-map><div id="nova-location-map" class="location-map" role="img" aria-label="경기도 화성시 동탄구 동탄영천로 131의 NOVA Solution 위치 지도"></div><div class="map-proximity-grid" aria-hidden="true" data-map-grid></div><div class="location-map-card"><span>HEAD OFFICE</span><h3>NOVA Solution</h3><p>경기도 화성시 동탄구 동탄영천로 131<br />8층 807호</p><small>Dongtan Corner One Smart Tower</small><a href="https://map.kakao.com/link/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%99%94%EC%84%B1%EC%8B%9C%20%EB%8F%99%ED%83%84%EA%B5%AC%20%EB%8F%99%ED%83%84%EC%98%81%EC%B2%9C%EB%A1%9C%20131" target="_blank" rel="noopener">Open in Maps <b>↗</b></a></div></div></div>
       </section>
     </main>
 

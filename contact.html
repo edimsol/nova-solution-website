@@ -37,7 +37,8 @@
       </section>
 
       <section class="inquiry-section">
-        <form class="container inquiry-form reveal" data-inquiry-form>
+        <form class="container inquiry-form reveal" action="https://formspree.io/f/xwlkqlvo" method="POST" accept-charset="UTF-8" data-inquiry-form>
+          <input type="hidden" name="_subject" value="NOVA Solution Website Inquiry">
           <fieldset class="inquiry-types">
             <legend><span>01</span> Inquiry Type <b>*</b></legend>
             <label class="inquiry-type-card"><input type="radio" name="inquiryType" value="hvac" required><span><small>01 / PRODUCT</small><strong>HVAC Product</strong><em>제품 · 견적 · 납품 · 기술 문의</em></span><i>↗</i></label>
@@ -60,8 +61,7 @@
             <label class="message-field"><span>Message <b>*</b></span><textarea name="message" rows="7" placeholder="프로젝트 배경, 필요한 제품 또는 검토 사항을 적어주세요." required></textarea></label>
           </fieldset>
 
-          <div class="form-footer"><p><b>*</b> 필수 입력 항목입니다.<br>현재 폼은 화면 검토용이며 서버 전송 기능은 연결되지 않았습니다.</p><button class="button button-primary" type="submit">Submit Inquiry <span>↗</span></button></div>
-          <p class="form-message" data-form-message tabindex="-1" hidden>입력 내용을 확인했습니다. 문의 전송 서버를 연결하면 이 단계에서 담당자에게 전달됩니다.</p>
+          <div class="form-footer"><p><b>*</b> 필수 입력 항목입니다.<br>입력하신 정보는 문의 확인과 답변을 위해 전송됩니다.</p><button class="button button-primary" type="submit">Submit Inquiry <span>↗</span></button></div>
         </form>
       </section>
     </main>
