@@ -23,7 +23,7 @@ for (const file of htmlFiles) {
     .replace(/<header\b[\s\S]*?<\/header>/i, pageHeader.trim())
     .replace(/<footer\b[\s\S]*?<\/footer>/i, footer.trim());
 
-  if (output === source) {
+  if (!/<header\b[\s\S]*?<\/header>/i.test(source) || !/<footer\b[\s\S]*?<\/footer>/i.test(source)) {
     throw new Error(`Shared header or footer not found in ${file}`);
   }
 

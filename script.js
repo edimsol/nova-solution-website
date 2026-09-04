@@ -53,7 +53,7 @@ const createDropdown = (selector, id, label, markup, className = 'submenu compan
 
 nav?.querySelector('a[href="./contact.html"]:not(.nav-cta)')?.remove();
 createDropdown('a[href="./company.html"]', 'submenu-company', 'Company 하위 메뉴', `
-  <a class="company-overview" href="./company.html"><span><small>COMPANY</small>Who We Are</span><b>회사소개 전체보기 →</b></a>
+  <a class="company-overview" href="./company.html"><span><small>COMPANY</small>Who We Are</span><b>Company Overview →</b></a>
   <div class="company-menu-grid">
     <a href="./company.html#about"><small>01</small><span>About NOVA Solution</span></a>
     <a href="./company.html#mission"><small>02</small><span>Mission & Vision</span></a>
@@ -63,7 +63,7 @@ createDropdown('a[href="./company.html"]', 'submenu-company', 'Company 하위 �
   </div>
 `);
 createDropdown('a[href="./technology.html"]', 'submenu-technology', 'Technology 하위 메뉴', `
-  <a class="company-overview" href="./technology.html"><span><small>TECHNOLOGY</small>How It Becomes Possible</span><b>기술 전체보기 →</b></a>
+  <a class="company-overview" href="./technology.html"><span><small>TECHNOLOGY</small>How We Build</span><b>Explore Technology →</b></a>
   <div class="company-menu-grid">
     <a href="./technology.html#manufacturing"><small>01</small><span>Manufacturing Engineering</span></a>
     <a href="./technology.html#automation"><small>02</small><span>Engineering Automation</span></a>
@@ -83,22 +83,40 @@ createDropdown('a[href="./resources.html"]', 'submenu-resources', 'Resources 하
   </div>
 `);
 createDropdown('a[href="./solutions.html"]', 'submenu-solutions', 'Solutions 하위 메뉴', `
-  <div class="solution-tier-head"><span><small>SOLUTIONS</small>What We Deliver</span><a href="./solutions.html">전체보기 →</a></div>
-  <div class="solution-tier-menu">
-    <section class="solution-tier-item has-flyout">
-      <a class="solution-tier-trigger hvac-trigger" href="./hvac.html"><small>01</small><span><b>HVAC</b>공조 하드웨어</span></a>
-      <div class="product-flyout category-flyout" aria-label="HVAC 카테고리">
-        <section class="category-tier-item"><a class="category-tier-trigger" href="./ventilation.html"><small>01</small><span><b>Ventilation</b>Impeller &amp; Fan</span></a><div class="category-product-flyout"><a href="./ventilation.html#eurus"><small>01</small><span>Eurus Impeller</span></a><a href="./ventilation.html#partial"><small>02</small><span>Partial Impeller</span></a><a href="./ventilation.html#pullout"><small>03</small><span>Pull-Out Impeller</span></a><a href="./ventilation.html#fan-model"><small>04</small><span>Fan Model Line-Up</span></a></div></section>
-        <section class="category-tier-item"><a class="category-tier-trigger" href="./air-system.html"><small>02</small><span><b>Air System</b>Air Treatment</span></a><div class="category-product-flyout"><a href="./air-system.html#ahu"><small>05</small><span>Eco AHU / RTU</span></a><a href="./air-system.html#bio-hvac"><small>06</small><span>Bio HVAC</span></a><a href="./air-system.html#ief"><small>07</small><span>IEF Filter</span></a><a href="./air-system.html#other-systems"><small>08</small><span>IAQS</span></a></div></section>
-        <section class="category-tier-item"><a class="category-tier-trigger" href="./parts-control.html"><small>03</small><span><b>Parts &amp; Control</b>Components</span></a><div class="category-product-flyout"><a href="./parts-control.html#clt"><small>09</small><span>CLT 배수 트랩</span></a><a href="./parts-control.html#fcm"><small>10</small><span>FCM 팬 제어</span></a><a href="./parts-control.html#ecm"><small>11</small><span>ECM 공조기 제어</span></a></div></section>
-      </div>
-    </section>
-    <section class="solution-tier-item has-flyout">
-      <a class="solution-tier-trigger edim-trigger" href="./edim.html"><small>02</small><span><b>EDIM</b>제조 데이터 플랫폼</span></a>
-      <div class="product-flyout category-flyout edim-category-flyout" aria-label="EDIM 카테고리"><section class="category-tier-item"><a class="category-tier-trigger" href="./edim.html"><small>01</small><span><b>EDIM Platform</b>Manufacturing Data</span></a><div class="category-product-flyout"><a href="./edim.html#cpq"><small>01</small><span>CPQ</span></a><a href="./edim.html#plm"><small>02</small><span>PLM</span></a><a href="./edim.html#rccs"><small>03</small><span>RCCS™</span></a><a href="./edim.html#erp"><small>04</small><span>ERP 연계</span></a></div></section></div>
-    </section>
+  <div class="mega-menu-head"><span><small>SOLUTIONS</small>What We Deliver</span><a href="./solutions.html">View All Solutions →</a></div>
+  <div class="solutions-overview">
+    <section class="solutions-column solutions-hvac"><a class="solutions-column-title" href="./hvac.html"><b>HVAC</b><small>Air &amp; Climate Engineering</small></a><div class="solutions-groups">
+      <div><a class="solutions-group-title" href="./ventilation.html">Ventilation</a><a href="./ventilation.html#eurus">Eurus Impeller</a><a href="./ventilation.html#partial">Partial Impeller</a><a href="./ventilation.html#pullout">Pull-Out Impeller</a><a href="./ventilation.html#fan-model">Fan Model Line-Up</a></div>
+      <div><a class="solutions-group-title" href="./air-system.html">Air Systems</a><a href="./air-system.html#ahu">Eco AHU / RTU</a><a href="./air-system.html#bio-hvac">Bio HVAC</a><a href="./air-system.html#ief">IEF Filter</a><a href="./air-system.html#iaqs">IAQS</a></div>
+      <div><a class="solutions-group-title" href="./parts-control.html">Parts &amp; Control</a><a href="./parts-control.html#clt">CLT</a><a href="./parts-control.html#fcm">FCM</a><a href="./parts-control.html#ecm">ECM</a></div>
+    </div></section>
+    <section class="solutions-column solutions-edim"><a class="solutions-column-title" href="./edim.html"><b>EDIM</b><small>Manufacturing Data Platform</small></a><div class="solutions-groups solutions-groups-edim"><div><a class="solutions-group-title" href="./edim.html">EDIM Overview</a><a href="./edim.html#cpq">CPQ</a><a href="./edim.html#plm">PLM</a><a href="./edim.html#rccs">RCCS™</a><a href="./edim.html#erp">ERP Integration</a></div></div></section>
   </div>
-`, 'submenu company-menu section-menu solutions-menu');
+`, 'submenu mega-panel solutions-menu');
+
+const searchButton = document.createElement('button');
+searchButton.className = 'nav-search';
+searchButton.type = 'button';
+searchButton.setAttribute('aria-label', '사이트 검색 열기');
+searchButton.setAttribute('aria-expanded', 'false');
+searchButton.innerHTML = '<span></span>';
+nav?.querySelector('.nav-cta')?.before(searchButton);
+const searchPanel = document.createElement('form');
+searchPanel.className = 'site-search-panel';
+searchPanel.setAttribute('role', 'search');
+searchPanel.innerHTML = '<label for="site-search-input">Search NOVA Solution</label><div><input id="site-search-input" type="search" placeholder="제품, 기술 또는 자료 검색" autocomplete="off"><button type="submit">Search →</button></div><p>예: Eurus, Eco AHU, CLT, EDIM</p>';
+header?.append(searchPanel);
+searchButton.addEventListener('click', () => {
+  const open = header.classList.toggle('search-open');
+  searchButton.setAttribute('aria-expanded', String(open));
+  searchButton.setAttribute('aria-label', open ? '사이트 검색 닫기' : '사이트 검색 열기');
+  if (open) searchPanel.querySelector('input')?.focus();
+});
+searchPanel.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const query = searchPanel.querySelector('input')?.value.trim();
+  if (query) window.location.href = `./resources.html?search=${encodeURIComponent(query)}`;
+});
 
 nav?.querySelector('.solutions-menu')?.querySelectorAll('a').forEach((link) => {
   if (link.getAttribute('href') === `./${currentPage}`) {
