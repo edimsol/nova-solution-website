@@ -9,11 +9,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="icon" href="./assets/nova-symbol.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="./styles.css?v=20260904-ahu-scope" />
-    <script src="./script.js?v=20260904-hvac-icons" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=20260906-home-intro" />
+    <script src="./script.js?v=20260906-home-intro" defer></script>
   </head>
   <body class="home-body">
     <a class="skip-link" href="#main">본문으로 바로가기!!</a>
+
+    <div class="home-entry" data-home-entry aria-hidden="true">
+      <div class="home-entry-copy">
+        <img src="./assets/nova-symbol-source.png" alt="" width="1254" height="1254" />
+        <div>
+          <p>NOVA SOLUTION</p>
+          <span>ENGINEERING · AIR · DATA</span>
+        </div>
+      </div>
+      <div class="home-entry-status">
+        <span>MANUFACTURING FLOW</span>
+        <i></i>
+        <b>CONNECTED</b>
+      </div>
+      <svg class="home-entry-waves" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false">
+        <defs>
+          <linearGradient id="entry-wave-steel" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#173e59" />
+            <stop offset="1" stop-color="#0b263d" />
+          </linearGradient>
+          <linearGradient id="entry-wave-cyan" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#2c9fbd" />
+            <stop offset="1" stop-color="#60cbe1" />
+          </linearGradient>
+        </defs>
+        <path data-entry-wave="back" fill="url(#entry-wave-steel)" />
+        <path data-entry-wave="accent" fill="url(#entry-wave-cyan)" />
+        <path data-entry-wave="front" fill="#07152a" />
+      </svg>
+    </div>
 
     <header class="site-header" data-header>
   <div class="container header-inner">

@@ -11,6 +11,34 @@
   --paper: #f4f7f9;
   --white: #f7fafc;
   --container: 1120px;
+  /* NOVA industrial editorial design tokens */
+  --color-navy-950: #061426;
+  --color-navy-900: #0a1d31;
+  --color-ink: #122b3e;
+  --color-copy: #5f7182;
+  --color-copy-dark: #9eafbf;
+  --color-surface: #f5f8fa;
+  --color-surface-alt: #eaf1f4;
+  --color-rule: rgba(31, 66, 88, .18);
+  --color-rule-dark: rgba(164, 215, 227, .2);
+  --type-hero: clamp(3.5rem, 5.2vw, 4.5rem);
+  --type-product: clamp(3.5rem, 5.8vw, 5rem);
+  --type-h2: clamp(2.5rem, 3.5vw, 3.25rem);
+  --type-h3: clamp(1.625rem, 2.1vw, 2rem);
+  --type-card: clamp(1.125rem, 1.35vw, 1.375rem);
+  --type-lead: clamp(1.125rem, 1.3vw, 1.25rem);
+  --type-body: clamp(.9375rem, 1vw, 1.0625rem);
+  --type-secondary: clamp(.875rem, .92vw, .9375rem);
+  --type-label: clamp(.75rem, .72vw, .8125rem);
+  --type-note: .75rem;
+  --leading-heading: 1.12;
+  --leading-body: 1.72;
+  --space-compact: clamp(4rem, 6vw, 5rem);
+  --space-standard: clamp(6rem, 8vw, 7.5rem);
+  --space-feature: clamp(7.5rem, 10vw, 9rem);
+  --measure-copy: 42.5rem;
+  --measure-narrow: 32.5rem;
+  --radius-small: 2px;
 }
 
 * { box-sizing: border-box; }
@@ -23,6 +51,46 @@ button { font: inherit; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 .skip-link { position: fixed; top: 8px; left: 8px; z-index: 100; padding: 10px 14px; background: white; transform: translateY(-140%); }
 .skip-link:focus { transform: none; }
+
+/* Homepage entry — SVG airflow / data-flow reveal */
+.home-entry { position: fixed; z-index: 1000; inset: 0; overflow: hidden; color: #f4fbfd; background: #07152a; pointer-events: none; }
+.home-entry-waves { position: absolute; inset: 0; width: 100%; height: 100%; }
+.home-entry-waves path { vector-effect: non-scaling-stroke; }
+.home-entry-copy { position: absolute; z-index: 2; left: clamp(24px, 5vw, 80px); top: 50%; display: flex; align-items: center; gap: 22px; transform: translateY(-50%); }
+.home-entry-copy img { width: clamp(54px, 5vw, 82px); height: clamp(54px, 5vw, 82px); object-fit: contain; filter: brightness(0) invert(1); }
+.home-entry-copy p { margin: 0 0 9px; font-size: clamp(20px, 2.1vw, 34px); font-weight: 500; letter-spacing: .12em; }
+.home-entry-copy span,
+.home-entry-status { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: clamp(10px, .75vw, 12px); letter-spacing: .18em; }
+.home-entry-copy span { color: #6bd4e8; }
+.home-entry-status { position: absolute; z-index: 2; right: clamp(24px, 5vw, 80px); bottom: clamp(26px, 5vw, 64px); display: flex; align-items: center; gap: 13px; color: #7895a8; }
+.home-entry-status i { width: clamp(46px, 7vw, 112px); height: 1px; background: linear-gradient(90deg, rgba(96,203,225,.15), #60cbe1); transform-origin: left; animation: home-entry-scan 1.15s ease-in-out infinite; }
+.home-entry-status b { color: #60cbe1; font-weight: 500; }
+.home-entry.is-revealing .home-entry-copy,
+.home-entry.is-revealing .home-entry-status { opacity: 0; transform: translateY(-50%) translateY(-12px); transition: opacity .3s ease, transform .3s ease; }
+.home-entry.is-revealing .home-entry-status { transform: translateY(-12px); }
+.home-entry.is-complete { visibility: hidden; }
+.home-entry-running .site-header,
+.home-entry-running .hero-copy,
+.home-entry-running .workflow { opacity: 0; }
+.home-entry-complete .site-header { animation: home-header-in .65s cubic-bezier(.2,.8,.2,1) both; }
+.home-entry-complete .hero-copy { animation: home-copy-in .8s .08s cubic-bezier(.2,.8,.2,1) both; }
+.home-entry-complete .workflow { animation: home-copy-in .8s .18s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes home-entry-scan { 0%,100% { transform: scaleX(.25); opacity: .45; } 50% { transform: scaleX(1); opacity: 1; } }
+@keyframes home-header-in { from { opacity: 0; transform: translateY(-18px); } to { opacity: 1; transform: none; } }
+@keyframes home-copy-in { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 600px) {
+  .home-entry-copy { top: 46%; gap: 14px; }
+  .home-entry-copy p { letter-spacing: .08em; }
+  .home-entry-status { left: 24px; right: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-entry { display: none; }
+  .home-entry-running .site-header,
+  .home-entry-running .hero-copy,
+  .home-entry-running .workflow { opacity: 1; }
+}
 
 .grid-surface {
   background-color: var(--navy);
@@ -1235,15 +1303,15 @@ body.company-panel-open { overflow: hidden; }
   .resource-menu-groups a:hover { color: #1765bb; background: transparent; }
 }
 .mega-panel { grid-template-columns: 1fr; overflow: hidden; }
-.mega-menu-head { display: flex; align-items: end; justify-content: space-between; padding-bottom: 13px; border-bottom: 1px solid #dce5eb; }
-.mega-menu-head > span { display: grid; gap: 4px; color: #142d42; font-size: 28px; font-weight: 500; }
-.mega-menu-head small { font-family: monospace; font-size: 10px; letter-spacing: .12em; }
+.mega-menu-head { display: flex; align-items: end; justify-content: space-between; padding-bottom: 18px; border-bottom: 1px solid #dce5eb; }
+.mega-menu-head > .mega-menu-overview-link { display: grid; gap: 7px; padding: 0 !important; color: #142d42 !important; background: transparent !important; font-size: clamp(34px, 2.5vw, 42px); line-height: 1.05; font-weight: 500; }
+.mega-menu-head small { font-family: monospace; font-size: 12px; letter-spacing: .14em; }
 .mega-menu-head > a { padding: 0; color: #2367b9; font-size: 12px; }
 .mega-menu-head > a::after, .solutions-overview a::after { display: none; }
 .solutions-overview { display: grid; grid-template-columns: 2fr .8fr; }
 .solutions-column { padding: 17px 22px 8px 0; }
 .solutions-hvac { position: relative; min-height: 268px; overflow: hidden; }
-.solutions-hvac::after { content: ''; position: absolute; right: 22px; bottom: -52px; width: 310px; height: 190px; background: url('./assets/products/eco-ahu-compact-cutout.png') center/contain no-repeat; opacity: .1; filter: grayscale(.25); pointer-events: none; }
+.solutions-hvac::after { display: none; }
 .solutions-edim { padding-left: 28px; border-left: 1px solid #dce5eb; }
 .solutions-column-title { display: grid !important; justify-content: start !important; gap: 2px; padding: 0 0 18px !important; color: #1b66bb !important; background: transparent !important; }
 .solutions-column-title b { font-size: 26px; }
@@ -1251,6 +1319,17 @@ body.company-panel-open { overflow: hidden; }
 .solutions-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
 .solutions-groups-edim { grid-template-columns: 1fr; }
 .solutions-groups > div { display: grid; align-content: start; }
+.solution-group-visual { position: relative; min-height: 214px; overflow: hidden; isolation: isolate; }
+.solution-group-visual::after { content: ''; position: absolute; z-index: -1; right: -38%; bottom: -42%; width: 180%; height: 112%; background: var(--menu-product) center bottom/contain no-repeat; opacity: .12; filter: grayscale(.2) saturate(.55); transform: scale(1.05); transform-origin: right bottom; transition: opacity .28s ease, transform .45s ease, filter .28s ease; pointer-events: none; }
+.solution-group-visual:hover::after { opacity: .24; filter: grayscale(0) saturate(.85); transform: scale(1.12); }
+.solution-group-ventilation { --menu-product: url('./assets/products/eurus-impeller-cutout.png'); }
+.solution-group-air { --menu-product: url('./assets/products/eco-ahu-main-cutout.png'); }
+.solution-group-parts { --menu-product: url('./assets/products/fcm-controller-main-cutout.png'); }
+.solution-group-edim { --menu-product: url('./assets/menu-technology-blueprint.png'); }
+.solution-group-air::after { right: -46%; bottom: -32%; width: 205%; height: 108%; }
+.solution-group-parts::after { right: -32%; bottom: -44%; width: 175%; height: 120%; }
+.solution-group-edim::after { right: -38%; bottom: -46%; width: 180%; height: 126%; opacity: .14; border-radius: 10px; }
+.solution-group-visual > a { position: relative; z-index: 1; }
 .solutions-menu .solutions-groups a { justify-content: start; padding: 4px 0; color: #687b8c; font-size: 14px; }
 .solutions-menu .solutions-groups .solutions-group-title { padding-bottom: 7px; color: #183249; font-size: 16px; font-weight: 600; }
 .solutions-group-title { display: grid !important; gap: 2px; }
@@ -1277,20 +1356,23 @@ body.company-panel-open { overflow: hidden; }
   .site-nav > .nav-dropdown > .dropdown-trigger::before { display: none; }
   .nav-cta { min-height: 46px; margin-top: 15px; border: 0 !important; }
   .company-menu, .mega-panel { margin-left: 0; padding: 0 0 8px 14px; }
-  .company-overview { display: none !important; }
+  .company-overview { display: flex !important; align-items: end; min-height: 74px; padding: 13px 4px !important; color: white !important; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .company-overview > span { display: grid; gap: 3px; font-size: 17px; }
+  .company-overview > span small { color: #55bdd7; font-size: 9px; }
+  .company-overview > b { color: #69cce1; font-size: 10px; }
   .editorial-menu-body, .resource-menu-layout, .resource-menu-groups { display: grid; grid-template-columns: 1fr; gap: 0; padding-top: 4px; }
   .editorial-links { display: grid; }
   .editorial-links a, .resource-menu-groups a { justify-content: stretch; min-height: 48px; padding: 14px 4px 14px 0; color: #9aabba; border-bottom: 1px solid rgba(255,255,255,.08); font-size: 13px; }
-  .editorial-menu aside { display: none; }
-  .resource-menu-layout > .menu-image, .solutions-menu-visual { display: none; }
+  .editorial-menu aside, .resource-menu-layout > .menu-image { display: block; min-height: 0; height: 118px; margin: 10px 0 6px; }
+  .editorial-menu aside p { font-size: 12px; }
   .solutions-edim { padding-bottom: 14px; }
   .solutions-hvac { min-height: 0; }
   .solutions-hvac::after { display: none; }
   .resource-menu-groups > div { display: grid; padding: 13px 0 4px; }
   .resource-menu-groups small { color: #55bdd7; font-family: monospace; font-size: 10px; letter-spacing: .1em; }
   .mega-menu-head { padding: 9px 0 12px; border-color: rgba(255,255,255,.1); }
-  .mega-menu-head > span { color: white; font-size: 17px; }
-  .mega-menu-head > a { display: none; }
+  .mega-menu-head > .mega-menu-overview-link { color: white !important; font-size: 24px; }
+  .mega-menu-head > a:last-child { display: inline-flex; align-items: center; padding: 8px 0; color: #68d0e6; font-size: 11px; }
   .solutions-overview { grid-template-columns: 1fr; }
   .solutions-column { padding: 14px 0; }
   .solutions-edim { padding-left: 0; border: 0; border-top: 1px solid rgba(255,255,255,.1); }
@@ -1302,6 +1384,12 @@ body.company-panel-open { overflow: hidden; }
   body.nav-open { overflow: hidden; }
   .solutions-menu .solutions-groups a:not(.solutions-group-title) { display: none; }
   .solutions-menu .solutions-groups .solutions-group-title { min-height: 48px; display: flex; align-items: center; padding: 10px 0; }
+  .solution-group-visual { min-height: 112px; padding: 2px 0; border-bottom: 1px solid rgba(255,255,255,.07); }
+  .solution-group-visual::after { display: block; z-index: 0; right: -18%; bottom: -48%; width: 70%; height: 145%; opacity: .16; }
+  .solution-group-air::after { right: -24%; bottom: -32%; width: 82%; height: 132%; }
+  .solution-group-parts::after { right: -14%; bottom: -48%; width: 68%; height: 148%; }
+  .solutions-menu-visual { display: block; left: auto; right: 0; bottom: 6px; width: 46%; height: 78px; opacity: .86; }
+  .solutions-edim { padding-bottom: 92px; }
 }
 
 .clt-intro { padding: 120px 0; scroll-margin-top: 205px; overflow: hidden; background: #f4f7f9; }
@@ -1704,6 +1792,350 @@ html:has(.solutions-body) { scroll-snap-type: y mandatory; scroll-behavior: smoo
   .solution-product-card { flex-basis: min(76vw, 310px); min-width: 270px; height: min(43svh, 370px); }
   .solution-product-card h2 { font-size: 21px; }
 }
+
+/* ========================================================================== */
+/* NOVA DETAIL SYSTEM 2026 — premium industrial editorial layer               */
+/* ========================================================================== */
+.detail-system-page {
+  color: var(--color-ink);
+  background: var(--color-surface);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+.detail-system-page h1 { font-size: var(--type-hero) !important; }
+.detail-system-page h2 { font-size: var(--type-h2) !important; }
+.detail-system-page h3 { font-size: var(--type-card) !important; }
+.detail-system-page :where(p, li) { text-wrap: pretty; }
+.detail-system-page main p { font-size: max(14px, 1em) !important; }
+.detail-system-page main :where(small, figcaption, figcaption *) { font-size: 12px !important; }
+.detail-system-page :where(.section-no, .eyebrow, small, figcaption, .category-breadcrumb) {
+  font-size: var(--type-label);
+  line-height: 1.5;
+  letter-spacing: .09em;
+}
+.detail-system-page :where(.section-no, .eyebrow) {
+  margin: 0 0 1.25rem;
+  color: var(--cyan);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 500;
+}
+.detail-system-page :where(.category-hero h1, .family-hero h1, .solution-stage-heading h1) {
+  font-size: var(--type-hero);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+.detail-system-page :where(.eurus-copy h2, .partial-copy h2, .pullout-copy h2, .fan-lineup-title h2, .air-ahu-copy h2, .bio-hvac-copy h2, .ief-copy h2, .iaqs-copy h2, .clt-copy h2, .fcm-copy h2, .ecm-copy h2),
+.detail-system-page :where(.performance-heading h2, .partial-heading h2, .pullout-heading h2, .air-section-heading h2, .clt-section-heading h2, .clt-operation h2, .fcm-section-heading h2, .ecm-section-heading h2, .group-heading h2, .family-cta h2) {
+  font-size: var(--type-h2);
+  line-height: var(--leading-heading);
+  letter-spacing: -.028em;
+}
+.detail-system-page .eurus-copy h2,
+.detail-system-page .partial-copy h2,
+.detail-system-page .pullout-copy h2,
+.detail-system-page .fan-lineup-title h2,
+.detail-system-page .air-ahu-copy h2,
+.detail-system-page .bio-hvac-copy h2,
+.detail-system-page .ief-copy h2,
+.detail-system-page .iaqs-copy h2,
+.detail-system-page .clt-copy h2,
+.detail-system-page .fcm-copy h2,
+.detail-system-page .ecm-copy h2 {
+  font-size: var(--type-product) !important;
+  line-height: 1.02;
+  letter-spacing: -.04em;
+}
+.detail-system-page .clt-copy h2 { font-weight: 500; }
+.detail-system-page .clt-copy h2 > span { font-weight: 400; }
+.detail-system-page :where(article h3, .fan-detail h3, .clt-size-copy h3, .integration-card h4, .ahu-sec-card h4) {
+  font-size: var(--type-card);
+  line-height: 1.35;
+}
+.detail-system-page :where(.eurus-lead, .partial-lead, .pullout-lead, .air-ahu-lead, .bio-hvac-lead, .ief-lead, .iaqs-lead, .clt-lead, .fcm-lead, .ecm-lead) {
+  max-width: var(--measure-copy);
+  font-size: var(--type-lead) !important;
+  line-height: 1.62 !important;
+}
+.detail-system-page :where(.eurus-copy, .partial-copy, .pullout-copy, .air-ahu-copy, .bio-hvac-copy, .ief-copy, .iaqs-copy, .clt-copy, .fcm-copy, .ecm-copy) > p:not(.section-no) {
+  max-width: var(--measure-copy);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+.detail-system-page :where(article p, .family-card p, .solution-product-card p) {
+  font-size: var(--type-secondary);
+  line-height: 1.7;
+}
+.detail-system-page :where(.performance-note, .partial-note, .pullout-note, .bio-note, .ief-note, .control-note) {
+  font-size: var(--type-note);
+  line-height: 1.7;
+}
+
+/* Shared section rhythm */
+.detail-system-page :where(.eurus-intro, .partial-intro, .pullout-intro, .fan-lineup-intro, .air-ahu-intro, .bio-hvac-intro, .ief-intro, .iaqs-intro, .clt-intro, .fcm-intro, .ecm-intro) { padding-block: var(--space-feature); }
+.detail-system-page :where(.eurus-performance, .eurus-concept, .partial-value, .partial-config, .pullout-value, .pullout-maintenance, .fan-lineup-showcase, .air-foundation, .bio-hvac-value, .ief-performance, .air-capabilities, .air-control, .iaqs-performance, .iaqs-architecture, .iaqs-telemetry, .clt-sizes, .clt-value, .clt-operation, .fcm-performance, .fcm-capabilities, .fcm-hardware, .fcm-dashboard-section, .fcm-applications, .ecm-performance, .ecm-modules-section, .ecm-psychrometric-section, .ecm-ahu-view) { padding-block: var(--space-standard); }
+.detail-system-page .family-cta { padding-block: var(--space-compact); }
+.detail-system-page :where(.performance-heading, .partial-heading, .pullout-heading, .air-section-heading, .clt-section-heading, .fcm-section-heading, .ecm-section-heading) {
+  gap: clamp(2.5rem, 6vw, 5rem);
+  margin-bottom: clamp(2.75rem, 5vw, 4rem);
+}
+.detail-system-page :where(.performance-heading, .partial-heading, .pullout-heading, .air-section-heading, .clt-section-heading, .fcm-section-heading, .ecm-section-heading) > p {
+  max-width: var(--measure-narrow);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+
+/* Product introduction split: visual 55–60%, text 40–45%. */
+.detail-system-page :where(.eurus-intro-grid, .partial-intro-grid, .pullout-intro-grid, .air-ahu-grid, .bio-hvac-grid, .ief-intro-grid, .iaqs-intro-grid, .clt-intro-grid, .fcm-intro-grid, .ecm-intro-grid) {
+  grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
+  gap: clamp(3rem, 6vw, 5.5rem);
+}
+.detail-system-page :where(.eurus-visual, .partial-visual, .pullout-visual, .air-ahu-visual, .bio-hvac-visual, .ief-visual, .iaqs-visual, .fcm-visual, .ecm-visual) {
+  min-height: clamp(30rem, 50vw, 39rem);
+}
+.detail-system-page :where(.eurus-visual img, .partial-visual img, .pullout-visual img, .bio-hvac-visual img, .ief-visual img, .iaqs-visual img, .fcm-visual img, .ecm-visual img) { width: min(94%, 43rem); }
+.detail-system-page :where(.eurus-visual figcaption, .partial-visual figcaption, .pullout-visual figcaption, .air-ahu-visual figcaption, .bio-hvac-visual figcaption, .ief-visual figcaption, .iaqs-visual figcaption, .fcm-visual figcaption, .ecm-visual figcaption) { font-size: var(--type-note); }
+
+/* Editorial data groups: rules, whitespace and type replace repeated tiles. */
+.detail-system-page :where(.performance-grid, .concept-grid, .pullout-metrics, .pullout-maintenance-grid, .air-foundation-grid, .bio-value-grid, .ief-metrics, .ief-proof-grid, .clt-value-grid, .fcm-metrics-grid, .ecm-metrics-grid) {
+  gap: 0;
+  border: 0;
+  border-top: 1px solid var(--color-rule-dark);
+  background: transparent;
+}
+.detail-system-page :where(.performance-grid, .concept-grid, .pullout-metrics, .pullout-maintenance-grid, .air-foundation-grid, .bio-value-grid, .ief-metrics, .ief-proof-grid, .clt-value-grid, .fcm-metrics-grid, .ecm-metrics-grid) > article {
+  min-height: 15.5rem;
+  padding: 2rem clamp(1.25rem, 2.5vw, 2rem);
+  border: 0;
+  border-right: 1px solid var(--color-rule-dark);
+  border-bottom: 1px solid var(--color-rule-dark);
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  backdrop-filter: none;
+}
+.detail-system-page :where(.performance-grid, .concept-grid, .pullout-metrics, .pullout-maintenance-grid, .air-foundation-grid, .bio-value-grid, .ief-metrics, .ief-proof-grid, .clt-value-grid, .fcm-metrics-grid, .ecm-metrics-grid) > article:first-child { border-left: 1px solid var(--color-rule-dark); }
+.detail-system-page :where(.performance-grid, .partial-metrics, .pullout-metrics, .ief-metrics, .fcm-metrics-grid, .ecm-metrics-grid) strong {
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  line-height: 1;
+}
+.detail-system-page :where(.performance-grid, .partial-metrics, .pullout-metrics, .ief-metrics, .fcm-metrics-grid, .ecm-metrics-grid) small { font-size: var(--type-label); }
+
+/* Cards only remain where the information is an independent choice/group. */
+.detail-system-page .partial-metrics { gap: 1px; background: var(--color-rule-dark); }
+.detail-system-page .partial-metrics article {
+  min-height: 17rem;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: rgba(255,255,255,.055);
+  backdrop-filter: none;
+}
+.detail-system-page :where(.partial-config-grid, .fcm-capability-grid, .ecm-module-grid) { gap: 1px; background: var(--color-rule); }
+.detail-system-page :where(.partial-config-grid, .fcm-capability-grid, .ecm-module-grid) article {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: var(--color-surface);
+}
+.detail-system-page .partial-config-grid article { background: rgba(255,255,255,.055); }
+.detail-system-page .partial-config-grid article::after { display: none; }
+.detail-system-page :where(.partial-acclaim span, .partial-first-badge, .ecm-patent-badge) { border-radius: 0; box-shadow: none; }
+.detail-system-page :where(.partial-acclaim small, .partial-first-badge small) { font-size: var(--type-label); }
+
+/* HVAC / EDIM overview */
+.detail-system-page .family-hero { padding-block: var(--space-standard) var(--space-compact); }
+.detail-system-page .family-hero-row > p { max-width: var(--measure-copy); font-size: var(--type-lead); line-height: 1.7; }
+.detail-system-page .family-content { padding-block: var(--space-standard); }
+.detail-system-page .family-group + .family-group { margin-top: var(--space-standard); }
+.detail-system-page .group-heading {
+  grid-template-columns: 5rem minmax(0, 1fr) minmax(17rem, .7fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  margin-bottom: 3.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-rule);
+}
+.detail-system-page .group-heading > div:last-child > p { font-size: var(--type-body); line-height: 1.7; }
+.detail-system-page .family-grid { gap: clamp(1.25rem, 2.5vw, 2.25rem); }
+.detail-system-page .family-card {
+  min-height: clamp(28rem, 40vw, 36rem);
+  padding: 0 0 1.5rem;
+  border: 0;
+  border-bottom: 1px solid var(--color-rule);
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+.detail-system-page .family-card:hover { transform: translateY(-3px); box-shadow: none; }
+.detail-system-page .family-card > span { font-size: clamp(5.5rem, 8vw, 8rem); opacity: .55; }
+.detail-system-page .family-card-visual { min-height: 20rem; }
+.detail-system-page .family-card-visual img { max-width: 96%; max-height: 19rem; }
+.detail-system-page .family-card h3 { font-size: var(--type-card); }
+.detail-system-page .family-card p { font-size: var(--type-secondary); }
+.detail-system-page .edim-family-grid .family-card-placeholder { min-height: 28rem; border-bottom-color: rgba(38,143,173,.28); }
+
+/* Technical evidence: readable labels and precise, flat surfaces. */
+.detail-system-page :where(.fcm-dash-window, .ahu-flow-board, .iaqs-dash-window, .psychrometric-board, .ecm-psychrometric-board) {
+  border-radius: var(--radius-small);
+  box-shadow: 0 1.5rem 3rem rgba(5,24,40,.14);
+}
+.detail-system-page :where(.fcm-dash-window small, .ahu-flow-board small, .iaqs-dash-window small, .fcm-dash-window .dash-label, .ahu-flow-board .sec-label, .telemetry-grid small, .iaqs-tele-card small) { font-size: var(--type-note); line-height: 1.5; }
+.detail-system-page main :where(figcaption, figcaption *, article small, article > span, [class*="-badge"], [class*="-tag"]) {
+  font-size: max(var(--type-note), 12px);
+}
+.detail-system-page main svg text { font-size: 11px !important; }
+.detail-system-page :where(.hw-specs, .module-specs, .sec-metrics, .telemetry-grid) { font-size: var(--type-secondary); }
+.detail-system-page :where(.fcm-hw-card, .fcm-sensor-network, .fcm-app-card, .integration-card) { border-radius: 0; box-shadow: none; }
+
+/* Solutions rail shares the same type and visual hierarchy. */
+.detail-system-page .solution-stage { padding-block: 8rem 3rem; }
+.detail-system-page .solution-stage-inner { min-height: calc(100svh - 11rem); }
+.detail-system-page .solution-stage-heading p:not(.eyebrow) { max-width: var(--measure-copy); font-size: var(--type-body); line-height: 1.7; }
+.detail-system-page .solution-stage-heading > a { font-size: var(--type-secondary); }
+.detail-system-page .slider-toolbar { margin-top: 3rem; }
+.detail-system-page .slider-toolbar :where(b, span, button) { font-size: var(--type-secondary); }
+.detail-system-page .solution-product-card {
+  flex-basis: min(31vw, 25rem);
+  min-width: 20rem;
+  height: clamp(23rem, 43vh, 29rem);
+  padding: 1.5rem;
+  border-radius: var(--radius-small);
+  box-shadow: none;
+}
+.detail-system-page .solution-product-card > small { font-size: var(--type-label); }
+.detail-system-page .solution-product-card h2 { font-size: var(--type-card) !important; }
+.detail-system-page .solution-product-card p { font-size: var(--type-secondary); }
+
+/* Limit repeated background numerals/orbits to the lead product. */
+.detail-system-page :where(.partial-visual::after, .pullout-visual::after, .fcm-visual::before, .ecm-visual::before) { display: none; }
+.detail-system-page :where(.partial-rings, .pullout-orbit, .fcm-orbit, .ecm-orbit) { opacity: .42; }
+
+@media (max-width: 900px) {
+  .detail-system-page {
+    --type-hero: clamp(2.75rem, 10vw, 3.75rem);
+    --type-product: clamp(3rem, 9vw, 4.25rem);
+    --type-h2: clamp(2.15rem, 7.6vw, 2.9rem);
+    --type-h3: clamp(1.5rem, 5.5vw, 1.85rem);
+    --space-compact: clamp(3.75rem, 10vw, 4.5rem);
+    --space-standard: clamp(5rem, 13vw, 6.25rem);
+    --space-feature: clamp(5.75rem, 15vw, 7rem);
+  }
+  .detail-system-page :where(.eurus-intro-grid, .partial-intro-grid, .pullout-intro-grid, .air-ahu-grid, .bio-hvac-grid, .ief-intro-grid, .iaqs-intro-grid, .clt-intro-grid, .fcm-intro-grid, .ecm-intro-grid) { grid-template-columns: 1fr; }
+  .detail-system-page :where(.eurus-visual, .partial-visual, .pullout-visual, .air-ahu-visual, .bio-hvac-visual, .ief-visual, .iaqs-visual, .fcm-visual, .ecm-visual) { min-height: clamp(25rem, 80vw, 34rem); }
+  .detail-system-page .group-heading { grid-template-columns: 4rem 1fr; }
+  .detail-system-page .group-heading > div:last-child { grid-column: 2; }
+  .detail-system-page .family-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .detail-system-page .family-card { min-height: 30rem; }
+}
+
+@media (max-width: 600px) {
+  .detail-system-page {
+    --type-hero: clamp(2.55rem, 12vw, 3.3rem);
+    --type-product: clamp(2.75rem, 13vw, 3.5rem);
+    --type-h2: clamp(2rem, 9.5vw, 2.55rem);
+    --type-h3: clamp(1.45rem, 6.5vw, 1.75rem);
+    --type-card: clamp(1.125rem, 5.2vw, 1.3rem);
+    --type-lead: clamp(1.0625rem, 4.6vw, 1.1875rem);
+    --type-body: clamp(.9375rem, 4vw, 1rem);
+    --type-secondary: clamp(.875rem, 3.7vw, .9375rem);
+    --type-label: clamp(.75rem, 3.2vw, .8125rem);
+    --space-compact: 4rem;
+    --space-standard: 5rem;
+    --space-feature: 5.5rem;
+  }
+  .detail-system-page .container { width: min(calc(100% - 2rem), var(--container)); }
+  .detail-system-page .category-hero { padding-block: 5rem 4rem; }
+  .detail-system-page .category-breadcrumb { margin-bottom: 2.5rem; }
+  .detail-system-page :where(.performance-heading, .partial-heading, .pullout-heading, .air-section-heading, .clt-section-heading, .fcm-section-heading, .ecm-section-heading) { grid-template-columns: 1fr; gap: 1.5rem; }
+  .detail-system-page :where(.eurus-visual, .partial-visual, .pullout-visual, .air-ahu-visual, .bio-hvac-visual, .ief-visual, .iaqs-visual, .fcm-visual, .ecm-visual) { min-height: clamp(21rem, 100vw, 27rem); }
+  .detail-system-page :where(.performance-grid, .concept-grid, .partial-metrics, .pullout-metrics, .pullout-maintenance-grid, .air-foundation-grid, .bio-value-grid, .ief-metrics, .ief-proof-grid, .clt-value-grid, .fcm-metrics-grid, .ecm-metrics-grid) { grid-template-columns: 1fr; }
+  .detail-system-page :where(.performance-grid, .concept-grid, .partial-metrics, .pullout-metrics, .pullout-maintenance-grid, .air-foundation-grid, .bio-value-grid, .ief-metrics, .ief-proof-grid, .clt-value-grid, .fcm-metrics-grid, .ecm-metrics-grid) > article {
+    min-height: 0;
+    padding: 2rem 0;
+    border-right: 0;
+    border-left: 0 !important;
+  }
+  .detail-system-page .partial-metrics > article { padding-inline: 1.25rem; }
+  .detail-system-page :where(.partial-config-grid, .fcm-capability-grid, .ecm-module-grid) { grid-template-columns: 1fr; }
+  .detail-system-page .group-heading { grid-template-columns: 1fr; gap: .75rem; }
+  .detail-system-page .group-heading > div:last-child { grid-column: 1; margin-top: .75rem; }
+  .detail-system-page .family-grid { grid-template-columns: 1fr; }
+  .detail-system-page .family-card { min-height: 27rem; padding-bottom: 1.75rem; }
+  .detail-system-page .family-card-visual { min-height: 18rem; }
+  .detail-system-page .solution-stage { min-height: 100svh; padding-block: 7rem 2.5rem; overflow-y: auto; }
+  .detail-system-page .solution-stage-inner { min-height: calc(100svh - 9.5rem); }
+  .detail-system-page .solution-stage-heading { align-items: flex-start; }
+  .detail-system-page .solution-product-card { min-width: min(18.25rem, calc(100vw - 3.5rem)); height: 25rem; }
+  .detail-system-page :where(.fcm-dash-window, .ahu-flow-board, .iaqs-dash-window, .psychrometric-board, .ecm-psychrometric-board) { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .detail-system-page :where(.fcm-dash-body, .ahu-sections-grid, .iaqs-dash-body) { min-width: 42rem; }
+}
+
+/* CLT dual-model scientific comparison viewport */
+.detail-system-page .clt-hero-products { min-height: 38rem; overflow: hidden; border: 1px solid rgba(62,158,183,.24); background: radial-gradient(circle at 62% 42%,rgba(44,156,184,.18),transparent 37%),#0a1d31; isolation: isolate; }
+.detail-system-page .clt-hero-products::before { inset: 14% 10%; z-index: -1; border: 1px solid rgba(79,194,223,.14); border-radius: 50%; background: transparent; box-shadow: 0 0 0 4.5rem rgba(79,194,223,.025),0 0 0 9rem rgba(79,194,223,.018); }
+.clt-hero-grid { position: absolute; inset: 0; z-index: -2; opacity: .48; background-image: linear-gradient(rgba(89,183,207,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(89,183,207,.1) 1px,transparent 1px); background-size: 2rem 2rem; mask-image: linear-gradient(to bottom,black 68%,transparent); }
+.clt-hero-readout { position: absolute; z-index: 5; top: 1.4rem; left: 1.5rem; display: grid; gap: .25rem; }
+.clt-hero-readout span,.clt-hero-status span { color: #67c9de; font: 12px ui-monospace,monospace; letter-spacing: .1em; }
+.clt-hero-readout b,.clt-hero-status b { color: #7890a1; font: 11px ui-monospace,monospace; letter-spacing: .08em; }
+.clt-hero-scale { position: absolute; z-index: 4; top: 6rem; left: 50%; display: flex; align-items: center; gap: .75rem; color: #66889c; font: 11px ui-monospace,monospace; letter-spacing: .08em; transform: translateX(-50%); white-space: nowrap; }
+.clt-hero-scale i { width: 2.75rem; height: 1px; background: #3b8195; }
+.detail-system-page .clt-hero-item img { filter: drop-shadow(0 2rem 1.5rem rgba(0,0,0,.36)); transition: transform .45s cubic-bezier(.2,.8,.2,1),filter .45s; }
+.detail-system-page .clt-hero-item:hover img { filter: drop-shadow(0 2.4rem 1.8rem rgba(0,0,0,.48)); transform: translateY(-.5rem) scale(1.025); }
+.detail-system-page .clt-hero-item span { display: grid; gap: .15rem; padding: .7rem .9rem; color: #eaf7fa; border: 1px solid rgba(91,199,222,.35); border-radius: 0; background: rgba(6,25,43,.82); font-size: 1.25rem; backdrop-filter: blur(10px); }
+.detail-system-page .clt-hero-item span small { color: #58bdd4; font: 10px ui-monospace,monospace; letter-spacing: .1em; }
+.detail-system-page .clt-hero-item figcaption { position: absolute; z-index: 3; color: #718a9c; font: 11px ui-monospace,monospace; letter-spacing: .08em; }
+.detail-system-page .clt-hero-item-50 { left: -2%; bottom: 2.25rem; width: 52%; height: 63%; }
+.detail-system-page .clt-hero-item-50 figcaption { left: 1.5rem; bottom: -.6rem; }
+.detail-system-page .clt-hero-item-100 { right: -1%; top: 5.5rem; width: 68%; height: 78%; }
+.detail-system-page .clt-hero-item-100 figcaption { right: 1.5rem; bottom: -.45rem; }
+.clt-hero-status { position: absolute; z-index: 5; right: 1.5rem; bottom: 1.25rem; display: grid; justify-items: end; gap: .2rem; }
+.clt-hero-status span { display: flex; align-items: center; gap: .5rem; }
+.clt-hero-status i { width: .45rem; height: .45rem; border-radius: 50%; background: #62d0e5; box-shadow: 0 0 0 .3rem rgba(98,208,229,.1); animation: clt-status-pulse 1.8s ease-in-out infinite; }
+@keyframes clt-status-pulse { 50% { opacity: .4; transform: scale(.75); } }
+@media (max-width:900px) { .detail-system-page .clt-hero-products{min-height:34rem} }
+@media (max-width:600px) { .detail-system-page .clt-hero-products{min-height:29rem}.clt-hero-readout{top:1rem;left:1rem}.clt-hero-scale{top:4.6rem}.detail-system-page .clt-hero-item-50{left:-7%;width:58%;height:59%}.detail-system-page .clt-hero-item-100{right:-8%;top:4.8rem;width:72%;height:72%}.detail-system-page .clt-hero-item span{font-size:1rem}.detail-system-page .clt-hero-item figcaption,.clt-hero-status b{display:none}.clt-hero-status{right:1rem;bottom:1rem}.clt-hero-status span{font-size:10px!important} }
+
+/* CLT engineering model viewer */
+.clt-model-viewer { color: #dce9ef; border-top: 1px solid rgba(77,185,210,.45); background: #081a2d; }
+.clt-model-toolbar { min-height: 5.5rem; display: flex; align-items: stretch; justify-content: space-between; border-bottom: 1px solid rgba(154,207,220,.17); }
+.clt-model-toolbar > p { display: grid; align-content: center; gap: .15rem; margin: 0; padding: 1rem 1.5rem; }
+.clt-model-toolbar > p span { color: var(--cyan); font: 500 var(--type-label)/1.4 ui-monospace, monospace; letter-spacing: .1em; }
+.clt-model-toolbar > p b { color: #f3f8fa; font-size: var(--type-secondary); font-weight: 400; }
+.clt-model-toolbar > div { display: flex; }
+.clt-model-toolbar button { min-width: 8.5rem; display: inline-flex; align-items: center; justify-content: center; gap: .75rem; padding: 0 1.5rem; color: #93a8b7; border: 0; border-left: 1px solid rgba(154,207,220,.17); background: transparent; font-size: var(--type-card); cursor: pointer; transition: color .25s, background .25s; }
+.clt-model-toolbar button span { color: #5f8195; font: var(--type-label) ui-monospace, monospace; }
+.clt-model-toolbar button:hover, .clt-model-toolbar button[aria-selected="true"] { color: white; background: rgba(67,190,217,.11); }
+.clt-model-toolbar button[aria-selected="true"] span { color: var(--cyan); }
+.clt-model-workspace { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(20rem, .55fr); min-height: 44rem; }
+.clt-model-stage { --model-rx: 0deg; --model-ry: 0deg; --model-x: 0px; --model-y: 0px; position: relative; min-width: 0; overflow: hidden; perspective: 850px; background: radial-gradient(circle at 50% 42%, rgba(62,164,193,.14), transparent 37%), #0b2034; isolation: isolate; }
+.clt-blueprint-grid { position: absolute; inset: 0; z-index: -1; opacity: .42; background-image: linear-gradient(rgba(81,180,205,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(81,180,205,.12) 1px,transparent 1px); background-size: 2rem 2rem; mask-image: linear-gradient(to bottom,black,transparent 95%); }
+.clt-blueprint-grid::after { content: ''; position: absolute; inset: 8% 12%; border: 1px solid rgba(93,194,218,.14); border-radius: 50%; box-shadow: 0 0 0 4rem rgba(93,194,218,.025),0 0 0 8rem rgba(93,194,218,.018); }
+.clt-model-object { position: absolute; inset: 6% 7% 10%; display: grid; place-items: center; margin: 0; opacity: 0; visibility: hidden; transform-style: preserve-3d; transform: rotateX(var(--model-rx)) rotateY(var(--model-ry)); transition: opacity .4s,visibility .4s,transform .12s ease-out; }
+.clt-model-object.is-active { opacity: 1; visibility: visible; }
+.clt-model-object img { width: min(80%, 42rem); max-height: 34rem; object-fit: contain; filter: drop-shadow(0 2.2rem 1.8rem rgba(0,0,0,.34)); transform: translate3d(var(--model-x),var(--model-y),2.5rem); transition: transform .12s ease-out; }
+.clt-model-object figcaption { position: absolute; inset: auto 0 0; display: flex; justify-content: space-between; padding-top: 1rem; color: #71899a; border-top: 1px solid rgba(139,197,212,.16); font-family: ui-monospace,monospace; }
+.clt-model-object figcaption b { color: #6ed0e4; font-weight: 500; }
+.clt-model-axis { position: absolute; left: 2rem; bottom: 4.5rem; width: 5rem; height: 5rem; opacity: .7; }
+.clt-model-axis i { position: absolute; left: 50%; bottom: 50%; width: 3.1rem; height: 1px; background: #5fc7dd; transform-origin: left; }
+.clt-model-axis .axis-y { transform: rotate(-90deg); }.clt-model-axis .axis-z { transform: rotate(140deg); }
+.clt-model-axis span { position: absolute; color: #71bfd2; font: 11px ui-monospace,monospace; }.clt-model-axis span:nth-of-type(1){right:-.2rem;bottom:47%}.clt-model-axis span:nth-of-type(2){left:46%;top:-.35rem}.clt-model-axis span:nth-of-type(3){left:-.2rem;bottom:-.1rem}
+.clt-dimension { position: absolute; z-index: 2; top: 2rem; left: 50%; display: flex; align-items: center; gap: .7rem; color: #77c9db; font: var(--type-label) ui-monospace,monospace; letter-spacing: .08em; transform: translateX(-50%); }
+.clt-dimension i { width: 3rem; height: 1px; background: #438fa3; }
+.clt-model-hint { position: absolute; right: 2rem; bottom: 1.25rem; margin: 0; color: #5e7789; font: var(--type-note) ui-monospace,monospace; letter-spacing: .08em; }
+.clt-model-data { position: relative; display: flex; flex-direction: column; padding: clamp(2rem,4vw,3.5rem); border-left: 1px solid rgba(154,207,220,.17); background: #071729; }
+.clt-model-data > article { display: none; animation: clt-panel-in .42s cubic-bezier(.2,.8,.2,1) both; }
+.clt-model-data > article.is-active { display: block; }
+@keyframes clt-panel-in { from { opacity: 0; transform: translateY(1rem); } }
+.clt-model-data .model-index { margin: 0 0 2.5rem; color: var(--cyan); font: var(--type-label) ui-monospace,monospace; letter-spacing: .1em; }
+.clt-model-data h3 { margin: 0 0 1.25rem; color: white; font-size: var(--type-h3) !important; font-weight: 400; }
+.clt-model-data .model-lead { margin: 0 0 2.25rem; color: #9fb1bf; font-size: var(--type-body) !important; line-height: 1.75; }
+.clt-model-data dl { margin: 0; border-top: 1px solid rgba(150,203,216,.18); }
+.clt-model-data dl div { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding: .9rem 0; border-bottom: 1px solid rgba(150,203,216,.12); }
+.clt-model-data dt { color: #668397; font: var(--type-label) ui-monospace,monospace; }.clt-model-data dd { margin: 0; color: #d7e1e7; font-size: var(--type-secondary); }
+.clt-model-data ul { display: grid; gap: .55rem; margin: 2rem 0 0; padding: 0; color: #91a5b3; font-size: var(--type-secondary); list-style: none; }.clt-model-data li::before { content: '+ '; color: var(--cyan); }
+.clt-engineering-note { margin: auto 0 0; padding-top: 2rem; border-top: 1px solid rgba(150,203,216,.16); }
+.clt-engineering-note b,.clt-engineering-note span { display: block; }.clt-engineering-note b { margin-bottom: .6rem; color: #57bed5; font: var(--type-label) ui-monospace,monospace; letter-spacing: .09em; }.clt-engineering-note span { color: #6f8798; font-size: var(--type-note); line-height: 1.7; }
+@media (max-width:900px) { .clt-model-workspace{grid-template-columns:1fr}.clt-model-stage{min-height:36rem}.clt-model-data{min-height:34rem;border-top:1px solid rgba(154,207,220,.17);border-left:0} }
+@media (max-width:600px) { .clt-model-toolbar{display:grid}.clt-model-toolbar>div{border-top:1px solid rgba(154,207,220,.17)}.clt-model-toolbar button{flex:1;min-width:0;min-height:4rem}.clt-model-stage{min-height:29rem}.clt-model-object{inset:10% 3% 12%}.clt-model-object img{width:94%}.clt-model-axis{display:none}.clt-model-hint{left:1rem;right:auto;font-size:11px!important}.clt-model-data{min-height:37rem;padding:2rem 1.25rem} }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
