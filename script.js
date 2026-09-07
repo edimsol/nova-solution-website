@@ -638,19 +638,41 @@ if (cltViewer) {
   const selectors = [...cltViewer.querySelectorAll('[data-clt-select]')];
   const models = [...cltViewer.querySelectorAll('[data-clt-model]')];
   const panels = [...cltViewer.querySelectorAll('[data-clt-panel]')];
+  const viewButtons = [...cltViewer.querySelectorAll('[data-clt-view]')];
   const dimension = cltViewer.querySelector('[data-clt-dimension]');
+  const backdropLabel = cltViewer.querySelector('[data-clt-backdrop]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   const selectCltModel = (size) => {
     cltViewer.dataset.activeModel = size;
     selectors.forEach((button) => button.setAttribute('aria-selected', String(button.dataset.cltSelect === size)));
     models.forEach((model) => model.classList.toggle('is-active', model.dataset.cltModel === size));
+    models.forEach((model) => {
+      const viewer = model.querySelector('model-viewer');
+      if (!viewer) return;
+      viewer.toggleAttribute('auto-rotate', model.dataset.cltModel === size && !reducedMotion.matches);
+    });
     panels.forEach((panel) => panel.classList.toggle('is-active', panel.dataset.cltPanel === size));
     if (dimension) dimension.textContent = `${size}A CONNECTION`;
+    if (backdropLabel) backdropLabel.textContent = `${size}A`;
+    cltViewer.querySelectorAll('.clt-view-controls img').forEach((image) => { image.src = `./assets/products/clt-${size}a-cutout.png`; });
+    const activeViewer = models.find((model) => model.dataset.cltModel === size)?.querySelector('model-viewer');
+    if (activeViewer) activeViewer.setAttribute('camera-orbit', '35deg 68deg auto');
+    viewButtons.forEach((button) => button.classList.toggle('is-active', button.dataset.cltView === 'iso'));
   };
   selectors.forEach((button) => button.addEventListener('click', () => selectCltModel(button.dataset.cltSelect)));
+  const cameraViews = { iso: '35deg 68deg auto', front: '0deg 75deg auto', side: '90deg 75deg auto' };
+  const selectCltView = (view) => {
+    const activeModel = models.find((model) => model.classList.contains('is-active'));
+    const viewer = activeModel?.querySelector('model-viewer');
+    if (!viewer || !cameraViews[view]) return;
+    viewer.setAttribute('camera-orbit', cameraViews[view]);
+    if (typeof viewer.jumpCameraToGoal === 'function') viewer.jumpCameraToGoal();
+    viewButtons.forEach((button) => button.classList.toggle('is-active', button.dataset.cltView === view));
+  };
+  viewButtons.forEach((button) => button.addEventListener('click', () => selectCltView(button.dataset.cltView)));
 
-  if (stage) {
+  if (stage && !stage.querySelector('model-viewer')) {
     const resetModel = () => {
       stage.style.setProperty('--model-rx', '0deg');
       stage.style.setProperty('--model-ry', '0deg');
