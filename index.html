@@ -9,40 +9,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="icon" href="./assets/nova-symbol.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="./styles.css?v=20260906-home-intro" />
-    <script src="./script.js?v=20260906-home-intro" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=20260907-logo-sequence" />
+    <script src="./script.js?v=20260907-logo-sequence" defer></script>
   </head>
   <body class="home-body">
     <a class="skip-link" href="#main">본문으로 바로가기!!</a>
 
     <div class="home-entry" data-home-entry aria-hidden="true">
-      <div class="home-entry-copy">
-        <img src="./assets/nova-symbol-source.png" alt="" width="1254" height="1254" />
-        <div>
-          <p>NOVA SOLUTION</p>
-          <span>ENGINEERING · AIR · DATA</span>
-        </div>
+      <div class="home-entry-stage">
+        <div class="home-entry-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="home-entry-logo"><span class="home-entry-logo-ghost"></span><img src="./assets/nova-symbol-source.png" alt="" width="1254" height="1254" /></div>
+        <p>NOVA SOLUTION</p>
+        <span>ENGINEERING · AIR · DATA</span>
       </div>
       <div class="home-entry-status">
         <span>MANUFACTURING FLOW</span>
         <i></i>
         <b>CONNECTED</b>
       </div>
-      <svg class="home-entry-waves" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false">
-        <defs>
-          <linearGradient id="entry-wave-steel" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#173e59" />
-            <stop offset="1" stop-color="#0b263d" />
-          </linearGradient>
-          <linearGradient id="entry-wave-cyan" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stop-color="#2c9fbd" />
-            <stop offset="1" stop-color="#60cbe1" />
-          </linearGradient>
-        </defs>
-        <path data-entry-wave="back" fill="url(#entry-wave-steel)" />
-        <path data-entry-wave="accent" fill="url(#entry-wave-cyan)" />
-        <path data-entry-wave="front" fill="#07152a" />
-      </svg>
+      <div class="home-entry-scan" aria-hidden="true"></div>
     </div>
 
     <header class="site-header" data-header>
@@ -76,20 +61,9 @@
               <a class="button button-primary" href="./solutions.html">Explore Solutions</a>
               <a class="button button-secondary" href="./contact.html">Contact Us</a>
             </div>
-            <a class="scroll-cue" href="#workflow"><span></span>Scroll Down</a>
+            <a class="scroll-cue" href="#company"><span></span>Scroll Down</a>
           </div>
 
-          <div id="workflow" class="workflow reveal" aria-label="제품에서 ERP까지의 제조 데이터 흐름">
-            <article class="workflow-step"><div class="step-top"><span class="step-number">01</span><span class="step-icon" aria-hidden="true">▱</span></div><div><small>PRODUCT</small><strong>제품 정의</strong><p>요구 조건과 제품 사양을 기준으로 시작합니다.</p><em>사양 · 요구사항</em></div></article>
-            <span class="flow-arrow" aria-hidden="true">→</span>
-            <article class="workflow-step"><div class="step-top"><span class="step-number">02</span><span class="step-icon" aria-hidden="true">▣</span></div><div><small>DESIGN</small><strong>설계 연결</strong><p>도면과 설계 정보를 하나의 기준으로 관리합니다.</p><em>도면 · 설계 데이터</em></div></article>
-            <span class="flow-arrow" aria-hidden="true">→</span>
-            <article class="workflow-step"><div class="step-top"><span class="step-number">03</span><span class="step-icon" aria-hidden="true">☷</span></div><div><small>BOM</small><strong>구성 표준화</strong><p>부품 구성과 변경 이력을 생산 기준에 반영합니다.</p><em>구성 · BOM</em></div></article>
-            <span class="flow-arrow" aria-hidden="true">→</span>
-            <article class="workflow-step"><div class="step-top"><span class="step-number">04</span><span class="step-icon" aria-hidden="true">♙</span></div><div><small>PRODUCTION</small><strong>생산 실행</strong><p>현장 조건에 맞춰 제조 정보가 실행으로 이어집니다.</p><em>작업 · 생산 이력</em></div></article>
-            <span class="flow-arrow" aria-hidden="true">→</span>
-            <article class="workflow-step"><div class="step-top"><span class="step-number">05</span><span class="step-icon" aria-hidden="true">◎</span></div><div><small>ERP</small><strong>경영 연계</strong><p>축적된 데이터를 ERP와 연결해 다음 판단을 돕습니다.</p><em>실적 · 의사결정</em></div></article>
-          </div>
         </div>
       </section>
 
