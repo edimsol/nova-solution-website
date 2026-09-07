@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="icon" href="./assets/nova-symbol.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="./styles.css?v=20260907-logo-sequence" />
-    <script src="./script.js?v=20260907-logo-sequence" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=20260907-home-technology-position" />
+    <script src="./script.js?v=20260907-home-technology-position" defer></script>
   </head>
   <body class="home-body">
     <a class="skip-link" href="#main">본문으로 바로가기!!</a>
@@ -68,35 +68,45 @@
       </section>
 
       <section id="company" class="intro section" data-home-slide data-slide-label="Company">
-        <div class="container section-heading reveal">
-          <p class="eyebrow">One Flow, Better Manufacturing</p>
-          <h2>현장과 데이터를 연결해<br />제조의 다음 기준을 만듭니다.</h2>
-          <p>NOVA Solution은 공조 설비 엔지니어링 경험과 제조 데이터 기술을 결합해, 복잡한 생산 과정을 선명하고 실행 가능한 흐름으로 바꿉니다.</p>
+        <div class="container company-flow-layout reveal">
+          <div class="company-flow-copy">
+            <p class="eyebrow">One Flow, Better Manufacturing</p>
+            <h2>현장과 데이터를 연결해<br />제조의 다음 기준을 만듭니다.</h2>
+            <i aria-hidden="true"></i>
+            <p>NOVA Solution은 공조 설비 엔지니어링 경험과 제조 데이터 기술을 결합해, 복잡한 생산 과정을 선명하고 실행 가능한 흐름으로 바꿉니다.</p>
+          </div>
+          <figure class="company-flow-visual" aria-label="현장부터 제조 데이터까지 연결되는 NOVA Solution의 업무 흐름">
+            <img src="./assets/field-to-data-panels-clean.png?v=20260907b" alt="네 개의 패널을 통과하며 제조 데이터로 연결되는 기술 흐름" width="1707" height="921" />
+            <ol class="company-flow-stages" aria-label="제조 데이터 연결 단계">
+              <li><span>01</span><strong>FIELD</strong><small>실제 현장</small></li>
+              <li><span>02</span><strong>ENGINEERING</strong><small>정밀 설계</small></li>
+              <li><span>03</span><strong>MANUFACTURING</strong><small>스마트 운영</small></li>
+              <li><span>04</span><strong>DATA</strong><small>지속적인 개선</small></li>
+            </ol>
+          </figure>
         </div>
       </section>
 
       <section id="solutions" class="solutions section" data-home-slide data-slide-label="Solutions">
         <div class="container">
-          <a class="solution-panel hvac reveal" href="./hvac.html" aria-label="HVAC 솔루션 상세 페이지">
-            <div>
+          <a class="solution-panel hvac reveal" href="./hvac.html" aria-label="HVAC 솔루션 상세 페이지" data-solution-card>
+            <div class="solution-panel-copy">
               <p class="panel-index">01 / HVAC</p>
               <h2>정밀한 공조,<br />안정적인 생산 환경.</h2>
               <p>산업 현장에 최적화된 AHU와 공조 시스템으로 온도, 습도, 청정도를 정밀하게 제어합니다.</p>
               <span class="text-link">HVAC 상세 보기 <span>↗</span></span>
             </div>
-            <div class="air-visual" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <div class="solution-tech-visual hvac-tech-visual" aria-hidden="true"><img src="./assets/hvac-airflow-architecture.png" alt=""><span>CLEAN AIR<br>STABLE OPERATION</span></div>
           </a>
 
-          <a class="solution-panel edim reveal" href="./edim.html" aria-label="EDIM 솔루션 상세 페이지">
-            <div class="data-visual" aria-hidden="true">
-              <span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <div>
+          <a class="solution-panel edim reveal" href="./edim.html" aria-label="EDIM 솔루션 상세 페이지" data-solution-card>
+            <div class="solution-panel-copy">
               <p class="panel-index">02 / EDIM</p>
               <h2>제품 정보의 흐름을<br />하나의 데이터로.</h2>
               <p>설계, BOM, 생산, ERP를 연결해 부서 간 단절을 줄이고 의사결정 속도를 높입니다.</p>
               <span class="text-link">EDIM 상세 보기 <span>↗</span></span>
             </div>
+            <div class="solution-tech-visual edim-tech-visual" aria-hidden="true"><img src="./assets/edim-system-architecture.png" alt=""><span>FROM DATA<br>TO SMARTER MANUFACTURING</span></div>
           </a>
         </div>
       </section>
@@ -108,10 +118,10 @@
             <h2>기술과 현장을 이해하는<br />제조 파트너.</h2>
           </div>
           <div class="strength-grid">
-            <article class="strength-card reveal"><span>01</span><h3>현장 중심 설계</h3><p>실제 생산 환경과 운영 조건을 반영해 바로 적용 가능한 해답을 설계합니다.</p></article>
-            <article class="strength-card reveal"><span>02</span><h3>통합 데이터 흐름</h3><p>제품에서 ERP까지 흩어진 정보를 연결해 하나의 기준 데이터를 만듭니다.</p></article>
-            <article class="strength-card reveal"><span>03</span><h3>유연한 확장성</h3><p>현재의 공정에 맞게 시작하고 비즈니스 성장에 따라 안정적으로 확장합니다.</p></article>
-            <article class="strength-card reveal"><span>04</span><h3>지속적인 파트너십</h3><p>구축 이후의 운영과 개선까지 함께하며 제조 경쟁력을 꾸준히 높입니다.</p></article>
+            <article class="strength-card reveal"><span>01</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 5 15 8-15 8-15-8 15-8Zm-15 16 15 8 15-8M9 29l15 8 15-8"/></svg><h3>현장 중심 설계</h3><p>실제 생산 환경과 운영 조건을 반영해 바로 적용 가능한 해답을 설계합니다.</p></article>
+            <article class="strength-card reveal"><span>02</span><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="8" r="4"/><circle cx="10" cy="36" r="4"/><circle cx="38" cy="36" r="4"/><path d="M22 12 12 32m14-20 10 20M14 36h20"/></svg><h3>통합 데이터 흐름</h3><p>제품에서 ERP까지 흩어진 정보를 연결해 하나의 기준 데이터를 만듭니다.</p></article>
+            <article class="strength-card reveal"><span>03</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V28h6v12M19 40V19h6v21M30 40V11h6v29M41 40V5h4v35"/></svg><h3>유연한 확장성</h3><p>현재의 공정에 맞게 시작하고 비즈니스 성장에 따라 안정적으로 확장합니다.</p></article>
+            <article class="strength-card reveal"><span>04</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 24c-6-11-18-11-18 0s12 11 18 0Zm0 0c6-11 18-11 18 0s-12 11-18 0Z"/></svg><h3>지속적인 파트너십</h3><p>구축 이후의 운영과 개선까지 함께하며 제조 경쟁력을 꾸준히 높입니다.</p></article>
           </div>
         </div>
       </section>

@@ -81,6 +81,34 @@ const createDropdown = (selector, id, label, markup, className = 'submenu compan
 };
 
 nav?.querySelector('a[href="./contact.html"]:not(.nav-cta)')?.remove();
+
+// The header CTA uses one reversible visual state. CSS transitions continue from
+// their current position when pointer/focus changes, so rapid enter/exit input
+// never restarts or snaps the animation.
+nav?.querySelectorAll('.nav-cta').forEach((cta) => {
+  if (!cta.querySelector('.nav-cta-label')) {
+    const label = cta.textContent.replace(/[→↗]/g, '').trim();
+    cta.textContent = '';
+
+    const labelElement = document.createElement('span');
+    labelElement.className = 'nav-cta-label';
+    labelElement.textContent = label;
+
+    const arrow = document.createElement('span');
+    arrow.className = 'nav-cta-arrow';
+    arrow.setAttribute('aria-hidden', 'true');
+    arrow.innerHTML = '<i></i><b>→</b>';
+
+    cta.append(labelElement, arrow);
+  }
+
+  const setActive = (active) => cta.classList.toggle('is-cta-active', active);
+  cta.addEventListener('pointerenter', () => setActive(true));
+  cta.addEventListener('pointerleave', () => setActive(false));
+  cta.addEventListener('focus', () => setActive(true));
+  cta.addEventListener('blur', () => setActive(false));
+});
+
 createDropdown('a[href="./company.html"]', 'submenu-company', 'Company 하위 메뉴', `
   <a class="company-overview" href="./company.html"><span><small>COMPANY</small>Who We Are</span><b>Company Overview →</b></a>
   <div class="editorial-menu-body"><div class="editorial-links"><a href="./company.html#about"><b>About Us</b><small>노바솔루션 소개</small></a><a href="./company.html#mission"><b>Mission &amp; Vision</b><small>미션과 비전</small></a><a href="./company.html#history"><b>History</b><small>연혁</small></a><a href="./company.html#foundation"><b>Manufacturing Foundation</b><small>제조 기반</small></a><a href="./company.html#location"><b>Location</b><small>오시는 길</small></a></div><aside class="menu-image"><img src="./assets/menu-company-building.png?v=20260907" data-menu-fallback="./assets/products/eco-ahu-main-cutout.png" alt="현대적인 산업 기술 기업 건축 이미지"><p>Engineering Manufacturing,<br>From Product to Data.</p></aside></div>
@@ -201,6 +229,12 @@ if (homeSlider) {
   let pointerY = 0;
   let pointerX = 0;
   let pointerMoved = false;
+  const revealHomeSlide = (slide) => {
+    slide?.querySelectorAll('.reveal').forEach((element, index) => {
+      element.style.transitionDelay = `${Math.min(index * 70, 280)}ms`;
+      element.classList.add('visible');
+    });
+  };
 
   slides.forEach((slide, index) => {
     slide.classList.add(index < activeIndex ? 'is-home-before' : index > activeIndex ? 'is-home-after' : 'is-home-active');
@@ -214,6 +248,7 @@ if (homeSlider) {
   });
   document.body.append(navDots, counter, hint);
   document.body.classList.add('home-slider-ready');
+  revealHomeSlide(slides[activeIndex]);
 
   const syncControls = () => {
     [...navDots.children].forEach((dot, index) => dot.classList.toggle('is-active', index === activeIndex));
@@ -229,6 +264,7 @@ if (homeSlider) {
     next.style.visibility = 'visible';
     next.style.opacity = '1';
     next.scrollTop = direction > 0 ? 0 : Math.max(0, next.scrollHeight - next.clientHeight);
+    revealHomeSlide(next);
     if (!reducedMotion) {
       const options = { duration: 760, easing: 'cubic-bezier(.76,0,.24,1)', fill: 'both' };
       await Promise.all([
@@ -692,6 +728,28 @@ if (cltViewer) {
     stage.addEventListener('pointerleave', resetModel);
   }
 }
+
+document.querySelectorAll('[data-solution-card]').forEach((card) => {
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+  const resetCard = () => {
+    card.style.setProperty('--card-rx', '0deg');
+    card.style.setProperty('--card-ry', '0deg');
+    card.style.setProperty('--visual-x', '0px');
+    card.style.setProperty('--visual-y', '0px');
+  };
+  card.addEventListener('pointermove', (event) => {
+    if (!canHover.matches) return;
+    const rect = card.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - .5;
+    const y = (event.clientY - rect.top) / rect.height - .5;
+    card.style.setProperty('--card-rx', `${(-y * 4.5).toFixed(2)}deg`);
+    card.style.setProperty('--card-ry', `${(x * 5.5).toFixed(2)}deg`);
+    card.style.setProperty('--visual-x', `${(x * 15).toFixed(1)}px`);
+    card.style.setProperty('--visual-y', `${(y * 11).toFixed(1)}px`);
+  });
+  card.addEventListener('pointerleave', resetCard);
+  card.addEventListener('blur', resetCard);
+});
 
 const inquiryForm = document.querySelector('[data-inquiry-form]');
 const productField = document.querySelector('[data-product-field]');
