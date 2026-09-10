@@ -21,6 +21,7 @@ await mkdir(dist, { recursive: true });
 const referencedAssets = new Set();
 const externalUrlPattern = /https?:\/\/[^"'\s)<>]+/g;
 const localAssetPattern = /(?:href|src)\s*=\s*["']\.\/(assets\/[^"'?#]+)(?:[?#][^"']*)?["']/gi;
+const embeddedAssetPattern = /\.\/(assets\/[^"'`$}{?#)\s<>]+\.(?:avif|gif|jpe?g|png|svg|webp|bin|glb))(?:[?#][^"'`)\s<>]*)?/gi;
 
 for (const file of htmlFiles) {
   const source = await readFile(join(root, file), 'utf8');
@@ -61,6 +62,12 @@ for (const file of htmlFiles) {
 }
 
 for (const file of ['styles.css', 'script.js']) {
+  const source = await readFile(join(root, file), 'utf8');
+
+  for (const match of source.matchAll(embeddedAssetPattern)) {
+    referencedAssets.add(match[1]);
+  }
+
   await copyFile(join(root, file), join(dist, file));
 }
 
