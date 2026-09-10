@@ -478,6 +478,60 @@ const checkCounterVisibility = () => {
 window.addEventListener('scroll', checkCounterVisibility, { passive: true });
 requestAnimationFrame(checkCounterVisibility);
 
+const chartConsoles = [...document.querySelectorAll('[data-chart-console]')];
+if (chartConsoles.length) {
+  const chartReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const setChartValue = (element, value) => {
+    const decimals = Number(element.dataset.chartDecimals || 0);
+    const formatted = Number(value).toLocaleString('en-US', {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    });
+    const textNode = [...element.childNodes].find((node) => node.nodeType === Node.TEXT_NODE);
+    if (textNode) textNode.nodeValue = `${formatted}${element.children.length ? ' ' : ''}`;
+    else element.textContent = formatted;
+  };
+  const animateChartValues = (consoleElement) => {
+    consoleElement.querySelectorAll('[data-chart-value]').forEach((element) => {
+      if (element.dataset.chartStarted) return;
+      element.dataset.chartStarted = 'true';
+      const target = Number(element.dataset.chartValue);
+      if (chartReducedMotion) {
+        setChartValue(element, target);
+        return;
+      }
+      const start = performance.now();
+      const duration = 1250;
+      setChartValue(element, 0);
+      const tick = (time) => {
+        const progress = Math.min((time - start) / duration, 1);
+        const eased = 1 - (1 - progress) ** 3;
+        setChartValue(element, target * eased);
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  };
+
+  chartConsoles.forEach((consoleElement) => consoleElement.classList.add('chart-enhanced'));
+  if (chartReducedMotion) {
+    chartConsoles.forEach((consoleElement) => {
+      consoleElement.classList.add('is-chart-active');
+      animateChartValues(consoleElement);
+    });
+  } else {
+    const chartObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-chart-active');
+        animateChartValues(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: .22 });
+    chartConsoles.forEach((consoleElement) => chartObserver.observe(consoleElement));
+  }
+}
+
 const fanCarousel = document.querySelector('[data-fan-carousel]');
 if (fanCarousel) {
   const modelOrder = ['kad', 'kap', 'kas'];

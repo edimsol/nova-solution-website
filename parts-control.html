@@ -264,7 +264,7 @@
         <p>복잡한 원시 데이터 대신, 송풍기 성능 곡선 위에 현재 운전점을 시각화하여 상태를 즉각 판단합니다.</p>
       </div>
 
-      <div class="fcm-dash-window reveal">
+      <div class="fcm-dash-window chart-console reveal" data-chart-console>
         <div class="dash-window-header">
           <div class="dash-status">
             <span class="live-dot" aria-hidden="true"></span>
@@ -273,7 +273,7 @@
           <div class="dash-machine">EURUS [ KAD 1120 / 75kW 6P / VFD ]</div>
           <div class="dash-target">
             <small>SET VALUE</small>
-            <strong>90,000 <span>CMH</span></strong>
+            <strong data-chart-value="90000">90,000 <span>CMH</span></strong>
           </div>
         </div>
 
@@ -308,18 +308,18 @@
                 <text x="395" y="225" fill="#698299" font-size="9" text-anchor="end" font-family="monospace">FLOW (CMH)</text>
                 <text x="45" y="16" fill="#698299" font-size="9" text-anchor="start" font-family="monospace">PRESSURE (Pa)</text>
 
-                <rect x="145" y="30" width="35" height="180" fill="rgba(255,180,0,0.08)" stroke="rgba(255,180,0,0.25)" stroke-dasharray="3,3" />
+                <rect class="chart-warning-band" x="145" y="30" width="35" height="180" fill="rgba(255,180,0,0.08)" stroke="rgba(255,180,0,0.25)" stroke-dasharray="3,3" />
                 <text x="162" y="45" fill="#e5ad35" font-size="7.5" text-anchor="middle" font-family="monospace">RESONANCE</text>
 
-                <path d="M 55 50 Q 180 75 380 200" fill="none" stroke="#256b82" stroke-width="1.5" stroke-dasharray="4,4" />
-                <path d="M 55 42 Q 190 62 385 190" fill="none" stroke="#4fc2df" stroke-width="2.5" />
-                <path d="M 55 42 Q 190 62 250 102 L 250 210 L 50 210 Z" fill="url(#curveGrad)" />
+                <path class="chart-line chart-line-secondary" d="M 55 50 Q 180 75 380 200" fill="none" stroke="#256b82" stroke-width="1.5" stroke-dasharray="4,4" />
+                <path class="chart-line chart-line-primary" d="M 55 42 Q 190 62 385 190" fill="none" stroke="#4fc2df" stroke-width="2.5" />
+                <path class="chart-area" d="M 55 42 Q 190 62 250 102 L 250 210 L 50 210 Z" fill="url(#curveGrad)" />
 
-                <line x1="250" y1="102" x2="250" y2="210" stroke="#69d5eb" stroke-dasharray="2,2" stroke-width="1" />
-                <line x1="50" y1="102" x2="250" y2="102" stroke="#69d5eb" stroke-dasharray="2,2" stroke-width="1" />
+                <line class="chart-guide" x1="250" y1="102" x2="250" y2="210" stroke="#69d5eb" stroke-dasharray="2,2" stroke-width="1" />
+                <line class="chart-guide" x1="50" y1="102" x2="250" y2="102" stroke="#69d5eb" stroke-dasharray="2,2" stroke-width="1" />
 
                 <circle cx="250" cy="102" r="12" fill="url(#dotGlow)" class="pulse-glow" />
-                <circle cx="250" cy="102" r="4.5" fill="#ffffff" stroke="#4fc2df" stroke-width="2" />
+                <circle class="chart-operating-point" cx="250" cy="102" r="4.5" fill="#ffffff" stroke="#4fc2df" stroke-width="2" />
 
                 <rect x="260" y="80" width="120" height="28" rx="4" fill="rgba(7,21,42,0.92)" stroke="#4fc2df" stroke-width="1" />
                 <text x="266" y="93" fill="#69d5eb" font-size="8.5" font-weight="bold" font-family="monospace">OP: 90,225 CMH</text>
@@ -337,32 +337,32 @@
             <div class="telemetry-grid">
               <div class="tele-item highlight">
                 <small>AIR VOLUME</small>
-                <strong>90,225 <span>CMH</span></strong>
+                <strong data-chart-value="90225">90,225 <span>CMH</span></strong>
                 <em>Accuracy ±5%</em>
               </div>
               <div class="tele-item">
                 <small>STATIC PRESSURE</small>
-                <strong>2,071 <span>Pa</span></strong>
+                <strong data-chart-value="2071">2,071 <span>Pa</span></strong>
                 <em>Balanced Duct Load</em>
               </div>
               <div class="tele-item">
                 <small>FAN SPEED</small>
-                <strong>1,057 <span>RPM</span></strong>
+                <strong data-chart-value="1057">1,057 <span>RPM</span></strong>
                 <em>VFD Inverter 6P</em>
               </div>
               <div class="tele-item">
                 <small>POWER</small>
-                <strong>66.4 <span>kW</span></strong>
+                <strong data-chart-value="66.4" data-chart-decimals="1">66.4 <span>kW</span></strong>
                 <em>Optimal Energy</em>
               </div>
               <div class="tele-item">
                 <small>EFFICIENCY</small>
-                <strong>85.2 <span>%</span></strong>
+                <strong data-chart-value="85.2" data-chart-decimals="1">85.2 <span>%</span></strong>
                 <em>Aerodynamic Peak</em>
               </div>
               <div class="tele-item">
                 <small>VIBRATION</small>
-                <strong>2.1 <span>RMS</span></strong>
+                <strong data-chart-value="2.1" data-chart-decimals="1">2.1 <span>RMS</span></strong>
                 <em>Safe Zone (&lt;4.5)</em>
               </div>
               <div class="tele-item wide">
@@ -577,7 +577,7 @@
         <p>단순 온도 감시를 넘어 공기의 엔탈피와 절대습도 상태점을 추적하여 최적의 에너지 경로를 제어합니다.</p>
       </div>
 
-      <div class="psychro-window reveal">
+      <div class="psychro-window chart-console reveal" data-chart-console>
         <div class="psychro-window-header">
           <div class="dash-status">
             <span class="live-dot" aria-hidden="true"></span>
@@ -610,37 +610,37 @@
                 <text x="45" y="24" fill="#698299" font-size="9" text-anchor="start" font-family="monospace">HUMIDITY RATIO (g/kg)</text>
 
                 <!-- Saturation curve (100% RH) -->
-                <path d="M 50 220 C 120 200, 200 130, 380 40" fill="none" stroke="#69d5eb" stroke-width="2" />
+                <path class="chart-line chart-line-primary" d="M 50 220 C 120 200, 200 130, 380 40" fill="none" stroke="#69d5eb" stroke-width="2" />
                 <text x="385" y="44" fill="#69d5eb" font-size="8" font-family="monospace">RH 100%</text>
 
                 <!-- Relative Humidity curves (60%, 40%) -->
-                <path d="M 60 220 C 140 205, 230 150, 400 80" fill="none" stroke="rgba(105,213,235,0.3)" stroke-dasharray="3,3" />
-                <path d="M 80 220 C 170 210, 270 170, 415 125" fill="none" stroke="rgba(105,213,235,0.2)" stroke-dasharray="3,3" />
+                <path class="chart-line chart-line-secondary" d="M 60 220 C 140 205, 230 150, 400 80" fill="none" stroke="rgba(105,213,235,0.3)" stroke-dasharray="3,3" />
+                <path class="chart-line chart-line-secondary" d="M 80 220 C 170 210, 270 170, 415 125" fill="none" stroke="rgba(105,213,235,0.2)" stroke-dasharray="3,3" />
                 <text x="405" y="85" fill="#588198" font-size="7.5" font-family="monospace">60%</text>
                 <text x="420" y="130" fill="#588198" font-size="7.5" font-family="monospace">40%</text>
 
                 <!-- Free cooling energy saving zone -->
-                <polygon points="120,220 220,220 180,140 100,165" fill="url(#freeCoolGrad)" stroke="#4fc2df" stroke-width="1" stroke-dasharray="4,2" />
+                <polygon class="chart-save-zone" points="120,220 220,220 180,140 100,165" fill="url(#freeCoolGrad)" stroke="#4fc2df" stroke-width="1" stroke-dasharray="4,2" />
                 <text x="150" y="195" fill="#4fc2df" font-size="8.5" font-weight="bold" font-family="monospace" text-anchor="middle">25% SAVE ZONE</text>
                 <text x="150" y="206" fill="#88b5c9" font-size="7" font-family="monospace" text-anchor="middle">(Free Cooling)</text>
 
                 <!-- State Points & Vectors -->
                 <!-- OA (Outdoor Air): 16℃, 55% RH -->
-                <circle cx="155" cy="180" r="4.5" fill="#e5ad35" />
+                <circle class="chart-state-point" cx="155" cy="180" r="4.5" fill="#e5ad35" />
                 <text x="145" y="174" fill="#e5ad35" font-size="8.5" font-weight="bold" font-family="monospace">OA (외기 16℃)</text>
 
                 <!-- RA (Return Air): 26℃, 50% RH -->
-                <circle cx="280" cy="155" r="4.5" fill="#f43f5e" />
+                <circle class="chart-state-point" cx="280" cy="155" r="4.5" fill="#f43f5e" />
                 <text x="288" y="152" fill="#f43f5e" font-size="8.5" font-weight="bold" font-family="monospace">RA (환기 26℃)</text>
 
                 <!-- MA (Mixed Air): Mixing line -->
-                <line x1="155" y1="180" x2="280" y2="155" stroke="rgba(255,255,255,0.4)" stroke-dasharray="3,3" />
-                <circle cx="205" cy="170" r="4" fill="#a855f7" />
+                <line class="chart-process-line" x1="155" y1="180" x2="280" y2="155" stroke="rgba(255,255,255,0.4)" stroke-dasharray="3,3" />
+                <circle class="chart-state-point" cx="205" cy="170" r="4" fill="#a855f7" />
                 <text x="200" y="162" fill="#c084fc" font-size="8" font-family="monospace">MA (혼합)</text>
 
                 <!-- CC (Cooling Coil Path) -> SA (Supply Air): 20℃, 45% RH -->
-                <line x1="205" y1="170" x2="215" y2="190" stroke="#4fc2df" stroke-width="2" />
-                <circle cx="215" cy="190" r="5" fill="#10b981" stroke="#ffffff" stroke-width="1.5" />
+                <line class="chart-process-line chart-process-active" x1="205" y1="170" x2="215" y2="190" stroke="#4fc2df" stroke-width="2" />
+                <circle class="chart-state-point chart-supply-point" cx="215" cy="190" r="5" fill="#10b981" stroke="#ffffff" stroke-width="1.5" />
                 <text x="225" y="198" fill="#34d399" font-size="9" font-weight="bold" font-family="monospace">SA (급기 20℃ / 45%)</text>
               </svg>
             </div>
@@ -656,7 +656,7 @@
             <div class="psychro-stat-list">
               <div class="p-stat-card highlight">
                 <small>ENERGY SAVING MODE</small>
-                <strong>25% SAVE</strong>
+                <strong><span data-chart-value="25">25</span>% SAVE</strong>
                 <p>실외 엔탈피가 실내보다 낮아 자연 냉각 댐퍼 개도율을 최대화합니다.</p>
               </div>
               <div class="p-stat-card">
