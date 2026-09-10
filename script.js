@@ -111,15 +111,15 @@ nav?.querySelectorAll('.nav-cta').forEach((cta) => {
 
 createDropdown('a[href="./company.html"]', 'submenu-company', 'Company 하위 메뉴', `
   <a class="company-overview" href="./company.html"><span><small>COMPANY</small>Who We Are</span><b>Company Overview →</b></a>
-  <div class="editorial-menu-body"><div class="editorial-links"><a href="./company.html#about"><b>About Us</b><small>노바솔루션 소개</small></a><a href="./company.html#mission"><b>Mission &amp; Vision</b><small>미션과 비전</small></a><a href="./company.html#history"><b>History</b><small>연혁</small></a><a href="./company.html#foundation"><b>Manufacturing Foundation</b><small>제조 기반</small></a><a href="./company.html#location"><b>Location</b><small>오시는 길</small></a></div><aside class="menu-image"><img src="./assets/menu-company-building.png?v=20260907" data-menu-fallback="./assets/products/eco-ahu-main-cutout.png" alt="현대적인 산업 기술 기업 건축 이미지"><p>Engineering Manufacturing,<br>From Product to Data.</p></aside></div>
+  <div class="editorial-menu-body"><div class="editorial-links"><a href="./company.html#about"><b>About Us</b><small>노바솔루션 소개</small></a><a href="./company.html#mission"><b>Mission &amp; Vision</b><small>미션과 비전</small></a><a href="./company.html#history"><b>History</b><small>연혁</small></a><a href="./company.html#foundation"><b>Manufacturing Foundation</b><small>제조 기반</small></a><a href="./company.html#location"><b>Location</b><small>오시는 길</small></a></div><aside class="menu-image"><img src="./assets/menu-company-building-web.jpg?v=20260910" alt="현대적인 산업 기술 기업 건축 이미지" decoding="async"><p>Engineering Manufacturing,<br>From Product to Data.</p></aside></div>
 `, 'submenu company-menu editorial-menu');
 createDropdown('a[href="./technology.html"]', 'submenu-technology', 'Technology 하위 메뉴', `
   <a class="company-overview" href="./technology.html"><span><small>TECHNOLOGY</small>How We Build</span><b>Explore Technology →</b></a>
-  <div class="editorial-menu-body"><div class="editorial-links"><a href="./technology.html#manufacturing"><b>Manufacturing Engineering</b><small>제조 엔지니어링</small></a><a href="./technology.html#automation"><b>Engineering Automation</b><small>엔지니어링 자동화</small></a><a href="./technology.html#architecture"><b>Product Data Architecture</b><small>제품 데이터 아키텍처</small></a><a href="./technology.html#rccs"><b>RCCS™</b><small>관계형 제품 구성 기술</small></a><a href="./technology.html#integration"><b>System Integration</b><small>시스템 통합</small></a></div><aside class="menu-image"><img src="./assets/menu-technology-blueprint.png?v=20260907" data-menu-fallback="./assets/products/eurus-impeller-cutout.png" alt="공조 설비 엔지니어링 도면 이미지"></aside></div>
+  <div class="editorial-menu-body"><div class="editorial-links"><a href="./technology.html#manufacturing"><b>Manufacturing Engineering</b><small>제조 엔지니어링</small></a><a href="./technology.html#automation"><b>Engineering Automation</b><small>엔지니어링 자동화</small></a><a href="./technology.html#architecture"><b>Product Data Architecture</b><small>제품 데이터 아키텍처</small></a><a href="./technology.html#rccs"><b>RCCS™</b><small>관계형 제품 구성 기술</small></a><a href="./technology.html#integration"><b>System Integration</b><small>시스템 통합</small></a></div><aside class="menu-image"><img src="./assets/menu-technology-blueprint-web.jpg?v=20260910" alt="공조 설비 엔지니어링 도면 이미지" decoding="async"></aside></div>
 `, 'submenu company-menu editorial-menu');
 createDropdown('a[href="./resources.html"]', 'submenu-resources', 'Resources 하위 메뉴', `
   <a class="company-overview" href="./resources.html"><span><small>RESOURCES</small>NOVA Library</span><b>View All Resources →</b></a>
-  <div class="resource-menu-layout"><div class="resource-menu-groups"><div><small>PRODUCT</small><a href="./resources.html#product-catalogues"><b>Product Catalogues</b><span>제품 카탈로그</span></a><a href="./resources.html#technical-documents"><b>Technical Documents</b><span>기술 문서</span></a></div><div><small>COMPANY</small><a href="./resources.html#company-profile"><b>Company Profile</b><span>회사 소개서</span></a><a href="./resources.html#edim-brochure"><b>EDIM Brochure</b><span>EDIM 브로슈어</span></a></div><div><small>UPDATE</small><a href="./resources.html#news-updates"><b>News &amp; Updates</b><span>뉴스 및 업데이트</span></a></div></div><figure class="menu-image"><img src="./assets/menu-resources-catalogues.png?v=20260907" data-menu-fallback="./assets/products/fcm-controller-main-cutout.png" alt="기술 카탈로그와 엔지니어링 문서 이미지"></figure></div>
+  <div class="resource-menu-layout"><div class="resource-menu-groups"><div><small>PRODUCT</small><a href="./resources.html#product-catalogues"><b>Product Catalogues</b><span>제품 카탈로그</span></a><a href="./resources.html#technical-documents"><b>Technical Documents</b><span>기술 문서</span></a></div><div><small>COMPANY</small><a href="./resources.html#company-profile"><b>Company Profile</b><span>회사 소개서</span></a><a href="./resources.html#edim-brochure"><b>EDIM Brochure</b><span>EDIM 브로슈어</span></a></div><div><small>UPDATE</small><a href="./resources.html#news-updates"><b>News &amp; Updates</b><span>뉴스 및 업데이트</span></a></div></div><figure class="menu-image"><img src="./assets/menu-resources-catalogues-web.jpg?v=20260910" alt="기술 카탈로그와 엔지니어링 문서 이미지" decoding="async"></figure></div>
 `, 'submenu company-menu editorial-menu resources-menu');
 createDropdown('a[href="./solutions.html"]', 'submenu-solutions', 'Solutions 하위 메뉴', `
   <div class="mega-menu-head"><a class="mega-menu-overview-link" href="./solutions.html"><small>SOLUTIONS</small>What We Deliver</a><a href="./solutions.html">View All Solutions →</a></div>
@@ -132,15 +132,6 @@ createDropdown('a[href="./solutions.html"]', 'submenu-solutions', 'Solutions 하
     <section class="solutions-column solutions-edim"><a class="solutions-column-title" href="./edim.html"><b>EDIM</b><small>제조 데이터 플랫폼</small></a><div class="solutions-groups solutions-groups-edim"><div><a class="solutions-group-title" href="./edim.html"><b>EDIM Overview</b><small>제조 데이터 연결</small></a><a href="./edim.html#cpq">CPQ · Product Configuration</a><a href="./edim.html#plm">PLM · Engineering Design</a><a href="./edim.html#rccs">RCCS™ · Product Data</a><a href="./edim.html#erp">System Integration</a></div></div><figure class="solutions-menu-visual"><img src="./assets/products/eurus-impeller-cutout.png" alt="NOVA Solution HVAC 임펠러 제품 이미지"></figure></section>
   </div>
 `, 'submenu mega-panel solutions-menu');
-
-nav?.querySelectorAll('img[data-menu-fallback]').forEach((image) => {
-  image.addEventListener('error', () => {
-    if (image.dataset.fallbackApplied === 'true') return;
-    image.dataset.fallbackApplied = 'true';
-    image.src = image.dataset.menuFallback;
-    image.classList.add('is-menu-fallback');
-  });
-});
 
 nav?.querySelector('.solutions-menu')?.querySelectorAll('a').forEach((link) => {
   if (link.getAttribute('href') === `./${currentPage}`) {
