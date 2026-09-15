@@ -19,6 +19,7 @@ await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
 
 const referencedAssets = new Set();
+const publicAssets = ['assets/recruitment-2026-web-developer.png'];
 const externalUrlPattern = /https?:\/\/[^"'\s)<>]+/g;
 const localAssetPattern = /(?:href|src)\s*=\s*["']\.\/(assets\/[^"'?#]+)(?:[?#][^"']*)?["']/gi;
 const embeddedAssetPattern = /\.\/(assets\/[^"'`$}{?#)\s<>]+\.(?:avif|gif|jpe?g|png|svg|webp|bin|glb))(?:[?#][^"'`)\s<>]*)?/gi;
@@ -69,6 +70,10 @@ for (const file of ['styles.css', 'script.js']) {
   }
 
   await copyFile(join(root, file), join(dist, file));
+}
+
+for (const asset of publicAssets) {
+  referencedAssets.add(asset);
 }
 
 const assetsRoot = join(root, 'assets');
