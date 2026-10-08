@@ -1,0 +1,39 @@
+{
+  "generator": "built-in image_gen",
+  "target": [
+    3840,
+    2160
+  ],
+  "images": [
+    {
+      "name": "hero",
+      "prompt": "Create one premium abstract engineering background for the NOVA Prism website. Wide landscape 3840x2160 target, highest available resolution. Restrained sophisticated 3D materials, charcoal #151619, finely machined dark metal, elegant low-key studio light. Detailed motif predominantly right and edges, broad clean dark negative space left and center for overlaid white text. No text, no logos, no watermark, no UI, no people. Not a depiction of an actual factory. Composition remains useful cropped vertically. Precision metal ribs transition into delicate cyan and muted violet data filaments. One graceful sweeping diagonal assembly from lower right into the distance. Tactile brushed metal and very controlled light, spacious cinematic composition.",
+      "source": "docs/renewal/prism-phase-2/originals/hero.png"
+    },
+    {
+      "name": "solutions",
+      "prompt": "Create one premium abstract engineering background for the NOVA Prism website. Wide landscape 3840x2160 target, highest available resolution. Restrained sophisticated 3D materials, charcoal #151619, finely machined dark metal, elegant low-key studio light. Detailed motif predominantly right and edges, broad clean dark negative space left and center for overlaid white text. No text, no logos, no watermark, no UI, no people. Not a depiction of an actual factory. Composition remains useful cropped vertically. Sculptural aerodynamic dark-metal ribbons and translucent cyan prisms channel a smooth luminous airflow across the right half. Air engineering expressed as refined abstract fluid paths, not a real product.",
+      "source": "docs/renewal/prism-phase-2/originals/solutions.png"
+    },
+    {
+      "name": "company",
+      "prompt": "Create one premium abstract engineering background for the NOVA Prism website. Wide landscape 3840x2160 target, highest available resolution. Restrained sophisticated 3D materials, charcoal #151619, finely machined dark metal, elegant low-key studio light. Detailed motif predominantly right and edges, broad clean dark negative space left and center for overlaid white text. No text, no logos, no watermark, no UI, no people. Not a depiction of an actual factory. Composition remains useful cropped vertically. Interlocking architectural dark metallic modules, gently rounded precision junctions, cyan edge reflections. Stable collaborative interconnected structure, spacious and quiet, strong depth without busy detail.",
+      "source": "docs/renewal/prism-phase-2/originals/company.png"
+    },
+    {
+      "name": "technology",
+      "prompt": "Create one premium abstract engineering background for the NOVA Prism website. Wide landscape 3840x2160 target, highest available resolution. Restrained sophisticated 3D materials, charcoal #151619, finely machined dark metal, elegant low-key studio light. Detailed motif predominantly right and edges, broad clean dark negative space left and center for overlaid white text. No text, no logos, no watermark, no UI, no people. Not a depiction of an actual factory. Composition remains useful cropped vertically. A graceful network of soft violet data paths flowing through a precision graphite lattice. Subtle dimensional nodes and engineered layers, technical but sculptural, no diagrams or labels.",
+      "source": "docs/renewal/prism-phase-2/originals/technology.png"
+    },
+    {
+      "name": "industries",
+      "prompt": "Create one premium abstract engineering background for the NOVA Prism website. Wide landscape 3840x2160 target, highest available resolution. Restrained sophisticated 3D materials, charcoal #151619, finely machined dark metal, elegant low-key studio light. Detailed motif predominantly right and edges, broad clean dark negative space left and center for overlaid white text. No text, no logos, no watermark, no UI, no people. Not a depiction of an actual factory. Composition remains useful cropped vertically. Branching modular graphite structure expanding into several directions, small restrained lime #d0e886 accents at joints. Metaphor of connected industries, elegant dark abstract engineering render.",
+      "source": "docs/renewal/prism-phase-2/originals/industries.png"
+    },
+    {
+      "name": "contact",
+      "prompt": "Create one premium abstract engineering background for the NOVA Prism website. Wide landscape 3840x2160 target, highest available resolution. Restrained sophisticated 3D materials, charcoal #151619, finely machined dark metal, elegant low-key studio light. Detailed motif predominantly right and edges, broad clean dark negative space left and center for overlaid white text. No text, no logos, no watermark, no UI, no people. Not a depiction of an actual factory. Composition remains useful cropped vertically. A very spacious charcoal studio horizon with one sculptural arc of soft cyan light and a few refined dark metal planes at far right. Quiet welcoming final scene, generous empty space, extremely restrained glow.",
+      "source": "docs/renewal/prism-phase-2/originals/contact.png"
+    }
+  ]
+}

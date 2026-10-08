@@ -2,37 +2,26 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="description" content="NOVA Solution은 제품 설계부터 생산 데이터까지 연결하는 제조 엔지니어링 솔루션을 제공합니다." />
     <title>NOVA Solution | Engineering Manufacturing</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" href="./assets/nova-symbol.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="./styles.css?v=20260907-home-technology-position" />
-    <script src="./script.js?v=20260910-menu-images-2" defer></script>
+    <link rel="icon" href="./assets/brand/nova-symbol-color.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css?v=20261009-accordion-5" />
+    <link rel="stylesheet" href="./prism.css?v=20261009-motion-6">
+    <link rel="stylesheet" href="./prism-nav.css?v=20261009-motion-6">
+    <link rel="stylesheet" href="./novascroll.css?v=20261009-prism-2-complete">
+    <script src="./prism-nav.js?v=20261009-motion-6" defer></script>
+    <script src="./script.js?v=20261009-accordion-5" defer></script>
+    <script src="./prism.js?v=20261009-prism-2-complete" defer></script>
+    <script src="./prism-background.js?v=20261009-loop10" defer></script>
+    <script src="./novascroll.js?v=20261009-mobile-dock-2" defer></script>
   </head>
-  <body class="home-body">
-    <a class="skip-link" href="#main">본문으로 바로가기!!</a>
-
-    <div class="home-entry" data-home-entry aria-hidden="true">
-      <div class="home-entry-stage">
-        <div class="home-entry-rings" aria-hidden="true"><i></i><i></i><i></i></div>
-        <div class="home-entry-logo"><span class="home-entry-logo-ghost"></span><img src="./assets/nova-symbol-source.png" alt="" width="1254" height="1254" /></div>
-        <p>NOVA SOLUTION</p>
-        <span>ENGINEERING · AIR · DATA</span>
-      </div>
-      <div class="home-entry-status">
-        <span>MANUFACTURING FLOW</span>
-        <i></i>
-        <b>CONNECTED</b>
-      </div>
-      <div class="home-entry-scan" aria-hidden="true"></div>
-    </div>
-
-    <header class="site-header" data-header>
+  <body class="prism-site prism-home-body">
+<a class="skip-link" href="#main">본문으로 바로가기</a>
+<header class="site-header" data-header>
   <div class="container header-inner">
     <a class="brand" href="./index.html" aria-label="NOVA Solution 홈">
-      <img class="brand-mark" src="./assets/nova-symbol-source.png" alt="" width="1254" height="1254" />
+      <img class="brand-mark" src="./assets/brand/nova-symbol-light.svg" alt="" width="1254" height="1254" />
       <span><strong>NOVA</strong> SOLUTION</span>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
@@ -48,107 +37,64 @@
     </nav>
   </div>
 </header>
-
-    <main id="main" class="home-swipe" data-home-slider>
-      <section id="home" class="hero grid-surface" data-home-slide data-slide-label="Home">
-        <div class="container hero-inner">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">Manufacturing, Connected.</p>
-            <h1>Engineering Manufacturing,<br />From Product to Data.</h1>
-            <p class="hero-description">공조 기술과 제조 데이터를 하나의 흐름으로 연결하여<br /> 더 효율적이고 유연한 제조를 만듭니다.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="./solutions.html">Explore Solutions</a>
-              <a class="button button-secondary" href="./contact.html">Contact Us</a>
-            </div>
-            <a class="scroll-cue" href="#company"><span></span>Scroll Down</a>
-          </div>
-
-        </div>
+    <main id="main" class="prism-home">
+      <section id="home" class="pr-home-intro pr-wrap" aria-labelledby="home-title">
+        <div class="pr-intro-top"><p class="pr-eyebrow"><span class="pr-signal" aria-hidden="true"></span> ENGINEERING MANUFACTURING</p><a class="pr-text-link" href="#solutions">Explore Solutions <span aria-hidden="true">↓</span></a></div>
+        <div class="pr-intro-line"><h1 id="home-title">Engineering<br> Manufacturing,<br> <span>From Product to Data.</span></h1><div class="pr-intro-aside"><p class="pr-intro-english">Manufacturing, Connected.</p><p>공조 기술과 제조 데이터를 하나의 흐름으로 연결하여<br>더 효율적이고 유연한 제조를 만듭니다.</p><a class="pr-text-link" href="./contact.html">Contact Us <span aria-hidden="true">↗</span></a></div></div>
       </section>
 
-      <section id="company" class="intro section" data-home-slide data-slide-label="Company">
-        <div class="container company-flow-layout reveal">
-          <div class="company-flow-copy">
-            <p class="eyebrow">One Flow, Better Manufacturing</p>
-            <h2>현장과 데이터를 연결해<br />제조의 다음 기준을 만듭니다.</h2>
-            <i aria-hidden="true"></i>
-            <p>NOVA Solution은 공조 설비 엔지니어링 경험과 제조 데이터 기술을 결합해, 복잡한 생산 과정을 선명하고 실행 가능한 흐름으로 바꿉니다.</p>
-          </div>
-          <figure class="company-flow-visual" aria-label="현장부터 제조 데이터까지 연결되는 NOVA Solution의 업무 흐름">
-            <img src="./assets/field-to-data-panels-clean.png?v=20260907b" alt="네 개의 패널을 통과하며 제조 데이터로 연결되는 기술 흐름" width="1707" height="921" />
-            <ol class="company-flow-stages" aria-label="제조 데이터 연결 단계">
-              <li><span>01</span><strong>FIELD</strong><small>실제 현장</small></li>
-              <li><span>02</span><strong>ENGINEERING</strong><small>정밀 설계</small></li>
-              <li><span>03</span><strong>MANUFACTURING</strong><small>스마트 운영</small></li>
-              <li><span>04</span><strong>DATA</strong><small>지속적인 개선</small></li>
-            </ol>
-          </figure>
-        </div>
-      </section>
-
-      <section id="solutions" class="solutions section" data-home-slide data-slide-label="Solutions">
-        <div class="container">
-          <a class="solution-panel hvac reveal" href="./hvac.html" aria-label="HVAC 솔루션 상세 페이지" data-solution-card>
-            <div class="solution-panel-copy">
-              <p class="panel-index">01 / HVAC</p>
-              <h2>정밀한 공조,<br />안정적인 생산 환경.</h2>
-              <p>산업 현장에 최적화된 AHU와 공조 시스템으로 온도, 습도, 청정도를 정밀하게 제어합니다.</p>
-              <span class="text-link">HVAC 상세 보기 <span>↗</span></span>
-            </div>
-            <div class="solution-tech-visual hvac-tech-visual" aria-hidden="true"><img src="./assets/hvac-airflow-architecture.png" alt=""><span>CLEAN AIR<br>STABLE OPERATION</span></div>
+      <section id="solutions" class="pr-launcher pr-wrap" data-prism-launcher aria-label="NOVA 솔루션 탐색">
+        <div class="pr-launcher-bar"><h2>Find your next.</h2><span>HVAC <b>11</b> PRODUCTS <i></i> EDIM <b>4</b> FUNCTIONS</span></div>
+        <div class="pr-grid" aria-label="솔루션 카테고리">
+          <a href="./ventilation.html" class="pr-tile pr-vent" data-pr-category="ventilation" data-prism-card>
+            <span class="pr-tile-top"><span>01 / HVAC</span><span class="pr-selected">SELECTED</span></span><span class="pr-tile-name">Ventilation</span><img class="pr-object" src="./assets/products/eurus-impeller-cutout.png" alt="Eurus Impeller" width="1275" height="1233" fetchpriority="high"><span class="pr-tile-foot"><span>송풍·환기 제품군<small>4 PRODUCTS</small></span><span class="pr-next" aria-hidden="true">↗</span></span>
           </a>
-
-          <a class="solution-panel edim reveal" href="./edim.html" aria-label="EDIM 솔루션 상세 페이지" data-solution-card>
-            <div class="solution-panel-copy">
-              <p class="panel-index">02 / EDIM</p>
-              <h2>제품 정보의 흐름을<br />하나의 데이터로.</h2>
-              <p>설계, BOM, 생산, ERP를 연결해 부서 간 단절을 줄이고 의사결정 속도를 높입니다.</p>
-              <span class="text-link">EDIM 상세 보기 <span>↗</span></span>
-            </div>
-            <div class="solution-tech-visual edim-tech-visual" aria-hidden="true"><img src="./assets/edim-system-architecture.png" alt=""><span>FROM DATA<br>TO SMARTER MANUFACTURING</span></div>
+          <a href="./air-system.html" class="pr-tile pr-air" data-pr-category="air" data-prism-card>
+            <span class="pr-tile-top"><span>02 / HVAC</span><span class="pr-selected">SELECTED</span></span><span class="pr-tile-name">Air Systems</span><img class="pr-object" src="./assets/products/eco-ahu-main-cutout.png" alt="Eco AHU 공조기" width="1320" height="900"><span class="pr-tile-foot"><span>공조·공기 처리 시스템<small>4 PRODUCTS</small></span><span class="pr-next" aria-hidden="true">↗</span></span>
+          </a>
+          <a href="./parts-control.html" class="pr-tile pr-control" data-pr-category="control" data-prism-card>
+            <span class="pr-tile-top"><span>03 / HVAC</span><span class="pr-selected">SELECTED</span></span><span class="pr-tile-name">Parts &amp; Control</span><img class="pr-object" src="./assets/products/clt-50a-cutout.png" alt="CLT 50A 배수 트랩" width="1000" height="1000"><span class="pr-tile-foot"><span>부품·제어 시스템<small>3 PRODUCTS</small></span><span class="pr-next" aria-hidden="true">↗</span></span>
+          </a>
+          <a href="./edim.html" class="pr-tile pr-edim" data-pr-category="edim" data-prism-card>
+            <span class="pr-tile-top"><span>04 / DATA</span><span class="pr-selected">SELECTED</span></span><span class="pr-tile-name">EDIM</span><span class="pr-edim-object" aria-hidden="true"><span class="pr-edim-face"><strong>EDIM</strong><span>PRODUCT<br>TO DATA</span><i>CPQ → PLM → ERP</i></span></span><span class="pr-tile-foot"><span>제조 데이터 플랫폼 <em>개발 중</em><small>4 FUNCTIONS</small></span><span class="pr-next" aria-hidden="true">↗</span></span>
           </a>
         </div>
-      </section>
-
-      <section id="technology" class="strengths section grid-surface" data-home-slide data-slide-label="Technology">
-        <div class="container">
-          <div class="section-heading light reveal">
-            <p class="eyebrow">Why NOVA Solution</p>
-            <h2>기술과 현장을 이해하는<br />제조 파트너.</h2>
+        <section id="prism-selection" class="pr-selection" aria-labelledby="pr-category-title">
+          <div class="pr-selection-head"><h2 id="pr-category-title">Ventilation</h2><span data-pr-caption>환기·송풍 / 4개 제품</span><a class="pr-text-link" data-pr-category-link href="./ventilation.html">카테고리 전체 보기 <span aria-hidden="true">↗</span></a></div>
+          <div class="pr-chip-row" data-pr-chips aria-label="제품 선택"><a href="./ventilation.html#eurus">Eurus</a><a href="./ventilation.html#partial">Partial</a><a href="./ventilation.html#pullout">Pull-Out</a><a href="./ventilation.html#fan-model">Fan</a></div>
+          <div id="prism-product-detail" class="pr-detail">
+            <div class="pr-detail-art"><span class="pr-art-ring" aria-hidden="true"></span><img data-pr-image src="./assets/products/eurus-impeller-cutout.png" alt="Eurus Impeller" width="1275" height="1233"><div class="pr-type-object" data-pr-symbol hidden><strong>CPQ</strong><span>PRODUCT TO DATA</span></div><span class="pr-art-caption" data-pr-art-caption>01 / EURUS IMPELLER</span></div>
+            <div class="pr-detail-copy"><p class="pr-eyebrow" data-pr-kind>VENTILATION / IMPELLER</p><span class="pr-development" data-pr-development hidden>IN DEVELOPMENT · 개발 중</span><h3 data-pr-title>Eurus Impeller</h3><p data-pr-description>토출 기류를 정돈하는 새로운 접근으로 팬 시스템의 효율과 운전 품질을 함께 개선합니다.</p><div class="pr-detail-tags" data-pr-tags><span>디퓨저 링 설계</span><span>성능 정보</span><span>적용 검토</span></div><a class="pr-button" data-pr-detail-link href="./ventilation.html#eurus">제품 상세 보기 <span aria-hidden="true">↗</span></a></div>
           </div>
-          <div class="strength-grid">
-            <article class="strength-card reveal"><span>01</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 5 15 8-15 8-15-8 15-8Zm-15 16 15 8 15-8M9 29l15 8 15-8"/></svg><h3>현장 중심 설계</h3><p>실제 생산 환경과 운영 조건을 반영해 바로 적용 가능한 해답을 설계합니다.</p></article>
-            <article class="strength-card reveal"><span>02</span><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="8" r="4"/><circle cx="10" cy="36" r="4"/><circle cx="38" cy="36" r="4"/><path d="M22 12 12 32m14-20 10 20M14 36h20"/></svg><h3>통합 데이터 흐름</h3><p>제품에서 ERP까지 흩어진 정보를 연결해 하나의 기준 데이터를 만듭니다.</p></article>
-            <article class="strength-card reveal"><span>03</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V28h6v12M19 40V19h6v21M30 40V11h6v29M41 40V5h4v35"/></svg><h3>유연한 확장성</h3><p>현재의 공정에 맞게 시작하고 비즈니스 성장에 따라 안정적으로 확장합니다.</p></article>
-            <article class="strength-card reveal"><span>04</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 24c-6-11-18-11-18 0s12 11 18 0Zm0 0c6-11 18-11 18 0s-12 11-18 0Z"/></svg><h3>지속적인 파트너십</h3><p>구축 이후의 운영과 개선까지 함께하며 제조 경쟁력을 꾸준히 높입니다.</p></article>
-          </div>
-        </div>
+          <p class="sr-only" role="status" data-pr-status></p>
+        </section>
+        <div class="pr-launcher-bottom"><span>PRODUCT · ENGINEERING · DATA</span><a class="pr-text-link" href="./solutions.html">모든 솔루션 보기 <span aria-hidden="true">↗</span></a></div>
       </section>
 
-      <section id="resources" class="industry-bar" data-home-slide data-slide-label="Industries">
-        <div class="container industry-inner reveal">
-          <p>Built for ETO Manufacturing</p>
-          <div class="tags"><span>HVAC</span><span>Semiconductor</span><span>Display</span><span>Battery</span><span>Smart Factory</span></div>
-        </div>
+      <section id="company" class="pr-story pr-wrap" aria-labelledby="company-title">
+        <div class="pr-section-label"><span>01 / COMPANY</span><a class="pr-text-link" href="./company.html">Meet NOVA <span aria-hidden="true">↗</span></a></div>
+        <div class="pr-story-grid"><div><p class="pr-eyebrow">One Flow, Better Manufacturing</p><h2 id="company-title">현장과 데이터를 연결해<br>제조의 다음 기준을 만듭니다.</h2></div><p>NOVA Solution은 공조 설비 엔지니어링 경험과 제조 데이터 기술을 결합해, 복잡한 생산 과정을 선명하고 실행 가능한 흐름으로 바꿉니다.</p></div>
+        <ol class="pr-flow" aria-label="제조 데이터 연결 단계"><li><small>01</small><strong>FIELD</strong><span>실제 현장</span></li><li><small>02</small><strong>ENGINEERING</strong><span>정밀 설계</span></li><li><small>03</small><strong>MANUFACTURING</strong><span>스마트 운영</span></li><li><small>04</small><strong>DATA</strong><span>지속적인 개선</span></li></ol>
+        <div class="pr-value-pair"><a href="./hvac.html" data-prism-card><span class="pr-eyebrow">HVAC</span><h3>정밀한 공조,<br>안정적인 생산 환경.</h3><p>산업 현장에 최적화된 AHU와 공조 시스템으로 온도, 습도, 청정도를 정밀하게 제어합니다.</p><span class="pr-text-link">HVAC 상세 보기 <span aria-hidden="true">↗</span></span></a><a href="./edim.html" data-prism-card><span class="pr-eyebrow">EDIM <span class="pr-development">개발 중</span></span><h3>제품 정보의 흐름을<br>하나의 데이터로.</h3><p>설계, BOM, 생산, ERP를 연결해 부서 간 단절을 줄이고 의사결정 속도를 높입니다.</p><span class="pr-text-link">EDIM 상세 보기 <span aria-hidden="true">↗</span></span></a></div>
       </section>
 
-      <section id="contact" class="contact section" data-home-slide data-slide-label="Contact">
-        <div class="container contact-inner reveal">
-          <div><p class="eyebrow">Start a Conversation</p><h2>더 나은 제조의 흐름,<br />NOVA와 시작하세요.</h2></div>
-          <a class="button button-primary" href="mailto:ys.lee@edimsol.com?subject=NOVA%20Solution%20Inquiry">Contact Us <span>↗</span></a>
-        </div>
+      <section id="technology" class="pr-technology pr-wrap" aria-labelledby="technology-title">
+        <div class="pr-section-label"><span>02 / TECHNOLOGY</span><a class="pr-text-link" href="./technology.html">Explore Technology <span aria-hidden="true">↗</span></a></div>
+        <div class="pr-tech-heading"><p class="pr-eyebrow">Why NOVA Solution</p><h2 id="technology-title">기술과 현장을 이해하는<br>제조 파트너.</h2></div>
+        <div class="pr-strengths"><article><span>01</span><h3>현장 중심 설계</h3><p>실제 생산 환경과 운영 조건을 반영해 바로 적용 가능한 해답을 설계합니다.</p></article><article><span>02</span><h3>통합 데이터 흐름</h3><p>제품에서 ERP까지 흩어진 정보를 연결해 하나의 기준 데이터를 만듭니다.</p></article><article><span>03</span><h3>유연한 확장성</h3><p>현재의 공정에 맞게 시작하고 비즈니스 성장에 따라 안정적으로 확장합니다.</p></article><article><span>04</span><h3>지속적인 파트너십</h3><p>구축 이후의 운영과 개선까지 함께하며 제조 경쟁력을 꾸준히 높입니다.</p></article></div>
       </section>
+      <section id="resources" class="pr-industries pr-wrap" aria-label="적용 산업"><p>Built for ETO Manufacturing</p><div><span>HVAC</span><span>Semiconductor</span><span>Display</span><span>Battery</span><span>Smart Factory</span></div></section>
+      <section id="contact" class="pr-contact pr-wrap" aria-labelledby="contact-title"><p class="pr-eyebrow">Start a Conversation</p><div><h2 id="contact-title">더 나은 제조의 흐름,<br>NOVA와 시작하세요.</h2><a class="pr-contact-arrow" href="mailto:ys.lee@edimsol.com?subject=NOVA%20Solution%20Inquiry" aria-label="NOVA에 이메일로 문의하기"><span aria-hidden="true">↗</span></a></div><a class="pr-text-link" href="./contact.html">프로젝트 문의하기 <span aria-hidden="true">↗</span></a></section>
     </main>
-
-    <footer class="site-footer">
+<footer class="site-footer">
   <div class="container footer-inner">
     <a class="brand" href="./index.html" aria-label="NOVA Solution 홈">
-      <img class="brand-mark" src="./assets/nova-symbol-source.png" alt="" width="1254" height="1254" />
+      <img class="brand-mark" src="./assets/brand/nova-symbol-color.svg" alt="" width="1254" height="1254" />
       <span><strong>NOVA</strong> SOLUTION</span>
     </a>
     <p>Engineering Manufacturing, From Product to Data.</p>
     <p class="copyright">© <span data-year></span> NOVA Solution. All rights reserved.</p>
   </div>
 </footer>
-  </body>
+</body>
 </html>

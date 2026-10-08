@@ -1,0 +1,273 @@
+{
+  "date": "2026-10-09",
+  "generator": "Higgsfield / FLUX 3 Video",
+  "processing": "24 fps; last/first 0.5 second ease-in-out dissolve; cyclic interpolation to requested duration; silent H.264 Main 3.1; faststart",
+  "batterySavingsMeasured": false,
+  "scenes": {
+    "hero": {
+      "source": "docs/renewal/motion-backgrounds/originals/hero.mp4",
+      "sourceSha256": "b42ec110d4aa0e20b0e4e727a258454170714e166a64c40e0263f25456a742db",
+      "sourceWidth": 1280,
+      "sourceHeight": 704,
+      "sourceFps": 24.0,
+      "sourceFrames": 241,
+      "outputs": [
+        {
+          "file": "assets/backgrounds/prism/video/hero-720.mp4",
+          "width": 720,
+          "height": 396,
+          "frames": 240,
+          "fps": 24.0,
+          "durationSeconds": 10.0,
+          "bytes": 155188,
+          "sha256": "3058b58fb98fb454e7aaefddf0b706ce2a35544505089abcd7d58c89e21df629",
+          "codec": "H.264 Main Level 3.1",
+          "pixelFormat": "yuv420p",
+          "audioTracks": 0,
+          "faststart": true,
+          "loopBoundaryMeanAbsolutePixelDifference": 1.6432589786756453,
+          "typicalFrameMeanAbsolutePixelDifference": 0.004313973063973064,
+          "maxFrameMeanAbsolutePixelDifference": 1.5974782547699213
+        },
+        {
+          "file": "assets/backgrounds/prism/video/hero-1280.mp4",
+          "width": 1280,
+          "height": 704,
+          "frames": 240,
+          "fps": 24.0,
+          "durationSeconds": 10.0,
+          "bytes": 550953,
+          "sha256": "c21d57a8b9db2d3a403e53ffafe033744e06e40f522ca50592929a750ac6e34c",
+          "codec": "H.264 Main Level 3.1",
+          "pixelFormat": "yuv420p",
+          "audioTracks": 0,
+          "faststart": true,
+          "loopBoundaryMeanAbsolutePixelDifference": 1.4566239790482955,
+          "typicalFrameMeanAbsolutePixelDifference": 0.0231689453125,
+          "maxFrameMeanAbsolutePixelDifference": 1.3416833126183711
+        }
+      ]
+    },
+    "solutions": {
+      "source": "docs/renewal/motion-backgrounds/originals/solutions.mp4",
+      "sourceSha256": "88b078dffd2472b57fb18bd864fadf395b62a2797ed75e432d0e2fb8b9b143da",
+      "sourceWidth": 1280,
+      "sourceHeight": 704,
+      "sourceFps": 24.0,
+      "sourceFrames": 241,
+      "outputs": [
+        {
+          "file": "assets/backgrounds/prism/video/solutions-720.mp4",
+          "width": 720,
+          "height": 396,
+          "frames": 240,
+          "fps": 24.0,
+          "durationSeconds": 10.0,
+          "bytes": 146512,
+          "sha256": "d1de5b451e369d699ffdfa1b8e74ec54e4d20167fb2b1f31343feac3bef0cce5",
+          "codec": "H.264 Main Level 3.1",
+          "pixelFormat": "yuv420p",
+          "audioTracks": 0,
+          "faststart": true,
+          "loopBoundaryMeanAbsolutePixelDifference": 1.5964938739244294,
+          "typicalFrameMeanAbsolutePixelDifference": 0.005947203516647961,
+          "maxFrameMeanAbsolutePixelDifference": 1.5633663019079687
+        },
+        {
+          "file": "assets/backgrounds/prism/video/solutions-1280.mp4",
+          "width": 1280,
+          "height": 704,
+          "frames": 240,
+          "fps": 24.0,
+          "durationSeconds": 10.0,
+          "bytes": 521475,
+          "sha256": "e37e0f6cf1a60dffd29016ade08bda967366e3ed7d0243b1d2d02e58c22fa1f6",
+          "codec": "H.264 Main Level 3.1",
+          "pixelFormat": "yuv420p",
+          "audioTracks": 0,
+          "faststart": true,
+          "loopBoundaryMeanAbsolutePixelDifference": 1.422649961529356,
+          "typicalFrameMeanAbsolutePixelDifference": 0.021892015861742425,
+          "maxFrameMeanAbsolutePixelDifference": 1.3214226000236742
+        }
+      ]
+    },
+    "company": {
+      "source": "docs/renewal/motion-backgrounds/originals/company.mp4",
+      "sourceSha256": "d7dee5cfb193aaca9e03f571115100ab4469173fa4d539a96c21e3938eaca563",
+      "sourceWidth": 1280,
+      "sourceHeight": 704,
+      "sourceFps": 24.0,
+      "sourceFrames": 241,
+      "outputs": [
+        {
+          "file": "assets/backgrounds/prism/video/company-720.mp4",
+          "width": 720,
+          "height": 396,
+          "frames": 240,
+          "fps": 24.0,
+          "durationSeconds": 10.0,
+          "bytes": 195568,
+          "sha256": "393f8d992a650670c2515d18835959048650033c0d69e7ee67ad8e0c1b838923",
+          "codec": "H.264 Main Level 3.1",
+          "pixelFormat": "yuv420p",
+          "audioTracks": 0,
+          "faststart": true,
+          "loopBoundaryMeanAbsolutePixelDifference": 2.2843668163112607,
+          "typicalFrameMeanAbsolutePixelDifference": 0.7767103909465021,
+          "maxFrameMeanAbsolutePixelDifference": 2.228916479610924
+        },
+        {
+          "file": "assets/backgrounds/prism/video/company-1280.mp4",
+          "width": 1280,
+          "height": 704,
+          "frames": 240,
+          "fps": 24.0,
+          "durationSeconds": 10.0,
+          "bytes": 659206,
+          "sha256": "db729c802e45060a9d031ba1e0b977425f8672469b97026b15f8b22b4df44ca7",
+          "codec": "H.264 Main Level 3.1",
+          "pixelFormat": "yuv420p",
+          "audioTracks": 0,
+          "faststart": true,
+          "loopBoundaryMeanAbsolutePixelDifference": 2.2040812174479165,
+          "typicalFrameMeanAbsolutePixelDifference": 0.9860329367897728,
+          "maxFrameMeanAbsolutePixelDifference": 2.148046875
+        }
+      ]
+    },
+    "technology": {
+      "source": "docs/renewal/motion-backgrounds/originals/technology.mp4",
+      "sourceSha256": "bfad7f28ef5792c528b4c04fd224ba11c99426422df84a834c783d4237380c00",
+      "sourceWidth": 1280,
+      "sourceHeight": 704,
+      "sourceFps": 24.0,
+      "sourceFrames": 241,
+      "outputs": [
+        {
+          "file": "assets/backgrounds/prism/video/technology-720.mp4",
+          "width": 720,
+          "height": 396,
+          "frames": 240,
+          "fps": 24.0,
+          "durationSeconds": 10.0,
+          "bytes": 154000,
+          "sha256": "7dca112775a97a2bb05d7951b4eee5288d3412b1b7312b4c3783c6045b44ac70",
+          "codec": "H.264 Main Level 3.1",
+          "pixelFormat": "yuv420p",
+          "audioTracks": 0,
+          "faststart": true,
+          "loopBoundaryMeanAbsolutePixelDifference": 1.458984521137299,
+          "typicalFrameMeanAbsolutePixelDifference": 0.002093855218855219,
+          "maxFrameMeanAbsolutePixelDifference": 1.4186319210624767
+        },
+        {
+          "file": "assets/backgrounds/prism/video/technology-1280.mp4",
+          "width": 1280,
+          "height": 704,
+          "frames": 240,
+          "fps": 24.0,
+          "durationSeconds": 10.0,
+          "bytes": 556512,
+          "sha256": "d01d36a359da831595f4c23d7d2b401a17b15f00dc4b34092241762c64ee30a0",
+          "codec": "H.264 Main Level 3.1",
+          "pixelFormat": "yuv420p",
+          "audioTracks": 0,
+          "faststart": true,
+          "loopBoundaryMeanAbsolutePixelDifference": 1.3607862067945076,
+          "typicalFrameMeanAbsolutePixelDifference": 0.018119673295454546,
+          "maxFrameMeanAbsolutePixelDifference": 1.2381728663589016
+        }
+      ]
+    },
+    "industries": {
+      "source": "docs/renewal/motion-backgrounds/originals/industries.mp4",
+      "sourceSha256": "78c0b05000e99c948d7ed8828887f34810aada32a798154adcd21889c524c64f",
+      "sourceWidth": 1280,
+      "sourceHeight": 704,
+      "sourceFps": 24.0,
+      "sourceFrames": 241,
+      "outputs": [
+        {
+          "file": "assets/backgrounds/prism/video/industries-720.mp4",
+          "width": 720,
+          "height": 396,
+          "frames": 240,
+          "fps": 24.0,
+          "durationSeconds": 10.0,
+          "bytes": 111733,
+          "sha256": "f035e1e2a06279251aed3b0c5e73b59e9d845dc0cfc1d443d6ee5888c74442cb",
+          "codec": "H.264 Main Level 3.1",
+          "pixelFormat": "yuv420p",
+          "audioTracks": 0,
+          "faststart": true,
+          "loopBoundaryMeanAbsolutePixelDifference": 1.2259960718294052,
+          "typicalFrameMeanAbsolutePixelDifference": 0.003264122708567153,
+          "maxFrameMeanAbsolutePixelDifference": 1.1850180041152263
+        },
+        {
+          "file": "assets/backgrounds/prism/video/industries-1280.mp4",
+          "width": 1280,
+          "height": 704,
+          "frames": 240,
+          "fps": 24.0,
+          "durationSeconds": 10.0,
+          "bytes": 378636,
+          "sha256": "ec08acea34065a1cf8de8543f7b11f5f797a2c5988a4362b89511f8cde473bb4",
+          "codec": "H.264 Main Level 3.1",
+          "pixelFormat": "yuv420p",
+          "audioTracks": 0,
+          "faststart": true,
+          "loopBoundaryMeanAbsolutePixelDifference": 1.0378884055397728,
+          "typicalFrameMeanAbsolutePixelDifference": 0.01378210819128788,
+          "maxFrameMeanAbsolutePixelDifference": 0.9480176521070076
+        }
+      ]
+    },
+    "contact": {
+      "source": "docs/renewal/motion-backgrounds/originals/contact.mp4",
+      "sourceSha256": "8925bd72bc70172955d5cadae56867206fa626de49427195429c6d057f20a39a",
+      "sourceWidth": 1280,
+      "sourceHeight": 704,
+      "sourceFps": 24.0,
+      "sourceFrames": 241,
+      "outputs": [
+        {
+          "file": "assets/backgrounds/prism/video/contact-720.mp4",
+          "width": 720,
+          "height": 396,
+          "frames": 240,
+          "fps": 24.0,
+          "durationSeconds": 10.0,
+          "bytes": 76862,
+          "sha256": "1a28afe98aa94a18caf42ce52fcf7e7915e510bde987eba709d7a997cb907bff",
+          "codec": "H.264 Main Level 3.1",
+          "pixelFormat": "yuv420p",
+          "audioTracks": 0,
+          "faststart": true,
+          "loopBoundaryMeanAbsolutePixelDifference": 0.9907302188552188,
+          "typicalFrameMeanAbsolutePixelDifference": 0.0067714178825289935,
+          "maxFrameMeanAbsolutePixelDifference": 0.9668911335578002
+        },
+        {
+          "file": "assets/backgrounds/prism/video/contact-1280.mp4",
+          "width": 1280,
+          "height": 704,
+          "frames": 240,
+          "fps": 24.0,
+          "durationSeconds": 10.0,
+          "bytes": 321371,
+          "sha256": "2aba5f442a55d707c42f556e89cd06dc3e1a1319d2da1b15707ab2bea1f4214b",
+          "codec": "H.264 Main Level 3.1",
+          "pixelFormat": "yuv420p",
+          "audioTracks": 0,
+          "faststart": true,
+          "loopBoundaryMeanAbsolutePixelDifference": 0.9337143406723485,
+          "typicalFrameMeanAbsolutePixelDifference": 0.013704427083333333,
+          "maxFrameMeanAbsolutePixelDifference": 0.8606985381155303
+        }
+      ]
+    }
+  },
+  "requestedDurationSeconds": 10
+}

@@ -1,0 +1,302 @@
+- link "본문으로 바로가기":
+  - /url: "#main"
+- banner:
+  - link "NOVA Solution 홈":
+    - /url: ./index.html
+    - strong: NOVA
+    - text: SOLUTION
+  - navigation "주요 메뉴":
+    - link "Company":
+      - /url: ./company.html
+    - link "Solutions":
+      - /url: ./solutions.html
+    - link "Technology":
+      - /url: ./technology.html
+    - link "Resources":
+      - /url: ./resources.html
+    - link "Contact Us":
+      - /url: ./contact.html
+      - generic: Contact Us
+      - generic: →
+- main:
+  - link "Solutions":
+    - /url: ./solutions.html
+  - generic: /
+  - link "HVAC":
+    - /url: ./hvac.html
+  - generic: /
+  - generic: Ventilation
+  - paragraph: HVAC / CATEGORY 01
+  - heading "Ventilation" [level=1]
+  - paragraph: 공기의 흐름을 더 안정적이고 효율적으로 만드는 NOVA의 임펠러 및 팬 제품군입니다.
+  - paragraph: 01 / NEW CONCEPT IMPELLER
+  - heading "Eurus Impeller" [level=2]:
+    - text: Eurus
+    - text: Impeller
+  - paragraph: 토출 기류를 정돈하는 새로운 접근으로 팬 시스템의 효율과 운전 품질을 함께 개선합니다.
+  - paragraph: 유러스 임펠러는 토출부의 공기 흐름을 고려한 디퓨저 링 설계로 불필요한 손실을 줄이고, 실제 공조 시스템에서 요구되는 압력과 소음 성능의 균형을 지향합니다.
+  - link "제품 적용 문의 ↗":
+    - /url: ./contact.html
+    - text: 제품 적용 문의
+    - generic: ↗
+  - figure "NOVA / VENTILATION EURUS IMPELLER":
+    - text: "01"
+    - img "배경을 제거한 파란색 Eurus Impeller 제품 이미지"
+    - generic: NOVA / VENTILATION
+    - generic: EURUS IMPELLER
+  - paragraph: PERFORMANCE AT A GLANCE
+  - heading "기술은 간결하게, 효과는 분명하게." [level=2]:
+    - text: 기술은 간결하게,
+    - text: 효과는 분명하게.
+  - paragraph: 공개 가능한 핵심 성능만 정리했습니다. 프로젝트별 상세 선정값과 기술 사양은 상담 과정에서 제공합니다.
+  - article:
+    - generic: EFFICIENCY
+    - strong:
+      - text: "+3"
+      - superscript: "%"
+    - paragraph: 기존 일반 임펠러 대비 효율 개선
+  - article:
+    - generic: NOISE
+    - strong:
+      - text: −2
+      - superscript: dB(A)
+    - paragraph: 운전 소음 저감
+  - article:
+    - generic: STATIC PRESSURE
+    - strong:
+      - text: "+7"
+      - superscript: "%"
+    - paragraph: 최대 정압 성능 향상
+  - paragraph: 표기된 수치는 비교 조건 및 시스템 구성에 따라 달라질 수 있습니다. 실제 적용 성능은 프로젝트별 선정과 검토를 통해 안내합니다.
+  - paragraph: ENGINEERING CONCEPT
+  - heading "토출 기류를 다루는 디퓨저 링 설계" [level=2]:
+    - text: 토출 기류를 다루는
+    - text: 디퓨저 링 설계
+  - article:
+    - text: "01"
+    - heading "Flow Guidance" [level=3]
+    - paragraph: 임펠러 토출부에서 확산되는 기류를 보다 안정적으로 유도하도록 설계했습니다.
+  - article:
+    - text: "02"
+    - heading "Balanced Performance" [level=3]
+    - paragraph: 효율, 소음과 정압 중 하나에 치우치지 않는 균형 있는 운전 성능을 목표로 합니다.
+  - article:
+    - text: "03"
+    - heading "System-Oriented" [level=3]
+    - paragraph: 단품 성능뿐 아니라 실제 팬 및 공조 시스템에 적용되는 운전 환경을 함께 고려합니다.
+  - generic: FOR ENGINEERS
+  - paragraph: 토출 측 형상과 디퓨저 링 구성을 통해 성능 곡선의 안정적인 압력 특성을 지향합니다. 상세 형상, 치수 및 선정 데이터는 기술 협의 시 제공됩니다.
+  - paragraph: 02 / DIRECT-DRIVE IMPELLER
+  - heading "Partial Impeller" [level=2]:
+    - text: Partial
+    - text: Impeller
+  - generic "Partial Impeller 개발 성과":
+    - generic: SINGLE
+    - generic: 국내 최초 개발
+    - generic: DOUBLE
+    - generic: 세계 최초 개발
+  - paragraph: 팬이 모터의 가장 효율적인 회전 영역에서 운전하도록, 임펠러의 유효 폭을 새롭게 설계한 Direct Drive 솔루션입니다.
+  - paragraph: 현장마다 다른 풍량 조건에 맞춰 임펠러 구성을 최적화하면서 벨트 구동계의 에너지 손실과 유지관리 요소를 줄입니다. 성능과 운영 효율을 동시에 고려한 NOVA의 차별화된 팬 기술입니다.
+  - link "프로젝트 적용 검토 ↗":
+    - /url: ./contact.html
+    - text: 프로젝트 적용 검토
+    - generic: ↗
+  - figure "DIRECT DRIVE PARTIAL IMPELLER":
+    - img "배경을 제거한 Partial Impeller 제품 이미지"
+    - generic: DIRECT DRIVE
+    - generic: PARTIAL IMPELLER
+    - text: "02"
+  - paragraph: PROVEN IN OPERATION
+  - heading "최초의 설계에서, 검증된 운전 경험으로." [level=2]:
+    - text: 최초의 설계에서,
+    - text: 검증된 운전 경험으로.
+  - paragraph: 개발의 차별성은 실제 운전으로 이어집니다. Partial Impeller는 국내외 5,000대 이상의 운전 사례를 기반으로 효율과 관리 편의성을 함께 제안합니다.
+  - article:
+    - generic: ENERGY VALUE
+    - strong:
+      - text: 약 3
+      - superscript: "%"
+    - heading "에너지 손실 절감" [level=3]
+    - paragraph: 벨트 없이 동력을 직접 전달해 구동 과정의 불필요한 손실을 줄입니다.
+  - article:
+    - generic: FIELD EXPERIENCE
+    - strong:
+      - text: "0"
+      - superscript: +
+    - heading "국내외 누적 운전 사례" [level=3]
+    - paragraph: 다양한 현장에서 축적된 운전 경험을 제품 선정과 적용 검토에 반영합니다.
+  - article:
+    - generic: MAINTENANCE FREE
+    - strong:
+      - text: "3"
+      - superscript: LESS
+    - heading "No Belt · Pulley · Bearing" [level=3]
+    - paragraph: 주요 구동 부품과 정비 포인트를 줄여 더 단순하고 안정적인 운영을 지향합니다.
+  - paragraph: FIRST-MOVER ENGINEERING
+  - heading "하나의 아이디어를 두 가지 최초로." [level=2]:
+    - text: 하나의 아이디어를
+    - text: 두 가지 최초로.
+  - article:
+    - generic: KOREA FIRST
+    - strong: 국내 최초
+    - generic: Single Partial Impeller
+    - generic: 01 / DIRECT DRIVE
+    - heading "Direct Drive 최적화의 새로운 기준" [level=3]:
+      - text: Direct Drive 최적화의
+      - text: 새로운 기준
+    - paragraph: 요구 풍량에 맞춰 임펠러 유효 폭을 구성해 모터와 팬의 회전 조건을 효율적으로 연결합니다. 다양한 운전점에 유연하게 대응하면서 구동 구조는 더욱 간결하게 유지합니다.
+  - article:
+    - generic: WORLD FIRST
+    - strong: 세계 최초
+    - generic: Double Partial Impeller
+    - generic: 02 / DIRECT DRIVE
+    - heading "양흡입 시스템으로 확장한 독자적 설계" [level=3]:
+      - text: 양흡입 시스템으로 확장한
+      - text: 독자적 설계
+    - paragraph: Partial 개념을 양흡입 팬까지 확장해 더 넓은 시스템 요구에 대응합니다. 풍량, 설치 공간과 운전 조건을 함께 검토해 프로젝트에 적합한 구성을 제안합니다.
+  - generic: BUSINESS VALUE
+  - list:
+    - listitem: + 벨트 손실 감소를 통한 에너지 효율 향상
+    - listitem: + 정비 부품 감소로 유지보수 비용 절감
+    - listitem: + 분진 발생 요소 감소로 설비 청결 유지
+    - listitem: + 구동부 단순화로 투자비와 작업 위험 부담 완화
+  - paragraph: ‘국내 최초’ 및 ‘세계 최초’ 표현은 제공된 자사 개발 자료를 기준으로 작성되었습니다. 에너지 절감률과 적용 효과는 모터, 운전 조건 및 시스템 구성에 따라 달라질 수 있으며 상세 선정값은 기술 협의 시 제공합니다.
+  - paragraph: 03 / PULL-OUT IMPELLER
+  - heading "Pull-Out Impeller" [level=2]:
+    - text: Pull-Out
+    - text: Impeller
+  - paragraph: 베어링과 샤프트, 커플링의 유지보수 부담을 줄이고 임펠러를 케이싱에서 간편하게 분리할 수 있는 구조입니다.
+  - paragraph: 모터 베이스를 풀아웃 방식으로 구성해 점검과 청소가 필요한 순간에 작업 공간을 확보합니다. 덕트 전체를 분해하지 않고도 임펠러를 분리할 수 있어, 설비 정비의 정확성과 작업 편의성을 함께 높입니다.
+  - link "제품 적용 문의 ↗":
+    - /url: ./contact.html
+    - text: 제품 적용 문의
+    - generic: ↗
+  - figure "NOVA / VENTILATION PULL-OUT IMPELLER":
+    - img "배경을 제거한 파란색 Pull-Out Impeller 제품 이미지"
+    - generic: NOVA / VENTILATION
+    - generic: PULL-OUT IMPELLER
+    - text: "03"
+  - paragraph: OPERATIONAL VALUE
+  - heading "정비는 간단하게, 운전은 안정적으로." [level=2]:
+    - text: 정비는 간단하게,
+    - text: 운전은 안정적으로.
+  - paragraph: 설치 공간을 효율적으로 활용하면서 소음과 압력 손실을 줄이고, 일상적인 점검과 정비가 더 간결해지도록 설계했습니다.
+  - article:
+    - generic: NOISE
+    - strong:
+      - text: "-8~12"
+      - superscript: dB(A)
+    - heading "소음 저감" [level=3]
+    - paragraph: 차음 효과를 고려한 기준 대비 비교 범위
+  - article:
+    - generic: PRESSURE LOSS
+    - strong:
+      - text: "-3~6"
+      - superscript: mmAq
+    - heading "압력 손실 감소" [level=3]
+    - paragraph: Canopy 적용에 따른 압력 손실 비교 범위
+  - article:
+    - generic: SPACE
+    - strong:
+      - text: 30~40
+      - superscript: "%"
+    - heading "설치 공간 감소" [level=3]
+    - paragraph: 기존 구성 대비 공간 절감 비교 범위
+  - paragraph: 소음, 압력 손실 및 공간 절감 수치는 실제 시스템 구성과 운전 조건에 따라 달라질 수 있습니다. 적용 전 현장 조건과 요구 성능을 기준으로 별도 검토합니다.
+  - paragraph: MAINTENANCE CONCEPT
+  - heading "분리와 접근을 단순하게, 정비 품질은 높게." [level=2]:
+    - text: 분리와 접근을 단순하게,
+    - text: 정비 품질은 높게.
+  - article:
+    - generic: 01 / DRIVE
+    - heading "No Bearing No Shaft, No Coupling" [level=3]:
+      - text: No Bearing
+      - text: No Shaft, No Coupling
+    - paragraph: 베어링·샤프트·커플링 관련 유지보수 요소를 줄여 진동, 유지보수 비용과 긴급 사고 위험을 낮추는 데 기여합니다.
+  - article:
+    - generic: 02 / CLEANING
+    - heading "Easy & Accurate Cleaning" [level=3]:
+      - text: Easy & Accurate
+      - text: Cleaning
+    - paragraph: 임펠러를 케이싱에서 분리해 잔여 찌꺼기를 보다 쉽고 정확하게 제거하고, 임펠러 보수 작업에 접근할 수 있습니다.
+  - article:
+    - generic: 03 / ACCESS
+    - heading "Maintenance Without Duct Removal" [level=3]:
+      - text: Maintenance
+      - text: Without Duct Removal
+    - paragraph: 유지보수 시 흡입구 덕트를 분리하지 않아도 되므로 작업 공정을 단순화하고 정비 시간을 줄이는 방향으로 설계되었습니다.
+  - generic: DESIGN BENEFITS
+  - list:
+    - listitem: + 기존 대비 약 10~15% 중량 감소
+    - listitem: + 구성 단순화에 따른 약 5~10% 비용 절감
+    - listitem: + Canopy 공기 충격 최소화로 진동 감소
+    - listitem: + 정비 접근성 향상과 작업 안전성 개선에 기여
+  - paragraph: 중량 및 비용 범위는 제품 사양, 시스템 구성과 프로젝트 조건에 따라 달라질 수 있습니다. 상세 선정값은 기술 협의 시 제공합니다.
+  - paragraph: 04 / FAN MODEL LINE-UP
+  - heading "Fan Model Line-Up" [level=2]:
+    - text: Fan Model
+    - text: Line-Up
+  - paragraph: 설치 방식과 필요한 풍량에 따라 선택하는 세 가지 Korea Airfoil 팬 라인업입니다.
+  - paragraph: KAP 플러그 팬, KAD 양흡입 팬, KAS 단흡입 팬을 한곳에서 비교하고 프로젝트에 적합한 구조를 확인할 수 있습니다.
+  - generic "팬 모델 구성":
+    - generic: KAP
+    - generic: Korea Airfoil Plug
+    - generic: KAD
+    - generic: Korea Airfoil Double
+    - generic: KAS
+    - generic: Korea Airfoil Single
+  - paragraph: MODEL SELECTOR
+  - heading "세 가지 모델을 직접 비교해보세요." [level=2]:
+    - text: 세 가지 모델을
+    - text: 직접 비교해보세요.
+  - paragraph: 제품을 누르거나 좌우 버튼을 사용하면 선택 모델이 선명하게 확대되고, 주요 특징과 공개 사양이 함께 전환됩니다.
+  - paragraph: 02 / 03
+  - button "이전 팬 모델": ←
+  - button "다음 팬 모델": →
+  - button "KAD KAD Korea Airfoil Double 양흡입 팬 Korea Airfoil Double DOUBLE INLET / 01":
+    - generic: KAD
+    - img "KAD Korea Airfoil Double 양흡입 팬"
+    - strong: Korea Airfoil Double
+    - generic: DOUBLE INLET / 01
+  - button "KAP KAP Korea Airfoil Plug 팬 Korea Airfoil Plug PLUG FAN / 02" [pressed]:
+    - generic: KAP
+    - img "KAP Korea Airfoil Plug 팬"
+    - strong: Korea Airfoil Plug
+    - generic: PLUG FAN / 02
+  - button "KAS KAS Korea Airfoil Single 단흡입 팬 Korea Airfoil Single SINGLE INLET / 03":
+    - generic: KAS
+    - img "KAS Korea Airfoil Single 단흡입 팬"
+    - strong: Korea Airfoil Single
+    - generic: SINGLE INLET / 03
+  - article:
+    - text: KAP / KOREA AIRFOIL PLUG
+    - heading "시스템 안으로 유연하게 통합되는 플러그 팬" [level=3]:
+      - text: 시스템 안으로 유연하게
+      - text: 통합되는 플러그 팬
+    - paragraph: 공기역학적 에어포일 블레이드와 가압 토출 구조를 적용한 직결형 플러그 팬입니다. 장비 내부에 유연하게 배치할 수 있어 효율적인 공간 구성과 낮은 토출 소음을 지향합니다.
+    - term: 구조
+    - definition: 고효율 플러그 팬
+    - term: 구동
+    - definition: 직결
+    - term: 크기 범위
+    - definition: 315–1,600
+    - term: 풍량 범위
+    - definition: 2,000–220,000 m³/h
+    - term: 최대 정압
+    - definition: 3,100 Pa
+  - paragraph: 표기 범위는 제품군 기준의 참고 정보입니다. 실제 모델, 구동 방식과 운전점은 요구 풍량·정압 및 설치 조건에 따라 기술 검토 후 선정합니다.
+  - paragraph: EURUS / APPLICATION INQUIRY
+  - heading "프로젝트에 적합한 구성을 함께 검토합니다." [level=2]:
+    - text: 프로젝트에 적합한 구성을
+    - text: 함께 검토합니다.
+  - link "Contact Us ↗":
+    - /url: ./contact.html
+    - text: Contact Us
+    - generic: ↗
+- contentinfo:
+  - link "NOVA Solution 홈":
+    - /url: ./index.html
+    - strong: NOVA
+    - text: SOLUTION
+  - paragraph: Engineering Manufacturing, From Product to Data.
+  - paragraph: © 2026 NOVA Solution. All rights reserved.

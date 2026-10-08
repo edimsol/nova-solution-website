@@ -2,19 +2,27 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
     <meta name="description" content="NOVA Solution HVAC 제품, EDIM 도입 및 파트너십 문의" />
     <title>Contact Us | NOVA Solution</title>
-    <link rel="icon" href="./assets/nova-symbol.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="./styles.css?v=20260904-ahu-scope" />
-    <script src="./script.js?v=20260910-menu-images-2" defer></script>
+    <link rel="icon" href="./assets/brand/nova-symbol-color.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css?v=20261009-accordion-5" />
+    <link rel="stylesheet" href="./prism.css?v=20261009-motion-6">
+    <link rel="stylesheet" href="./prism-nav.css?v=20261009-motion-6">
+    <link rel="stylesheet" href="./prism-detail.css?v=20261009-loop10">
+    <link rel="stylesheet" href="./novascroll.css?v=20261009-prism-2-complete">
+    <script src="./prism-nav.js?v=20261009-motion-6" defer></script>
+    <script src="./script.js?v=20261009-accordion-5" defer></script>
+    <script src="./prism.js?v=20261009-prism-2-complete" defer></script>
+    <script src="./novascroll.js?v=20261009-mobile-dock-2" defer></script>
+      <script src="./prism-background.js?v=20261009-loop10" defer></script>
   </head>
-  <body>
+  <body class="prism-site prism-detail pd-contact">
     <a class="skip-link" href="#main">본문으로 바로가기</a>
     <header class="site-header" data-header>
   <div class="container header-inner">
     <a class="brand" href="./index.html" aria-label="NOVA Solution 홈">
-      <img class="brand-mark" src="./assets/nova-symbol-source.png" alt="" width="1254" height="1254" />
+      <img class="brand-mark" src="./assets/brand/nova-symbol-light.svg" alt="" width="1254" height="1254" />
       <span><strong>NOVA</strong> SOLUTION</span>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
@@ -57,7 +65,7 @@
 
           <fieldset class="inquiry-detail">
             <legend><span>03</span> Inquiry Details</legend>
-            <label><span>Product / Solution <b>*</b></span><select name="product" data-product-field required disabled><option value="">먼저 문의 유형을 선택해 주세요</option></select></label>
+            <label><span>Product / Solution <b>*</b></span><select name="product" data-product-field required><option value="">먼저 문의 유형을 선택해 주세요</option><optgroup label="HVAC"><option value="Eurus Impeller">Eurus Impeller</option><option value="Partial Impeller">Partial Impeller</option><option value="Pull-Out Impeller">Pull-Out Impeller</option><option value="Fan Model 라인업">Fan Model 라인업</option><option value="AHU / RTU">AHU / RTU</option><option value="Bio HVAC">Bio HVAC</option><option value="IEF 전기집진필터">IEF 전기집진필터</option><option value="IAQS 실내공기질">IAQS 실내공기질</option><option value="CLT 배수 트랩">CLT 배수 트랩</option><option value="FCM 팬 제어">FCM 팬 제어</option><option value="ECM 공조기 제어">ECM 공조기 제어</option></optgroup><optgroup label="EDIM"><option value="CPQ">CPQ</option><option value="PLM">PLM</option><option value="RCCS™">RCCS™</option><option value="ERP 연계">ERP 연계</option><option value="Demo / PoC">Demo / PoC</option><option value="시스템 연계">시스템 연계</option></optgroup><optgroup label="Partnership"><option value="기술 협력">기술 협력</option><option value="제조 협력">제조 협력</option><option value="사업 제휴">사업 제휴</option></optgroup></select></label>
             <label class="message-field"><span>Message <b>*</b></span><textarea name="message" rows="7" placeholder="프로젝트 배경, 필요한 제품 또는 검토 사항을 적어주세요." required></textarea></label>
           </fieldset>
 
@@ -69,7 +77,7 @@
     <footer class="site-footer">
   <div class="container footer-inner">
     <a class="brand" href="./index.html" aria-label="NOVA Solution 홈">
-      <img class="brand-mark" src="./assets/nova-symbol-source.png" alt="" width="1254" height="1254" />
+      <img class="brand-mark" src="./assets/brand/nova-symbol-color.svg" alt="" width="1254" height="1254" />
       <span><strong>NOVA</strong> SOLUTION</span>
     </a>
     <p>Engineering Manufacturing, From Product to Data.</p>

@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "name": "NOVA Website",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "files.encoding": "utf8",
+    "files.eol": "\n"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "source": "assets/nova-symbol-source.png",
+  "source_sha256": "3a0f613a1b8b22ae7be22f54007104b4a887d64efac34e773f313a16b66584d1",
+  "source_bytes": 326832,
+  "source_dimensions": [
+    1254,
+    1254
+  ],
+  "source_mode": "RGBA",
+  "viewBox": "0 0 1254 1254",
+  "method": "Two alpha>=128 components; periodic Gaussian boundary denoising sigma=1.1px; half-pixel outward pixel-center correction; adaptive least-squares cubic Bezier fitting, 0.65px sampled-fit tolerance. Color: trimmed interior affine RGB fit projected onto its strongest gradient axis.",
+  "source_component_areas_px": [
+    103954,
+    114908
+  ],
+  "cubic_segments": 132,
+  "subpaths": 2,
+  "source_interior_rgb_median": [
+    70.0,
+    195.0,
+    230.0
+  ],
+  "gradient_endpoint_rgb": [
+    [
+      69.40416863400502,
+      194.66827787191883,
+      230.24761867673487
+    ],
+    [
+      70.22984799411041,
+      195.67519227290606,
+      230.49625600125682
+    ]
+  ],
+  "gradient_endpoints_xy": [
+    [
+      1379.8268340756542,
+      373.13583537657695
+    ],
+    [
+      -125.82683407565432,
+      880.864164623423
+    ]
+  ],
+  "validation_at_1254px": {
+    "silhouette_iou": 0.9968863542079806,
+    "symmetric_edge_distance_max_px": 1.0,
+    "symmetric_edge_distance_p95_px": 1.0,
+    "interior_rgb_mae": [
+      0.682346119589453,
+      0.7093831632683559,
+      0.5129865083777176
+    ],
+    "all_three_path_data_identical": true,
+    "all_three_rendered_alpha_identical": true,
+    "light_opaque_rgb": [
+      254,
+      254,
+      254
+    ],
+    "dark_opaque_rgb": [
+      36,
+      36,
+      36
+    ],
+    "no_bitmap_embedding_external_references_or_background_rectangles": true
+  },
+  "error_characteristics": [
+    "This is a measured vector restoration, not the unavailable original vector master.",
+    "The square PNG canvas and visible mark placement are retained; transparent margins are intentional.",
+    "Low-alpha stray pixels, edge halos and raster texture are omitted; main shapes are opaque with antialiased boundaries.",
+    "The very small original color drift is retained as a smooth two-stop gradient; random per-pixel color noise is not reproduced.",
+    "Boundary error is measured after resvg rasterization at source resolution against the cleaned 50% alpha silhouette, not against stray transparent pixels."
+  ],
+  "authoring_versions": {
+    "numpy": "2.5.1",
+    "opencv": "5.0.0",
+    "Pillow": "12.3.0",
+    "resvg_py": "0.5.0"
+  },
+  "outputs": {
+    "color": {
+      "path": "assets/brand/nova-symbol-color.svg",
+      "sha256": "a9c77f0c322954543fa6c7c125be7af9e298a987b28d5311fa8b88330a77eaa5",
+      "bytes": 7349
+    },
+    "light": {
+      "path": "assets/brand/nova-symbol-light.svg",
+      "sha256": "e50ac0cdb29eb3831e7feeafcd70c417a3056dc3e481d4aa699a49daec3c9f38",
+      "bytes": 7040
+    },
+    "dark": {
+      "path": "assets/brand/nova-symbol-dark.svg",
+      "sha256": "5148115669919ee8a3454d84604903ef8e8549e00fa3eff9c06896e2861599fa",
+      "bytes": 7038
+    }
+  }
+}

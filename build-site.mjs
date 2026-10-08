@@ -1,5 +1,6 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const root = new URL('.', import.meta.url);
 const partials = new URL('./partials/', root);
@@ -15,7 +16,7 @@ const currentPageByFile = {
 };
 
 for (const file of htmlFiles) {
-  const path = join(root.pathname, file);
+  const path = join(fileURLToPath(root), file);
   const source = await readFile(path, 'utf8');
   const currentPage = currentPageByFile[file] ?? '';
   const pageHeader = header.replaceAll(' data-nav-page="' + currentPage + '"', ' data-nav-page="' + currentPage + '" aria-current="page"');

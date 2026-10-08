@@ -1,0 +1,85 @@
+- link "본문으로 바로가기":
+  - /url: "#main"
+- banner:
+  - link "NOVA Solution 홈":
+    - /url: ./index.html
+    - strong: NOVA
+    - text: SOLUTION
+  - button "메뉴 열기":
+    - generic: 메뉴 열기
+  - navigation "주요 메뉴":
+    - link "Company":
+      - /url: ./company.html
+    - link "Solutions":
+      - /url: ./solutions.html
+    - link "Technology":
+      - /url: ./technology.html
+    - link "Resources":
+      - /url: ./resources.html
+    - link "Contact Us":
+      - /url: ./contact.html
+      - generic: Contact Us
+      - generic: →
+- main:
+  - paragraph: CONTACT NOVA SOLUTION
+  - heading "What can we help you with?" [level=1]:
+    - text: What can we
+    - text: help you with?
+  - paragraph:
+    - text: 문의 목적을 선택하고 프로젝트에 대해 알려주세요.
+    - text: 확인 후 적합한 담당자가 연락드리겠습니다.
+  - link "EMAIL US DIRECTLY ys.lee@edimsol.com 메일 보내기 ↗":
+    - /url: mailto:ys.lee@edimsol.com?subject=NOVA%20Solution%20Inquiry
+    - generic: EMAIL US DIRECTLY
+    - strong: ys.lee@edimsol.com
+    - generic: 메일 보내기 ↗
+  - group "01 Inquiry Type *":
+    - generic: 01 Inquiry Type *
+    - radio "01 / PRODUCT HVAC Product 제품 · 견적 · 납품 · 기술 문의 ↗"
+    - generic: 01 / PRODUCT
+    - strong: HVAC Product
+    - emphasis: 제품 · 견적 · 납품 · 기술 문의
+    - generic: ↗
+    - radio "02 / PLATFORM EDIM 도입 · Demo · PoC · 시스템 연계 ↗"
+    - generic: 02 / PLATFORM
+    - strong: EDIM
+    - emphasis: 도입 · Demo · PoC · 시스템 연계
+    - generic: ↗
+    - radio "03 / COLLABORATION Partnership 기술 협력 · 제조 협력 · 사업 제휴 ↗"
+    - generic: 03 / COLLABORATION
+    - strong: Partnership
+    - emphasis: 기술 협력 · 제조 협력 · 사업 제휴
+    - generic: ↗
+  - group "02 Contact Information":
+    - generic: 02 Contact Information
+    - generic: Company Name *
+    - textbox "Company Name *"
+    - generic: Name *
+    - textbox "Name *"
+    - generic: Position
+    - textbox "Position"
+    - generic: Email *
+    - textbox "Email *"
+    - generic: Phone
+    - textbox "Phone"
+  - group "03 Inquiry Details":
+    - generic: 03 Inquiry Details
+    - generic: Product / Solution *
+    - combobox "Product / Solution *" [disabled]:
+      - option "먼저 문의 유형을 선택해 주세요" [selected]
+    - generic: Message *
+    - textbox "Message *":
+      - /placeholder: 프로젝트 배경, 필요한 제품 또는 검토 사항을 적어주세요.
+  - paragraph:
+    - text: "* 필수 입력 항목입니다."
+    - text: 입력하신 정보는 문의 확인과 답변을 위해 전송됩니다.
+  - button "Submit Inquiry ↗":
+    - text: Submit Inquiry
+    - generic: ↗
+- contentinfo:
+  - link "NOVA Solution 홈":
+    - /url: ./index.html
+    - strong: NOVA
+    - text: SOLUTION
+  - paragraph: Engineering Manufacturing, From Product to Data.
+  - paragraph: © 2026 NOVA Solution. All rights reserved.

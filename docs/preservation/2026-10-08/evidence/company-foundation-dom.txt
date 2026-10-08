@@ -1,0 +1,90 @@
+- link "본문으로 바로가기":
+  - /url: "#main"
+- banner:
+  - link "NOVA Solution 홈":
+    - /url: ./index.html
+    - strong: NOVA
+    - text: SOLUTION
+  - navigation "주요 메뉴":
+    - link "Company":
+      - /url: ./company.html
+    - link "Solutions":
+      - /url: ./solutions.html
+    - link "Technology":
+      - /url: ./technology.html
+    - link "Resources":
+      - /url: ./resources.html
+    - link "Contact Us":
+      - /url: ./contact.html
+      - generic: Contact Us
+      - generic: →
+- main:
+  - paragraph: WHO WE ARE / NOVA SOLUTION
+  - heading "Manufacturing Intelligence, Built from the Field." [level=1]:
+    - text: Manufacturing Intelligence,
+    - text: Built from the Field.
+  - paragraph:
+    - text: 제조 기술에서 시작해
+    - text: 제조 데이터까지 연결합니다.
+  - generic: Engineering → Product → Data
+  - region "Select a story. See who we are.":
+    - paragraph: EXPLORE NOVA SOLUTION
+    - heading "Select a story. See who we are." [level=2]:
+      - text: Select a story.
+      - text: See who we are.
+    - paragraph: 카드를 선택하면 각 이야기가 화면 위로 확장됩니다.
+    - button "01 / COMPANY About Nova Solution 현장을 아는 기술과 연결을 만드는 데이터 Open ↗":
+      - generic: 01 / COMPANY
+      - text: About Nova Solution
+      - heading "현장을 아는 기술과 연결을 만드는 데이터" [level=3]
+      - text: Open
+      - generic: ↗
+    - button "02 / DIRECTION Mission & Vision 끊김 없는 제조를 만드는 방향 Open ↗":
+      - generic: 02 / DIRECTION
+      - text: Mission & Vision
+      - heading "끊김 없는 제조를 만드는 방향" [level=3]
+      - text: Open
+      - generic: ↗
+    - button "03 / JOURNEY History 짧지만 분명한 출발점 Open ↗":
+      - generic: 03 / JOURNEY
+      - text: History
+      - heading "짧지만 분명한 출발점" [level=3]
+      - text: Open
+      - generic: ↗
+    - button "04 / FOUNDATION Manufacturing Foundation 제조 현장에서 시작한 기술 기반 Open ↗":
+      - generic: 04 / FOUNDATION
+      - text: Manufacturing Foundation
+      - heading "제조 현장에서 시작한 기술 기반" [level=3]
+      - text: Open
+      - generic: ↗
+    - button "05 / HEAD OFFICE Location Dongtan, Hwaseong Open Map ↗":
+      - generic: 05 / HEAD OFFICE
+      - text: Location
+      - heading "Dongtan, Hwaseong" [level=3]:
+        - text: Dongtan,
+        - text: Hwaseong
+      - text: Open Map
+      - generic: ↗
+  - text: → →
+  - dialog:
+    - button "foundation 정보 닫기" [active]:
+      - generic: ×
+    - paragraph: 04 / MANUFACTURING FOUNDATION
+    - heading "제조 현장에서 시작한 NOVA의 기술 기반" [level=2]
+    - paragraph: NOVA Solution은 제품과 공조 시스템을 설계하고 제조 현장의 조건을 해석하는 엔지니어링 역량에서 출발합니다.
+    - paragraph: 하드웨어의 구조와 실제 운전 환경에 대한 이해를 바탕으로, 공조 제품과 제조 데이터를 연결하는 기술과 서비스를 만들어갑니다.
+    - text: HVAC ENGINEERING
+    - generic: 제품·설비·공조 설계
+    - generic: +
+    - text: MANUFACTURING DATA
+    - generic: 사양·도면·BOM·시스템 연결
+    - paragraph: 현장에 적용할 수 있는 기술과 신뢰할 수 있는 데이터 구조를 함께 설계하는 것이 NOVA의 핵심 접근 방식입니다.
+  - text: "N"
+- contentinfo:
+  - link "NOVA Solution 홈":
+    - /url: ./index.html
+    - strong: NOVA
+    - text: SOLUTION
+  - paragraph: Engineering Manufacturing, From Product to Data.
+  - paragraph: © 2026 NOVA Solution. All rights reserved.
+- button "회사 정보 닫기"

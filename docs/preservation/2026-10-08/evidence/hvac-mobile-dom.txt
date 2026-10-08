@@ -1,0 +1,132 @@
+- link "본문으로 바로가기":
+  - /url: "#main"
+- banner:
+  - link "NOVA Solution 홈":
+    - /url: ./index.html
+    - strong: NOVA
+    - text: SOLUTION
+  - button "메뉴 열기":
+    - generic: 메뉴 열기
+  - navigation "주요 메뉴":
+    - link "Company":
+      - /url: ./company.html
+    - link "Solutions":
+      - /url: ./solutions.html
+    - link "Technology":
+      - /url: ./technology.html
+    - link "Resources":
+      - /url: ./resources.html
+    - link "Contact Us":
+      - /url: ./contact.html
+      - generic: Contact Us
+      - generic: →
+- main:
+  - paragraph: SOLUTION 01 / HVAC
+  - heading "공조 하드웨어" [level=1]
+  - paragraph: 현장 중심의 제조·공조 엔지니어링을 기반으로 공기의 흐름, 처리, 품질과 제어를 아우르는 HVAC 제품군을 제공합니다.
+  - strong: "11"
+  - generic: HVAC Products
+  - strong: "3"
+  - generic: Product Categories
+  - region "Ventilation":
+    - generic: 01–04
+    - paragraph: Category 01
+    - heading "Ventilation" [level=2]
+    - paragraph: 기류를 만들고 전달하는 핵심 임펠러와 팬 라인업
+    - link "View Category →":
+      - /url: ./ventilation.html
+    - link "Eurus Impeller 상세 보기":
+      - /url: ./ventilation.html#eurus
+      - generic: "01"
+      - img "Eurus Impeller 제품 이미지"
+      - heading "Eurus Impeller" [level=3]
+      - paragraph: Ventilation
+    - link "Partial Impeller 상세 보기":
+      - /url: ./ventilation.html#partial
+      - generic: "02"
+      - img "Partial Impeller 제품 이미지"
+      - heading "Partial Impeller" [level=3]
+      - paragraph: Ventilation
+    - link "Pull-Out Impeller 상세 보기":
+      - /url: ./ventilation.html#pullout
+      - generic: "03"
+      - img "Pull-Out Impeller 제품 이미지"
+      - heading "Pull-Out Impeller" [level=3]
+      - paragraph: Ventilation
+    - link "Fan Model 라인업 상세 보기":
+      - /url: ./ventilation.html#fan-model
+      - generic: "04"
+      - img "KAD, KAP, KAS 팬 모델 라인업"
+      - heading "Fan Model 라인업" [level=3]
+      - paragraph: Ventilation
+  - region "Air System":
+    - generic: 05–08
+    - paragraph: Category 02
+    - heading "Air System" [level=2]
+    - paragraph: 공기 조화와 품질 관리를 위한 통합 시스템
+    - link "View Category →":
+      - /url: ./air-system.html
+    - link "Eco AHU / RTU 상세 보기":
+      - /url: ./air-system.html#ahu
+      - generic: "05"
+      - img "Eco AHU / RTU 제품 이미지"
+      - heading "Eco AHU / RTU" [level=3]
+      - paragraph: Air System
+    - link "Bio HVAC 상세 보기":
+      - /url: ./air-system.html#bio-hvac
+      - generic: "06"
+      - img "Bio HVAC 제품 이미지"
+      - heading "Bio HVAC" [level=3]
+      - paragraph: Air System
+    - link "IEF 전기집진필터 상세 보기":
+      - /url: ./air-system.html#ief
+      - generic: "07"
+      - img "IEF 전기집진필터 제품 이미지"
+      - heading "IEF 전기집진필터" [level=3]
+      - paragraph: Air System
+    - link "IAQS 실내공기질 상세 보기":
+      - /url: ./air-system.html#iaqs
+      - generic: "08"
+      - img "IAQS 실내공기질 제품 이미지"
+      - heading "IAQS 실내공기질" [level=3]
+      - paragraph: Air System
+  - region "Parts & Control":
+    - generic: 09–11
+    - paragraph: Category 03
+    - heading "Parts & Control" [level=2]
+    - paragraph: 운전 안정성과 효율을 높이는 부품 및 제어 기술
+    - link "View Category →":
+      - /url: ./parts-control.html
+    - link "CLT 배수 트랩 상세 보기":
+      - /url: ./parts-control.html#clt
+      - generic: "09"
+      - img "CLT 배수 트랩 제품 이미지"
+      - heading "CLT 배수 트랩" [level=3]
+      - paragraph: Parts & Control
+    - link "FCM 팬 제어 상세 보기":
+      - /url: ./parts-control.html#fcm
+      - generic: "10"
+      - img "FCM 팬 제어 제품 이미지"
+      - heading "FCM 팬 제어" [level=3]
+      - paragraph: Parts & Control
+    - link "ECM 공조기 제어 상세 보기":
+      - /url: ./parts-control.html#ecm
+      - generic: "11"
+      - img "ECM 공조기 제어 제품 이미지"
+      - heading "ECM 공조기 제어" [level=3]
+      - paragraph: Parts & Control
+  - paragraph: HVAC / Project Inquiry
+  - heading "현장 조건에 맞는 제품 구성을 함께 검토합니다." [level=2]:
+    - text: 현장 조건에 맞는 제품 구성을
+    - text: 함께 검토합니다.
+  - link "Contact Us ↗":
+    - /url: ./contact.html
+    - text: Contact Us
+    - generic: ↗
+- contentinfo:
+  - link "NOVA Solution 홈":
+    - /url: ./index.html
+    - strong: NOVA
+    - text: SOLUTION
+  - paragraph: Engineering Manufacturing, From Product to Data.
+  - paragraph: © 2026 NOVA Solution. All rights reserved.

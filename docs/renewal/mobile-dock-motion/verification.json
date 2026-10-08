@@ -1,0 +1,243 @@
+{
+  "date": "2026-10-09",
+  "iconScale": 1.5,
+  "regularIcon": {
+    "previous": 24,
+    "current": 36,
+    "strokeViewBox": 0.85,
+    "effectiveStroke": 1.275
+  },
+  "centralIcon": {
+    "previous": 26,
+    "current": 39,
+    "asset": "assets/brand/nova-symbol-navigation.svg"
+  },
+  "layouts": [
+    {
+      "icons": [
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        },
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        },
+        {
+          "gap": 14.9000244140625,
+          "height": 39,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 39
+        },
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        },
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        }
+      ],
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "icons": [
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        },
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        },
+        {
+          "gap": 14.9000244140625,
+          "height": 39,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 39
+        },
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        },
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        }
+      ],
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "icons": [
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        },
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        },
+        {
+          "gap": 14.9000244140625,
+          "height": 39,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 39
+        },
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        },
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        }
+      ],
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "icons": [
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        },
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        },
+        {
+          "gap": 14.9000244140625,
+          "height": 39,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 39
+        },
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        },
+        {
+          "gap": 8.4000244140625,
+          "height": 36,
+          "insideCell": true,
+          "labelY": 809.2000122070312,
+          "width": 36
+        }
+      ],
+      "overflow": false,
+      "width": 960
+    }
+  ],
+  "motion": {
+    "openClose": {
+      "axis": "y",
+      "distance": 28,
+      "duration": 320,
+      "easing": "ease-in-out"
+    },
+    "category": {
+      "axis": "x",
+      "distance": 36,
+      "duration": 280,
+      "easing": "ease-in-out"
+    }
+  },
+  "browserSlides": [
+    {
+      "mainInert": true,
+      "opacity": "0.944113",
+      "panel": "prism-nav-panel-resources",
+      "transform": "matrix(1, 0, 0, 1, 2.01194, 0)",
+      "visiblePanels": 1
+    },
+    {
+      "mainInert": true,
+      "opacity": "0.962574",
+      "panel": "prism-nav-panel-technology",
+      "transform": "matrix(1, 0, 0, 1, -1.34732, 0)",
+      "visiblePanels": 1
+    },
+    {
+      "mainInert": true,
+      "opacity": "0.962592",
+      "panel": "prism-nav-panel-solutions",
+      "transform": "matrix(1, 0, 0, 1, 1.34668, 0)",
+      "visiblePanels": 1
+    },
+    {
+      "mainInert": true,
+      "opacity": "0.943794",
+      "panel": "prism-nav-panel-company",
+      "transform": "matrix(1, 0, 0, 1, -2.02341, 0)",
+      "visiblePanels": 1
+    }
+  ],
+  "closingSlide": {
+    "hidden": false,
+    "mainInert": true,
+    "opacity": "0.123576",
+    "transform": "matrix(1, 0, 0, 1, 0, 24.5399)"
+  },
+  "checks": [
+    "Escape restores focus after animated close",
+    "Closing interrupted by reopen keeps menu open",
+    "Company modal handoff synchronous and header inert preserved",
+    "961 breakpoint closes mobile sheet and restores desktop trigger focus",
+    "5 lifecycle regression groups pass",
+    "11-page build pass"
+  ],
+  "limitations": [
+    "Reduced motion verified through lifecycle fixture; physical devices not tested."
+  ],
+  "commitPushDeploy": false
+}

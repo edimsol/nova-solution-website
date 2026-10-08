@@ -1,0 +1,4 @@
+# Preserve the byte-for-byte archival evidence and vector source hashes.
+docs/preservation/** -text
+assets/brand/*.svg -text
+assets/fonts/pretendard/LICENSE.txt -text

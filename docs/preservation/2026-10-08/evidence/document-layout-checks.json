@@ -1,0 +1,90 @@
+[
+  {
+    "page": "index",
+    "viewport": "390×844",
+    "brokenImages": [],
+    "imageCount": 11,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "page": "company",
+    "viewport": "390×844",
+    "brokenImages": [],
+    "imageCount": 10,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "page": "solutions",
+    "viewport": "390×844",
+    "brokenImages": [],
+    "imageCount": 16,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "page": "hvac",
+    "viewport": "390×844",
+    "brokenImages": [],
+    "imageCount": 15,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "page": "ventilation",
+    "viewport": "390×844",
+    "brokenImages": [],
+    "imageCount": 11,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "page": "air-system",
+    "viewport": "390×844",
+    "brokenImages": [],
+    "imageCount": 9,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "page": "parts-control",
+    "viewport": "390×844",
+    "brokenImages": [],
+    "imageCount": 19,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "page": "edim",
+    "viewport": "390×844",
+    "brokenImages": [],
+    "imageCount": 2,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "page": "technology",
+    "viewport": "390×844",
+    "brokenImages": [],
+    "imageCount": 2,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "page": "resources",
+    "viewport": "390×844",
+    "brokenImages": [],
+    "imageCount": 2,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "page": "contact",
+    "viewport": "390×844",
+    "brokenImages": [],
+    "imageCount": 5,
+    "scrollWidth": 375,
+    "width": 375
+  }
+]

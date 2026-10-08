@@ -1,0 +1,22 @@
+/* Native scrolling remains in charge. Only successful JS enhancement hides bars. */
+.novascroll-ready { scrollbar-width: none !important; scrollbar-gutter: auto !important; }
+.novascroll-ready::-webkit-scrollbar { width: 0 !important; height: 0 !important; display: none !important; }
+.novascroll-layer { --novascroll-css-ready: 1; position: fixed; inset: 0; z-index: 2147483000; pointer-events: none; contain: layout style; }
+.novascroll-rail { position: absolute; pointer-events: none; opacity: 0; transition: opacity 180ms ease; }
+.novascroll-rail[hidden] { display: none !important; }
+.novascroll-rail.is-visible { opacity: 1; }
+.novascroll-rail[data-axis="y"] { width: 16px; }
+.novascroll-rail[data-axis="x"] { height: 16px; }
+.novascroll-rail .novascroll-thumb { position: absolute; display: block; box-sizing: border-box; min-width: 0; min-height: 0; padding: 0; margin: 0; border: 0; border-radius: 12px; color: #e9f2f4; background: transparent; appearance: none; pointer-events: none; touch-action: none; cursor: grab; outline-offset: -2px; }
+.novascroll-rail.is-visible .novascroll-thumb { pointer-events: auto; }
+.novascroll-thumb::before { content: ""; position: absolute; border-radius: inherit; background: rgba(119,145,153,.75); box-shadow: 0 0 0 1px rgba(255,255,255,.22); transition: background-color 120ms; }
+.novascroll-rail[data-axis="y"] .novascroll-thumb { left: 0; width: 16px; }
+.novascroll-rail[data-axis="y"] .novascroll-thumb::before { inset: 0 5px; }
+.novascroll-rail[data-axis="x"] .novascroll-thumb { top: 0; height: 16px; }
+.novascroll-rail[data-axis="x"] .novascroll-thumb::before { inset: 5px 0; }
+.novascroll-thumb:hover::before,.novascroll-thumb:focus-visible::before,.novascroll-thumb.is-dragging::before { background: #54bbd2; }
+.novascroll-thumb.is-dragging { cursor: grabbing; }
+.novascroll-dragging { scroll-behavior: auto !important; scroll-snap-type: none !important; }
+@media (prefers-reduced-motion: reduce) { .novascroll-rail,.novascroll-thumb::before { transition: none; } }
+@media (forced-colors: active) { .novascroll-thumb::before { background: CanvasText; box-shadow: none; forced-color-adjust: none; } }
+@media print { .novascroll-layer { display: none !important; } .novascroll-ready { scrollbar-width: auto !important; } }

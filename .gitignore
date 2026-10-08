@@ -2,3 +2,5 @@
 .idea/
 *.log
 /dist/
+__pycache__/
+*.py[cod]

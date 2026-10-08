@@ -1,0 +1,31 @@
+{
+  "date_kst": "2026-10-08",
+  "baseline_commit": "17940aeff93b3ea17179a9a9048886e3b8ee6ed8",
+  "status": "passed",
+  "failures": [],
+  "snapshot_and_worktree_files_checked": 62,
+  "tracked_source_unchanged": true,
+  "standalone_page_documents": 11,
+  "auxiliary_html_documents": 4,
+  "original_main_text_preserved": true,
+  "embedded_document_image_elements": 137,
+  "local_document_links_checked": 471,
+  "browser_capture_count": 51,
+  "browser_check_count": 35,
+  "mobile_layout_documents_checked": 15,
+  "production_pages_matching_after_documented_normalization": 11,
+  "logo_count": 3,
+  "logo_silhouettes_identical": true,
+  "deployment_build": {
+    "command": "node scripts/build-pages.mjs 17940ae",
+    "result": "passed",
+    "details": "11 HTML files and 31 referenced image assets; executed separately by root agent."
+  },
+  "verification_limits": [
+    "No real Formspree submission or email sent.",
+    "Responsive viewports tested; no physical touch-device, Safari or Firefox test.",
+    "Product performance/patent/first-in-market claims preserved, not independently substantiated.",
+    "novascroll and Pretendard are future specifications, not installed.",
+    "Print CSS inspected; no paper/PDF pagination guarantee."
+  ]
+}

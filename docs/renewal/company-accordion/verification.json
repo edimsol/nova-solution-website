@@ -1,0 +1,318 @@
+{
+  "date": "2026-10-09",
+  "baselineCommit": "17940ae",
+  "scope": "Five Company content modals converted to inline native accordions; navigation panels retained",
+  "browser": {
+    "openChecks": [
+      {
+        "bodyLocked": false,
+        "dialogs": 0,
+        "expanded": "true",
+        "hash": "#about",
+        "id": "about",
+        "open": true
+      },
+      {
+        "bodyLocked": false,
+        "dialogs": 0,
+        "expanded": "true",
+        "hash": "#mission",
+        "id": "mission",
+        "open": true
+      },
+      {
+        "dialogs": 0,
+        "expanded": "true",
+        "hash": "#history",
+        "id": "history",
+        "open": true
+      },
+      {
+        "dialogs": 0,
+        "expanded": "true",
+        "hash": "#foundation",
+        "id": "foundation",
+        "open": true
+      },
+      {
+        "dialogs": 0,
+        "expanded": "true",
+        "hash": "#location",
+        "id": "location",
+        "open": true
+      }
+    ],
+    "layoutChecks": [
+      {
+        "height": 1000,
+        "map": 246.8000030517578,
+        "open": 5,
+        "overflow": false,
+        "panels": [
+          {
+            "id": "about",
+            "position": "relative",
+            "width": 282.3999938964844
+          },
+          {
+            "id": "mission",
+            "position": "relative",
+            "width": 282.3999938964844
+          },
+          {
+            "id": "history",
+            "position": "relative",
+            "width": 282.3999938964844
+          },
+          {
+            "id": "foundation",
+            "position": "relative",
+            "width": 282.3999938964844
+          },
+          {
+            "id": "location",
+            "position": "relative",
+            "width": 282.3999938964844
+          }
+        ],
+        "width": 320
+      },
+      {
+        "height": 1000,
+        "map": 317.20001220703125,
+        "open": 5,
+        "overflow": false,
+        "panels": [
+          {
+            "id": "about",
+            "position": "relative",
+            "width": 352.8000183105469
+          },
+          {
+            "id": "mission",
+            "position": "relative",
+            "width": 352.8000183105469
+          },
+          {
+            "id": "history",
+            "position": "relative",
+            "width": 352.8000183105469
+          },
+          {
+            "id": "foundation",
+            "position": "relative",
+            "width": 352.8000183105469
+          },
+          {
+            "id": "location",
+            "position": "relative",
+            "width": 352.8000183105469
+          }
+        ],
+        "width": 390
+      },
+      {
+        "height": 1000,
+        "map": 660.7999877929688,
+        "open": 5,
+        "overflow": false,
+        "panels": [
+          {
+            "id": "about",
+            "position": "relative",
+            "width": 718.4000244140625
+          },
+          {
+            "id": "mission",
+            "position": "relative",
+            "width": 718.4000244140625
+          },
+          {
+            "id": "history",
+            "position": "relative",
+            "width": 718.4000244140625
+          },
+          {
+            "id": "foundation",
+            "position": "relative",
+            "width": 718.4000244140625
+          },
+          {
+            "id": "location",
+            "position": "relative",
+            "width": 718.4000244140625
+          }
+        ],
+        "width": 768
+      },
+      {
+        "height": 1000,
+        "map": 852.7999877929688,
+        "open": 5,
+        "overflow": false,
+        "panels": [
+          {
+            "id": "about",
+            "position": "relative",
+            "width": 910.4000244140624
+          },
+          {
+            "id": "mission",
+            "position": "relative",
+            "width": 910.4000244140624
+          },
+          {
+            "id": "history",
+            "position": "relative",
+            "width": 910.4000244140624
+          },
+          {
+            "id": "foundation",
+            "position": "relative",
+            "width": 910.4000244140624
+          },
+          {
+            "id": "location",
+            "position": "relative",
+            "width": 910.4000244140624
+          }
+        ],
+        "width": 960
+      },
+      {
+        "height": 1000,
+        "map": 854.4000244140625,
+        "open": 5,
+        "overflow": false,
+        "panels": [
+          {
+            "id": "about",
+            "position": "relative",
+            "width": 912
+          },
+          {
+            "id": "mission",
+            "position": "relative",
+            "width": 912
+          },
+          {
+            "id": "history",
+            "position": "relative",
+            "width": 912
+          },
+          {
+            "id": "foundation",
+            "position": "relative",
+            "width": 912
+          },
+          {
+            "id": "location",
+            "position": "relative",
+            "width": 912
+          }
+        ],
+        "width": 962
+      },
+      {
+        "height": 1000,
+        "map": 1252.800048828125,
+        "open": 5,
+        "overflow": false,
+        "panels": [
+          {
+            "id": "about",
+            "position": "relative",
+            "width": 1318.4000244140625
+          },
+          {
+            "id": "mission",
+            "position": "relative",
+            "width": 1318.4000244140625
+          },
+          {
+            "id": "history",
+            "position": "relative",
+            "width": 1318.4000244140625
+          },
+          {
+            "id": "foundation",
+            "position": "relative",
+            "width": 1318.4000244140625
+          },
+          {
+            "id": "location",
+            "position": "relative",
+            "width": 1318.4000244140625
+          }
+        ],
+        "width": 1440
+      }
+    ],
+    "back": {
+      "hash": "#foundation",
+      "open": [
+        "about",
+        "mission",
+        "history",
+        "foundation"
+      ]
+    },
+    "forward": {
+      "hash": "#location",
+      "open": [
+        "about",
+        "mission",
+        "history",
+        "foundation",
+        "location"
+      ]
+    },
+    "mobileNavigation": {
+      "contentDialog": 0,
+      "expanded": "true",
+      "hash": "#location",
+      "headerInert": false,
+      "mainInert": false,
+      "navigationClosed": true
+    },
+    "map": {
+      "headerBottom": 61.20000076293945,
+      "loadedTiles": 12,
+      "mapBounds": {
+        "bottom": 925.2375183105468,
+        "height": 548.4000244140625,
+        "left": 36.60000228881836,
+        "right": 353.8000144958496,
+        "top": 376.8374938964844,
+        "width": 317.20001220703125,
+        "x": 36.60000228881836,
+        "y": 376.8374938964844
+      },
+      "mapLink": "https://map.kakao.com/link/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%99%94%EC%84%B1%EC%8B%9C%20%EB%8F%99%ED%83%84%EA%B5%AC%20%EB%8F%99%ED%83%84%EC%98%81%EC%B2%9C%EB%A1%9C%20131",
+      "overflow": false,
+      "summaryTop": 98.0875015258789,
+      "tiles": 12,
+      "width": 390
+    },
+    "noJavaScript": "All five native details opened with Enter in sandbox without scripts"
+  },
+  "automated": {
+    "controller": "Seven behavioral groups passed",
+    "navigationMotion": "Passed",
+    "build": "11 HTML pages, 11 root assets and 56 public assets; build verification passed",
+    "preservation": "62 snapshot files retain original hashes; all five original story sections preserved; 11 UI text replacements and five summary migrations explicitly checked"
+  },
+  "limitations": [
+    "Responsive browser viewport validation; physical iOS/Android devices not tested",
+    "Reduced-motion behavior tested with controller fixtures, not an operating-system preference change"
+  ],
+  "screenshots": [
+    "company-desktop.png",
+    "company-mobile.png"
+  ],
+  "delivery": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  }
+}

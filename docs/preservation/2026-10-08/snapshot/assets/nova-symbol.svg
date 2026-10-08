@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" role="img" aria-label="NOVA symbol">
+  <path
+    d="M38 190V30L134 116M76 139L162 207V30L126 64M38 190L67 162"
+    fill="none"
+    stroke="#4FC2DF"
+    stroke-width="18"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

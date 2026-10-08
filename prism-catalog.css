@@ -1,0 +1,222 @@
+/* Prism: Solutions and HVAC catalogue pages. Shared chrome is styled elsewhere. */
+body.prism-catalog {
+  --pc-bg: #151619;
+  --pc-surface: #202226;
+  --pc-ink: #f2f4f6;
+  --pc-muted: #a8afb9;
+  --pc-border: #373b42;
+  --pc-cyan: #77d8e9;
+  --pc-lime: #d0e886;
+  --pc-purple: #b9a2ef;
+  background: var(--pc-bg);
+  color: var(--pc-ink);
+}
+
+.prism-catalog .prism-catalog-main { padding-top: 108px; }
+.prism-catalog .prism-catalog-main [hidden] { display: none !important; }
+.prism-catalog .pc-container { width: min(1320px, calc(100% - 80px)); margin-inline: auto; }
+.prism-catalog .prism-catalog-main :where(h1, h2, h3, p, figure) { margin: 0; }
+.prism-catalog .prism-catalog-main :where(a, button) { -webkit-tap-highlight-color: transparent; }
+.prism-catalog .prism-catalog-main a { color: inherit; text-decoration: none; }
+.prism-catalog .prism-catalog-main img { display: block; max-width: 100%; object-fit: contain; }
+.prism-catalog .prism-catalog-main :where(section[id], h2[id]) { scroll-margin-top: 125px; }
+.prism-catalog .pc-eyebrow { color: var(--pc-cyan); font-size: 12px; line-height: 1.5; letter-spacing: .1em; margin-bottom: 23px; }
+
+/* Page introductions */
+.prism-catalog .pc-solution-block { padding: 45px 0 76px; }
+.prism-catalog .pc-stage-decor { display: none; }
+.prism-catalog .pc-block-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 44px; margin-bottom: 45px; }
+.prism-catalog .pc-block-heading h1,
+.prism-catalog .pc-edim-title h2 { color: var(--pc-ink); font-size: clamp(60px, 7.8vw, 104px); font-weight: 600; line-height: .95; letter-spacing: -.065em; }
+.prism-catalog .pc-block-heading > div > p:last-child { max-width: 650px; margin-top: 24px; font-size: 17px; line-height: 1.75; color: var(--pc-muted); word-break: keep-all; }
+.prism-catalog .pc-block-heading > a,
+.prism-catalog .pc-category-link { display: inline-flex; align-items: center; gap: 18px; min-height: 44px; padding-bottom: 5px; border-bottom: 1px solid var(--pc-border); font-size: 13px; line-height: 1.5; color: var(--pc-ink); white-space: nowrap; }
+.prism-catalog .pc-block-heading > a span { color: var(--pc-cyan); transition: transform .2s ease; }
+.prism-catalog .pc-block-heading > a:hover span { transform: translateX(5px); }
+.prism-catalog .pc-library-label { margin-bottom: 20px; }
+.prism-catalog .pc-library-label > p { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px 24px; }
+.prism-catalog .pc-library-label b { font-size: 16px; line-height: 1.5; font-weight: 500; color: var(--pc-ink); }
+.prism-catalog .pc-library-label span { font-size: 13px; line-height: 1.6; color: var(--pc-muted); }
+
+/* These controls are revealed only after prism.js has bound their behavior. */
+.prism-catalog .pc-filterbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 26px; }
+.prism-catalog .pc-filterbar button { display: inline-flex; align-items: center; justify-content: space-between; gap: 17px; min-height: 44px; border: 1px solid var(--pc-border); padding: 11px 17px; border-radius: 12px; font: inherit; font-size: 13px; line-height: 1.4; color: var(--pc-muted); background: transparent; cursor: pointer; transition: background .2s, border-color .2s, color .2s; }
+.prism-catalog .pc-filterbar button span { font-size: 11px; opacity: .7; }
+.prism-catalog .pc-filterbar button:hover { color: var(--pc-ink); border-color: #626a74; }
+.prism-catalog .pc-filterbar button[aria-pressed="true"] { background: var(--pc-cyan); border-color: var(--pc-cyan); color: #152328; }
+.prism-catalog .pc-filterbar button[data-prism-filter="parts-control"][aria-pressed="true"] { background: var(--pc-lime); border-color: var(--pc-lime); color: #222919; }
+.prism-catalog .pc-status { min-height: 0; font-size: 13px; line-height: 1.6; color: var(--pc-muted); }
+.prism-catalog .pc-status:not(:empty) { margin: -7px 0 22px; }
+
+/* Product-first grid: a wider opening card followed by compact product cards. */
+.prism-catalog .pc-products { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
+.prism-catalog .pc-product,
+.prism-catalog .pc-family-card { --pc-accent: var(--pc-cyan); position: relative; isolation: isolate; min-width: 0; border: 1px solid var(--pc-border); border-radius: 24px; background: var(--pc-surface); overflow: hidden; transition: transform .2s ease, border-color .25s ease, box-shadow .25s ease; }
+.prism-catalog .pc-product::before,
+.prism-catalog .pc-family-card::before { content: ''; pointer-events: none; position: absolute; z-index: -1; inset: 0; opacity: .4; background: radial-gradient(ellipse at var(--pr-x, 65%) var(--pr-y, 18%), color-mix(in srgb, var(--pc-accent) 13%, transparent), transparent 67%); transition: opacity .3s ease; }
+.prism-catalog .pc-product:hover,
+.prism-catalog .pc-product:focus-visible,
+.prism-catalog .pc-family-card:hover,
+.prism-catalog .pc-family-card:focus-visible { border-color: color-mix(in srgb, var(--pc-accent) 65%, var(--pc-border)); box-shadow: 0 12px 35px #0000001a; }
+.prism-catalog .pc-product:hover::before,
+.prism-catalog .pc-family-card:hover::before { opacity: 1; }
+.prism-catalog .pc-product { grid-column: span 2; padding: 25px; display: flex; flex-direction: column; min-height: 370px; }
+.prism-catalog .pc-product[data-prism-category="parts-control"] { --pc-accent: var(--pc-lime); }
+.prism-catalog .pc-product > small { color: var(--pc-accent); font-size: 11px; line-height: 1.5; letter-spacing: .065em; }
+.prism-catalog .pc-product > img,
+.prism-catalog .pc-image-stack { height: 216px; width: 100%; margin: 16px 0 20px; filter: drop-shadow(0 18px 15px #00000028); }
+.prism-catalog .pc-product > img { transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+.prism-catalog .pc-product:hover > img { transform: translateY(-5px) scale(1.025); }
+.prism-catalog .pc-product > div { margin-top: auto; }
+.prism-catalog .pc-product h2 { font-size: clamp(20px, 2vw, 26px); line-height: 1.3; font-weight: 500; letter-spacing: -.035em; color: var(--pc-ink); }
+.prism-catalog .pc-product > div > p { margin-top: 9px; font-size: 14px; line-height: 1.65; color: var(--pc-muted); word-break: keep-all; }
+.prism-catalog .pc-products:not(.pc-software-grid) > .pc-product:first-child { grid-column: span 4; display: grid; grid-template-columns: .9fr 1.1fr; grid-template-rows: auto 1fr; gap: 18px; align-items: stretch; }
+.prism-catalog .pc-products:not(.pc-software-grid) > .pc-product:first-child > img { grid-column: 2; grid-row: 1 / 3; align-self: center; height: 270px; margin: 0; }
+.prism-catalog .pc-products:not(.pc-software-grid) > .pc-product:first-child > div { align-self: end; grid-column: 1; grid-row: 2; }
+.prism-catalog .pc-products:not(.pc-software-grid) > .pc-product:first-child h2 { font-size: clamp(25px, 2.8vw, 38px); }
+.prism-catalog .pc-image-stack { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; align-items: center; }
+.prism-catalog .pc-image-stack img { width: 100%; height: 100%; max-height: 216px; }
+.prism-catalog .pc-stage-link { display: flex; align-items: center; justify-content: flex-end; gap: 14px; min-height: 44px; margin-top: 25px; font-size: 11px; line-height: 1.6; letter-spacing: .08em; color: var(--pc-muted); }
+.prism-catalog .pc-stage-link span { font-size: 19px; color: var(--pc-cyan); }
+
+/* EDIM retains its four existing entry cards and development status. */
+.prism-catalog .pc-edim { padding-top: 67px; border-top: 1px solid var(--pc-border); background: linear-gradient(180deg, #b9a2ef06, transparent 65%); }
+.prism-catalog .pc-edim .pc-eyebrow { color: var(--pc-purple); }
+.prism-catalog .pc-edim-title { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
+.prism-catalog .pc-development { padding: 7px 11px; border: 1px solid #b9a2ef55; border-radius: 100px; font-size: 10px; letter-spacing: .06em; color: var(--pc-purple); }
+.prism-catalog .pc-software-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.prism-catalog .pc-software-card { --pc-accent: var(--pc-purple); grid-column: auto; min-height: 300px; padding: 24px; }
+.prism-catalog .pc-software-graphic { display: flex; align-items: center; min-height: 124px; margin: 14px 0; font-size: clamp(36px, 4vw, 58px); line-height: 1; letter-spacing: -.045em; color: var(--pc-purple); }
+.prism-catalog .pc-software-card h2 { font-size: 20px; }
+.prism-catalog .pc-software-card > div > p { font-size: 13px; }
+
+/* HVAC category catalogue. Original section anchors and product links remain. */
+.prism-catalog .pc-family-hero { padding: 45px 0 42px; }
+.prism-catalog .pc-family-hero-row { display: grid; grid-template-columns: 1.1fr .9fr; align-items: end; gap: 60px; }
+.prism-catalog .pc-family-hero h1 { font-size: clamp(46px, 6vw, 78px); font-weight: 600; letter-spacing: -.065em; line-height: 1.15; color: var(--pc-ink); }
+.prism-catalog .pc-family-hero-row > p { max-width: 500px; font-size: 16px; line-height: 1.85; color: var(--pc-muted); word-break: keep-all; }
+.prism-catalog .pc-family-stat { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px 15px; margin-top: 35px; }
+.prism-catalog .pc-family-stat strong { font-size: 28px; line-height: 1; font-weight: 500; color: var(--pc-cyan); }
+.prism-catalog .pc-family-stat span { font-size: 12px; color: var(--pc-muted); }
+.prism-catalog .pc-family-stat i { align-self: center; height: 18px; width: 1px; background: var(--pc-border); margin-inline: 10px; }
+.prism-catalog .pc-family-content { padding-bottom: 20px; }
+.prism-catalog .pc-family-group { --pc-group-accent: var(--pc-cyan); padding: 38px 0 58px; border-top: 1px solid var(--pc-border); }
+.prism-catalog .pc-family-group[data-prism-category="parts-control"] { --pc-group-accent: var(--pc-lime); }
+.prism-catalog .pc-group-heading { display: grid; grid-template-columns: 68px 1fr 1fr; align-items: start; gap: 24px; margin-bottom: 27px; }
+.prism-catalog .pc-group-heading > span { padding-top: 4px; color: var(--pc-group-accent); font-size: 12px; letter-spacing: .06em; }
+.prism-catalog .pc-group-heading > div > p { font-size: 14px; line-height: 1.7; color: var(--pc-muted); word-break: keep-all; }
+.prism-catalog .pc-group-heading > div:first-of-type > p { margin-bottom: 8px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+.prism-catalog .pc-group-heading h2 { font-size: clamp(28px, 3vw, 40px); line-height: 1.2; letter-spacing: -.045em; font-weight: 500; color: var(--pc-ink); }
+.prism-catalog .pc-category-link { margin-top: 10px; font-size: 12px; color: var(--pc-group-accent); }
+.prism-catalog .pc-family-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.prism-catalog .pc-family-card { --pc-accent: var(--pc-group-accent); display: flex; flex-direction: column; padding: 25px; min-height: 340px; }
+.prism-catalog .pc-family-card > span { color: var(--pc-accent); font-size: 12px; line-height: 1.5; }
+.prism-catalog .pc-family-media { min-width: 0; height: 210px; margin: 10px 0 20px; display: flex; align-items: center; justify-content: center; }
+.prism-catalog .pc-family-media > img { max-width: 100%; width: auto; height: 100%; filter: drop-shadow(0 18px 15px #00000026); transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+.prism-catalog .pc-family-card:hover .pc-family-media > img { transform: translateY(-5px); }
+.prism-catalog .pc-family-card h3 { margin-top: auto; font-size: 25px; line-height: 1.3; letter-spacing: -.035em; font-weight: 500; color: var(--pc-ink); }
+.prism-catalog .pc-family-card > p { margin-top: 8px; color: var(--pc-muted); font-size: 13px; line-height: 1.5; }
+.prism-catalog .pc-family-models { gap: 2%; }
+.prism-catalog .pc-family-models > img { width: 32%; height: 100%; }
+.prism-catalog .pc-family-grid:not(.pc-family-grid-three) > .pc-family-card:first-child,
+.prism-catalog .pc-family-grid:not(.pc-family-grid-three) > .pc-family-card:last-child { grid-column: span 2; display: grid; grid-template-columns: .86fr 1.14fr; grid-template-rows: auto 1fr auto; gap: 0 15px; }
+.prism-catalog .pc-family-grid:not(.pc-family-grid-three) > .pc-family-card:is(:first-child, :last-child) > span { grid-column: 1; grid-row: 1; }
+.prism-catalog .pc-family-grid:not(.pc-family-grid-three) > .pc-family-card:is(:first-child, :last-child) .pc-family-media { grid-column: 2; grid-row: 1 / 4; height: 250px; margin: 10px 0; align-self: center; }
+.prism-catalog .pc-family-grid:not(.pc-family-grid-three) > .pc-family-card:is(:first-child, :last-child) h3 { grid-column: 1; grid-row: 2; align-self: end; font-size: clamp(24px, 2.6vw, 34px); }
+.prism-catalog .pc-family-grid:not(.pc-family-grid-three) > .pc-family-card:is(:first-child, :last-child) > p { grid-column: 1; grid-row: 3; }
+.prism-catalog .pc-family-cta { padding: 14px 0 80px; }
+.prism-catalog .pc-family-cta > .pc-container { border: 1px solid var(--pc-border); border-radius: 26px; padding: 42px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 19px 40px; background: radial-gradient(ellipse at 94% 18%, #77d8e90c, transparent 60%), var(--pc-surface); }
+.prism-catalog .pc-family-cta p { grid-column: 1 / -1; color: var(--pc-cyan); font-size: 12px; line-height: 1.5; letter-spacing: .04em; }
+.prism-catalog .pc-family-cta h2 { font-size: clamp(27px, 3.5vw, 43px); font-weight: 500; line-height: 1.4; letter-spacing: -.045em; color: var(--pc-ink); }
+.prism-catalog .pc-cta-link { display: inline-flex; justify-content: space-between; align-items: center; gap: 28px; min-height: 50px; padding: 14px 20px; border-radius: 12px; background: var(--pc-cyan); color: #152328 !important; font-size: 14px; }
+
+@media (max-width: 1050px) {
+  .prism-catalog .pc-container { width: calc(100% - 48px); }
+  .prism-catalog .pc-block-heading { gap: 30px; }
+  .prism-catalog .pc-product { padding: 21px; min-height: 350px; }
+  .prism-catalog .pc-product > img, .prism-catalog .pc-image-stack { height: 190px; }
+  .prism-catalog .pc-products:not(.pc-software-grid) > .pc-product:first-child > img { height: 230px; }
+  .prism-catalog .pc-software-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .prism-catalog .pc-software-card { min-height: 280px; }
+  .prism-catalog .pc-family-hero-row { gap: 35px; }
+  .prism-catalog .pc-group-heading { grid-template-columns: 50px 1fr 1fr; gap: 18px; }
+  .prism-catalog .pc-family-card { padding: 22px; }
+  .prism-catalog .pc-family-grid:not(.pc-family-grid-three) > .pc-family-card:is(:first-child, :last-child) { grid-template-columns: .9fr 1.1fr; }
+}
+
+@media (max-width: 760px) {
+  .prism-catalog .prism-catalog-main { padding-top: 92px; }
+  .prism-catalog .pc-container { width: calc(100% - 48px); }
+  .prism-catalog .pc-solution-block { padding-top: 30px; padding-bottom: 52px; }
+  .prism-catalog .pc-block-heading { display: block; margin-bottom: 32px; }
+  .prism-catalog .pc-block-heading > a { margin-top: 18px; }
+  .prism-catalog .pc-block-heading > div > p:last-child { font-size: 15px; }
+  .prism-catalog .pc-products { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+  .prism-catalog .pc-product { grid-column: auto; min-height: 320px; padding: 20px; }
+  .prism-catalog .pc-products:not(.pc-software-grid) > .pc-product:first-child { grid-column: 1 / -1; min-height: 285px; }
+  .prism-catalog .pc-product > img, .prism-catalog .pc-image-stack { height: 180px; }
+  .prism-catalog .pc-product h2 { font-size: 22px; }
+  .prism-catalog .pc-edim { padding-top: 42px; }
+  .prism-catalog .pc-software-graphic { font-size: 45px; }
+  .prism-catalog .pc-family-hero { padding: 30px 0 33px; }
+  .prism-catalog .pc-family-hero-row { grid-template-columns: 1fr; gap: 22px; }
+  .prism-catalog .pc-family-hero-row > p { font-size: 15px; max-width: none; }
+  .prism-catalog .pc-group-heading { grid-template-columns: 35px 1fr; gap: 10px 16px; }
+  .prism-catalog .pc-group-heading > div:last-child { grid-column: 2; }
+  .prism-catalog .pc-family-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+  .prism-catalog .pc-family-card { padding: 20px; min-height: 310px; }
+  .prism-catalog .pc-family-card h3 { font-size: 23px; }
+  .prism-catalog .pc-family-media { height: 180px; }
+  .prism-catalog .pc-family-grid:not(.pc-family-grid-three) > .pc-family-card:first-child { grid-column: 1 / -1; }
+  .prism-catalog .pc-family-grid:not(.pc-family-grid-three) > .pc-family-card:last-child { display: flex; grid-column: auto; }
+  .prism-catalog .pc-family-grid:not(.pc-family-grid-three) > .pc-family-card:last-child .pc-family-media { height: 180px; width: 100%; margin: 10px 0 20px; }
+  .prism-catalog .pc-family-grid:not(.pc-family-grid-three) > .pc-family-card:last-child h3 { font-size: 23px; margin-top: auto; }
+  .prism-catalog .pc-family-group { padding-block: 30px 43px; }
+  .prism-catalog .pc-family-cta { padding-bottom: 45px; }
+  .prism-catalog .pc-family-cta > .pc-container { grid-template-columns: 1fr; padding: 29px; gap: 20px; }
+  .prism-catalog .pc-cta-link { justify-self: start; }
+}
+
+@media (max-width: 480px) {
+  .prism-catalog .pc-container { width: calc(100% - 36px); }
+  .prism-catalog .pc-eyebrow { font-size: 11px; margin-bottom: 18px; }
+  .prism-catalog .pc-block-heading h1, .prism-catalog .pc-edim-title h2 { font-size: 64px; }
+  .prism-catalog .pc-edim-title { gap: 16px; }
+  .prism-catalog .pc-development { font-size: 10px; }
+  .prism-catalog .pc-library-label > p { display: grid; gap: 7px; }
+  .prism-catalog .pc-filterbar { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 20px; }
+  .prism-catalog .pc-filterbar button { padding: 11px 12px; gap: 6px; font-size: 12px; border-radius: 10px; }
+  .prism-catalog .pc-products, .prism-catalog .pc-software-grid, .prism-catalog .pc-family-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .prism-catalog .pc-product, .prism-catalog .pc-family-card { min-height: 0; padding: 22px; border-radius: 21px; }
+  .prism-catalog .pc-products:not(.pc-software-grid) > .pc-product:first-child { display: flex; min-height: 0; gap: 0; }
+  .prism-catalog .pc-products:not(.pc-software-grid) > .pc-product:first-child > img { width: 100%; height: 224px; margin: 16px 0 20px; }
+  .prism-catalog .pc-products:not(.pc-software-grid) > .pc-product:first-child > div { align-self: stretch; }
+  .prism-catalog .pc-products:not(.pc-software-grid) > .pc-product:first-child h2 { font-size: 25px; }
+  .prism-catalog .pc-product > img, .prism-catalog .pc-image-stack { height: 210px; }
+  .prism-catalog .pc-product h2 { font-size: 25px; }
+  .prism-catalog .pc-software-card { min-height: 270px; }
+  .prism-catalog .pc-software-graphic { min-height: 112px; font-size: 48px; }
+  .prism-catalog .pc-software-card h2 { font-size: 23px; }
+  .prism-catalog .pc-family-hero h1 { font-size: 44px; }
+  .prism-catalog .pc-family-stat { gap: 9px; }
+  .prism-catalog .pc-family-stat strong { font-size: 25px; }
+  .prism-catalog .pc-family-stat span { font-size: 11px; }
+  .prism-catalog .pc-family-stat i { margin-inline: 3px; }
+  .prism-catalog .pc-group-heading { grid-template-columns: 1fr; gap: 12px; }
+  .prism-catalog .pc-group-heading > div:last-child { grid-column: auto; }
+  .prism-catalog .pc-group-heading h2 { font-size: 33px; }
+  .prism-catalog .pc-family-grid:not(.pc-family-grid-three) > .pc-family-card:first-child { display: flex; gap: 0; }
+  .prism-catalog .pc-family-grid:not(.pc-family-grid-three) > .pc-family-card:is(:first-child, :last-child) .pc-family-media { height: 224px; width: 100%; margin: 10px 0 20px; }
+  .prism-catalog .pc-family-grid:not(.pc-family-grid-three) > .pc-family-card:is(:first-child, :last-child) h3 { align-self: stretch; font-size: 25px; }
+  .prism-catalog .pc-family-media { height: 224px; }
+  .prism-catalog .pc-family-card h3 { font-size: 25px; }
+  .prism-catalog .pc-family-cta > .pc-container { padding: 25px; border-radius: 21px; }
+  .prism-catalog .pc-family-cta h2 { font-size: 25px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prism-catalog .prism-catalog-main *,
+  .prism-catalog .prism-catalog-main *::before { transition: none !important; }
+  .prism-catalog .pc-product:hover > img,
+  .prism-catalog .pc-family-card:hover .pc-family-media > img { transform: none; }
+}

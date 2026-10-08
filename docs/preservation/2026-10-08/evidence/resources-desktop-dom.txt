@@ -1,0 +1,95 @@
+- link "본문으로 바로가기":
+  - /url: "#main"
+- banner:
+  - link "NOVA Solution 홈":
+    - /url: ./index.html
+    - strong: NOVA
+    - text: SOLUTION
+  - navigation "주요 메뉴":
+    - link "Company":
+      - /url: ./company.html
+    - link "Solutions":
+      - /url: ./solutions.html
+    - link "Technology":
+      - /url: ./technology.html
+    - link "Resources":
+      - /url: ./resources.html
+    - link "Contact Us":
+      - /url: ./contact.html
+      - generic: Contact Us
+      - generic: →
+- main:
+  - paragraph: RESOURCES / NOVA LIBRARY
+  - heading "Knowledge for Better Manufacturing." [level=1]:
+    - text: Knowledge for
+    - text: Better Manufacturing.
+  - paragraph: 제품과 기술을 이해하는 데 필요한 NOVA Solution의 공식 자료와 최신 소식을 한곳에서 확인하세요.
+  - paragraph: DOCUMENT LIBRARY
+  - heading "Resources" [level=2]
+  - paragraph:
+    - text: 자료는 준비되는 순서대로 업데이트됩니다.
+    - text: 긴급하게 필요한 자료는 문의해 주세요.
+  - article:
+    - generic: "01"
+    - generic: ▱
+    - text: PRODUCT
+    - heading "Product Catalogues" [level=3]
+    - paragraph: HVAC 제품 카탈로그
+    - emphasis: Preparing
+    - link "제품 카탈로그 문의":
+      - /url: ./contact.html
+      - text: Request →
+  - article:
+    - generic: "02"
+    - generic: ⌁
+    - text: TECHNICAL
+    - heading "Technical Documents" [level=3]
+    - paragraph: 기술자료 / Specifications
+    - emphasis: Preparing
+    - link "기술자료 문의":
+      - /url: ./contact.html
+      - text: Request →
+  - article:
+    - generic: "03"
+    - generic: ◇
+    - text: EDIM
+    - heading "EDIM Brochure" [level=3]
+    - paragraph: EDIM 소개자료
+    - emphasis: In Development
+    - link "EDIM 소개자료 문의":
+      - /url: ./contact.html
+      - text: Request →
+  - article:
+    - generic: "04"
+    - generic: "N"
+    - text: COMPANY
+    - heading "Company Profile" [level=3]
+    - paragraph: 회사소개서
+    - emphasis: Preparing
+    - link "회사소개서 문의":
+      - /url: ./contact.html
+      - text: Request →
+  - article:
+    - generic: "05"
+    - generic: ＋
+    - text: NEWSROOM
+    - heading "News & Updates" [level=3]
+    - paragraph: 회사 소식
+    - emphasis: Coming Soon
+    - generic: View →
+  - paragraph: NEED A DOCUMENT?
+  - heading "찾는 자료가 아직 등록되지 않았나요?" [level=2]:
+    - text: 찾는 자료가 아직
+    - text: 등록되지 않았나요?
+  - paragraph: 제품 사양서, 기술 검토 자료 또는 회사소개서가 필요하면 문의 유형을 선택해 요청해 주세요.
+  - link "Request a Document ↗":
+    - /url: ./contact.html
+    - text: Request a Document
+    - generic: ↗
+- contentinfo:
+  - link "NOVA Solution 홈":
+    - /url: ./index.html
+    - strong: NOVA
+    - text: SOLUTION
+  - paragraph: Engineering Manufacturing, From Product to Data.
+  - paragraph: © 2026 NOVA Solution. All rights reserved.

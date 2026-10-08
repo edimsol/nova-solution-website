@@ -1,0 +1,548 @@
+{
+  "checked_at_utc": "2026-10-08T17:31:39.637409+00:00",
+  "baseline_commit": "17940aeff93b3ea17179a9a9048886e3b8ee6ed8",
+  "manifest": "docs/preservation/2026-10-08/baseline-manifest.json",
+  "manifest_sha256": "40c7a896acf8d7f126855ed2fd4da39bae85ef236984a85e4caa10d0e7c948f4",
+  "snapshot_only": true,
+  "expected_file_count": 62,
+  "files_checked": 62,
+  "snapshot_passed": true,
+  "root_javascript_syntax_passed": true,
+  "root_javascript_syntax": [
+    {
+      "path": "build-site.mjs",
+      "sha256": "0cc0b7b23a30f46837dc1f702d5b06fc9145a881929cd32012dce5b2a5e94e6d",
+      "passed": true,
+      "diagnostic": ""
+    },
+    {
+      "path": "novascroll.js",
+      "sha256": "ee6b602cce0233bc13acadd04942f6a07af5337bc2d89dc35ad9abd208a1767e",
+      "passed": true,
+      "diagnostic": ""
+    },
+    {
+      "path": "prism-background.js",
+      "sha256": "e77655d7f682a2d4f1037ff7ee87d673e3ddac25c65ebafdf8ac5e3c541bc8fd",
+      "passed": true,
+      "diagnostic": ""
+    },
+    {
+      "path": "prism-nav.js",
+      "sha256": "7fc98ad3f6aa5013b8cff84b380b7f68d80a977ae5ea3f36307b8f6c68812e10",
+      "passed": true,
+      "diagnostic": ""
+    },
+    {
+      "path": "prism.js",
+      "sha256": "8e2c30ba0513610f35ad08636dc7eb25467a4fb3b9df8fa1a06daeaa8a213f72",
+      "passed": true,
+      "diagnostic": ""
+    },
+    {
+      "path": "script.js",
+      "sha256": "20267968ea574595fe53628309c5aff60020e55fe7025333f0a70b3b8dc1f019",
+      "passed": true,
+      "diagnostic": ""
+    }
+  ],
+  "files": [
+    {
+      "path": ".github/workflows/deploy-pages.yml",
+      "expected_sha256": "c9fbb68f309528fb31042fd5037a96d9dd4ff1f401582113c38b416589538d4a",
+      "actual_sha256": "c9fbb68f309528fb31042fd5037a96d9dd4ff1f401582113c38b416589538d4a",
+      "expected_bytes": 998,
+      "actual_bytes": 998,
+      "passed": true
+    },
+    {
+      "path": ".gitignore",
+      "expected_sha256": "d2296db13c68be474ddfa9e3bf81dc03964c0908b91182fd9d886eb355404b8a",
+      "actual_sha256": "d2296db13c68be474ddfa9e3bf81dc03964c0908b91182fd9d886eb355404b8a",
+      "expected_bytes": 34,
+      "actual_bytes": 34,
+      "passed": true
+    },
+    {
+      "path": ".vscode/extensions.json",
+      "expected_sha256": "2c4a04c9eea09e9e876ffa5232fc26de725df817ddb84cfa57e261785470367b",
+      "actual_sha256": "2c4a04c9eea09e9e876ffa5232fc26de725df817ddb84cfa57e261785470367b",
+      "expected_bytes": 65,
+      "actual_bytes": 65,
+      "passed": true
+    },
+    {
+      "path": ".vscode/tasks.json",
+      "expected_sha256": "86180d21ec5a190a51b76f99247fb1977f4dc9bf822001c1186f9148a3d95fdd",
+      "actual_sha256": "86180d21ec5a190a51b76f99247fb1977f4dc9bf822001c1186f9148a3d95fdd",
+      "expected_bytes": 425,
+      "actual_bytes": 425,
+      "passed": true
+    },
+    {
+      "path": "README.md",
+      "expected_sha256": "b4428af6e16c0cb838f4acf5339ea3905c9af5aa2f6279c8222f4061547be850",
+      "actual_sha256": "b4428af6e16c0cb838f4acf5339ea3905c9af5aa2f6279c8222f4061547be850",
+      "expected_bytes": 1463,
+      "actual_bytes": 1463,
+      "passed": true
+    },
+    {
+      "path": "air-system.html",
+      "expected_sha256": "ec4cd72bb0703b559a3345869b1ef2ef149d664c4dc8319eb0c0a5484f8cd5b3",
+      "actual_sha256": "ec4cd72bb0703b559a3345869b1ef2ef149d664c4dc8319eb0c0a5484f8cd5b3",
+      "expected_bytes": 28120,
+      "actual_bytes": 28120,
+      "passed": true
+    },
+    {
+      "path": "assets/edim-system-architecture.png",
+      "expected_sha256": "e1c6386b7eda205a3ce835a5ad9dee2e7503944910c63e15e41d314d39bb6051",
+      "actual_sha256": "e1c6386b7eda205a3ce835a5ad9dee2e7503944910c63e15e41d314d39bb6051",
+      "expected_bytes": 1991142,
+      "actual_bytes": 1991142,
+      "passed": true
+    },
+    {
+      "path": "assets/field-to-data-flow-reference.png",
+      "expected_sha256": "30ae8c51dd10c589cbbd6c9bfe26e39405f03bafab311763d2c0505e5ca9aa76",
+      "actual_sha256": "30ae8c51dd10c589cbbd6c9bfe26e39405f03bafab311763d2c0505e5ca9aa76",
+      "expected_bytes": 398705,
+      "actual_bytes": 398705,
+      "passed": true
+    },
+    {
+      "path": "assets/field-to-data-flow.png",
+      "expected_sha256": "9354e946ec5453a330a93338f1bc24accd6b58d772dc0bc352b88566591a7104",
+      "actual_sha256": "9354e946ec5453a330a93338f1bc24accd6b58d772dc0bc352b88566591a7104",
+      "expected_bytes": 2472193,
+      "actual_bytes": 2472193,
+      "passed": true
+    },
+    {
+      "path": "assets/field-to-data-panels-clean.png",
+      "expected_sha256": "42dc0e6884856ff4a444f7d592f258e4b1a20cddf029d64ad315be9b1a4e58fc",
+      "actual_sha256": "42dc0e6884856ff4a444f7d592f258e4b1a20cddf029d64ad315be9b1a4e58fc",
+      "expected_bytes": 1255573,
+      "actual_bytes": 1255573,
+      "passed": true
+    },
+    {
+      "path": "assets/home-hero-data-wave.png",
+      "expected_sha256": "b1be6406c27992ff47cb285b7974785a27f7f9c5c5ed4d712ad250bd37a9ee21",
+      "actual_sha256": "b1be6406c27992ff47cb285b7974785a27f7f9c5c5ed4d712ad250bd37a9ee21",
+      "expected_bytes": 2777928,
+      "actual_bytes": 2777928,
+      "passed": true
+    },
+    {
+      "path": "assets/hvac-airflow-architecture.png",
+      "expected_sha256": "c6e1b65b41ef944b1bc9042ae9be415df00a09cd021d6e04e4422b0cb712e679",
+      "actual_sha256": "c6e1b65b41ef944b1bc9042ae9be415df00a09cd021d6e04e4422b0cb712e679",
+      "expected_bytes": 2825116,
+      "actual_bytes": 2825116,
+      "passed": true
+    },
+    {
+      "path": "assets/menu-company-building-web.jpg",
+      "expected_sha256": "e80e92a08b9fd97be947596319f43c4dcbc34782656e5769bb23f011f8ec0f6e",
+      "actual_sha256": "e80e92a08b9fd97be947596319f43c4dcbc34782656e5769bb23f011f8ec0f6e",
+      "expected_bytes": 424176,
+      "actual_bytes": 424176,
+      "passed": true
+    },
+    {
+      "path": "assets/menu-company-building.png",
+      "expected_sha256": "e6ab5b7e68393f5f12320905c15b7bd5255d01e9aba02d0adcfe073cc4de3dea",
+      "actual_sha256": "e6ab5b7e68393f5f12320905c15b7bd5255d01e9aba02d0adcfe073cc4de3dea",
+      "expected_bytes": 2179244,
+      "actual_bytes": 2179244,
+      "passed": true
+    },
+    {
+      "path": "assets/menu-resources-catalogues-web.jpg",
+      "expected_sha256": "9aa4882f94e3e655007b3f8f3fb5971da353089afe52c794c74805a87476b2ed",
+      "actual_sha256": "9aa4882f94e3e655007b3f8f3fb5971da353089afe52c794c74805a87476b2ed",
+      "expected_bytes": 412245,
+      "actual_bytes": 412245,
+      "passed": true
+    },
+    {
+      "path": "assets/menu-resources-catalogues.png",
+      "expected_sha256": "b7542d6d190c9b1ec12510b7d68e0aad43d31614e05c9a9311daa6b8635bab6e",
+      "actual_sha256": "b7542d6d190c9b1ec12510b7d68e0aad43d31614e05c9a9311daa6b8635bab6e",
+      "expected_bytes": 2275064,
+      "actual_bytes": 2275064,
+      "passed": true
+    },
+    {
+      "path": "assets/menu-technology-blueprint-web.jpg",
+      "expected_sha256": "59100f06bd4f110bf32845657bbf5d5eea8b3a93ccb4564b1826e661cb559cae",
+      "actual_sha256": "59100f06bd4f110bf32845657bbf5d5eea8b3a93ccb4564b1826e661cb559cae",
+      "expected_bytes": 502978,
+      "actual_bytes": 502978,
+      "passed": true
+    },
+    {
+      "path": "assets/menu-technology-blueprint.png",
+      "expected_sha256": "245f71a5ea4cc4683c4ec8a512ded006c8d4eef1c47fdd117fa5af12207fdb4a",
+      "actual_sha256": "245f71a5ea4cc4683c4ec8a512ded006c8d4eef1c47fdd117fa5af12207fdb4a",
+      "expected_bytes": 2115485,
+      "actual_bytes": 2115485,
+      "passed": true
+    },
+    {
+      "path": "assets/models/clt-dn100.glb",
+      "expected_sha256": "b370aa847f03925dd2d41c7f1734e075a4d2c3160f604ba2b48f9b532931b57a",
+      "actual_sha256": "b370aa847f03925dd2d41c7f1734e075a4d2c3160f604ba2b48f9b532931b57a",
+      "expected_bytes": 2095128,
+      "actual_bytes": 2095128,
+      "passed": true
+    },
+    {
+      "path": "assets/models/clt-dn50.glb",
+      "expected_sha256": "7069acfd9be1c3c6801c9687a2c6675d58d85b4da7089edddc6c40395bbd3fcb",
+      "actual_sha256": "7069acfd9be1c3c6801c9687a2c6675d58d85b4da7089edddc6c40395bbd3fcb",
+      "expected_bytes": 1735596,
+      "actual_bytes": 1735596,
+      "passed": true
+    },
+    {
+      "path": "assets/nova-symbol-source.png",
+      "expected_sha256": "3a0f613a1b8b22ae7be22f54007104b4a887d64efac34e773f313a16b66584d1",
+      "actual_sha256": "3a0f613a1b8b22ae7be22f54007104b4a887d64efac34e773f313a16b66584d1",
+      "expected_bytes": 326832,
+      "actual_bytes": 326832,
+      "passed": true
+    },
+    {
+      "path": "assets/nova-symbol.svg",
+      "expected_sha256": "b4f429356236a132f95a25715e0c2ae443c36d782f6265a71e8c77a1bda4e385",
+      "actual_sha256": "b4f429356236a132f95a25715e0c2ae443c36d782f6265a71e8c77a1bda4e385",
+      "expected_bytes": 309,
+      "actual_bytes": 309,
+      "passed": true
+    },
+    {
+      "path": "assets/products/bio-hvac-system-cutout.png",
+      "expected_sha256": "6a80c00e8b527062d9b91b1e611b46e8c2965526527979353bc9add4a06debd9",
+      "actual_sha256": "6a80c00e8b527062d9b91b1e611b46e8c2965526527979353bc9add4a06debd9",
+      "expected_bytes": 1942072,
+      "actual_bytes": 1942072,
+      "passed": true
+    },
+    {
+      "path": "assets/products/clt-100a-cutout.png",
+      "expected_sha256": "17e4913d360ecb5f7418cd064f6e993d61a7f049df7da9a5f84a39a7932dd346",
+      "actual_sha256": "17e4913d360ecb5f7418cd064f6e993d61a7f049df7da9a5f84a39a7932dd346",
+      "expected_bytes": 1875390,
+      "actual_bytes": 1875390,
+      "passed": true
+    },
+    {
+      "path": "assets/products/clt-50a-cutout.png",
+      "expected_sha256": "d639f6ccb90d9aefdc802e95270b9fb76c05ddedddb5289d03e6a4bf2ab3eb86",
+      "actual_sha256": "d639f6ccb90d9aefdc802e95270b9fb76c05ddedddb5289d03e6a4bf2ab3eb86",
+      "expected_bytes": 1563663,
+      "actual_bytes": 1563663,
+      "passed": true
+    },
+    {
+      "path": "assets/products/ecm-system-cutout.png",
+      "expected_sha256": "b51f4e4684d06134bc740fa64daea7e3eb35acc3147f9c6661d52dfad5011968",
+      "actual_sha256": "b51f4e4684d06134bc740fa64daea7e3eb35acc3147f9c6661d52dfad5011968",
+      "expected_bytes": 679198,
+      "actual_bytes": 679198,
+      "passed": true
+    },
+    {
+      "path": "assets/products/eco-ahu-compact-cutout.png",
+      "expected_sha256": "96196e0e5585ff7fd776114c2dff24c4ec899fecfc514b26820a1259572090db",
+      "actual_sha256": "96196e0e5585ff7fd776114c2dff24c4ec899fecfc514b26820a1259572090db",
+      "expected_bytes": 1532597,
+      "actual_bytes": 1532597,
+      "passed": true
+    },
+    {
+      "path": "assets/products/eco-ahu-main-cutout.png",
+      "expected_sha256": "159f7d716f3aa82512a4df2c4d4e1cb92a5745b2a3bebad85c423e30c0850658",
+      "actual_sha256": "159f7d716f3aa82512a4df2c4d4e1cb92a5745b2a3bebad85c423e30c0850658",
+      "expected_bytes": 1893340,
+      "actual_bytes": 1893340,
+      "passed": true
+    },
+    {
+      "path": "assets/products/eurus-impeller-cutout.png",
+      "expected_sha256": "d7787287a7f157de786a45d748ac55ccb5f45f6ecc9071b2ea65b67a2e860418",
+      "actual_sha256": "d7787287a7f157de786a45d748ac55ccb5f45f6ecc9071b2ea65b67a2e860418",
+      "expected_bytes": 1527873,
+      "actual_bytes": 1527873,
+      "passed": true
+    },
+    {
+      "path": "assets/products/eurus-impeller.png",
+      "expected_sha256": "3256a1b8db543dd2bf94ea3ebc7aed16c598eeaa39b21746a054b7b5566d2a3c",
+      "actual_sha256": "3256a1b8db543dd2bf94ea3ebc7aed16c598eeaa39b21746a054b7b5566d2a3c",
+      "expected_bytes": 1757278,
+      "actual_bytes": 1757278,
+      "passed": true
+    },
+    {
+      "path": "assets/products/fan-kad-cutout.png",
+      "expected_sha256": "1849090832cac958467feb595cbe7e17ea6b2887e6d3184dd5c57237b2bdec8b",
+      "actual_sha256": "1849090832cac958467feb595cbe7e17ea6b2887e6d3184dd5c57237b2bdec8b",
+      "expected_bytes": 4981114,
+      "actual_bytes": 4981114,
+      "passed": true
+    },
+    {
+      "path": "assets/products/fan-kap-cutout.png",
+      "expected_sha256": "7f411b987cb2a2a437786e30b576c4c68b6295797da10ca3fababd13eaf14044",
+      "actual_sha256": "7f411b987cb2a2a437786e30b576c4c68b6295797da10ca3fababd13eaf14044",
+      "expected_bytes": 1952043,
+      "actual_bytes": 1952043,
+      "passed": true
+    },
+    {
+      "path": "assets/products/fan-kas-cutout.png",
+      "expected_sha256": "171469666893ccb21c126a929f2f71b04c241d450e5403be6baae08f306ee339",
+      "actual_sha256": "171469666893ccb21c126a929f2f71b04c241d450e5403be6baae08f306ee339",
+      "expected_bytes": 1365538,
+      "actual_bytes": 1365538,
+      "passed": true
+    },
+    {
+      "path": "assets/products/fcm-controller-internal-cutout.png",
+      "expected_sha256": "9d1daa78932d73bb79363d29188f70206fb9749d3d1a788870a3365357a4082e",
+      "actual_sha256": "9d1daa78932d73bb79363d29188f70206fb9749d3d1a788870a3365357a4082e",
+      "expected_bytes": 593349,
+      "actual_bytes": 593349,
+      "passed": true
+    },
+    {
+      "path": "assets/products/fcm-controller-main-cutout.png",
+      "expected_sha256": "6e3805180b6b1e10fc882cd2a74b8a467e5b9be715c9ec5efad5b1f2a43836d0",
+      "actual_sha256": "6e3805180b6b1e10fc882cd2a74b8a467e5b9be715c9ec5efad5b1f2a43836d0",
+      "expected_bytes": 483648,
+      "actual_bytes": 483648,
+      "passed": true
+    },
+    {
+      "path": "assets/products/iaqs-sensor-exploded-cutout.png",
+      "expected_sha256": "5bc8b30d523d95496132dcbe1e5b522f6fe05eae24163b16631328c57d87f7f3",
+      "actual_sha256": "5bc8b30d523d95496132dcbe1e5b522f6fe05eae24163b16631328c57d87f7f3",
+      "expected_bytes": 393311,
+      "actual_bytes": 393311,
+      "passed": true
+    },
+    {
+      "path": "assets/products/iaqs-sensor-main-cutout.png",
+      "expected_sha256": "9acd34d6e3cfaf4d8bceb5697197d68838eae2ad55084824992b2bbf77e530e6",
+      "actual_sha256": "9acd34d6e3cfaf4d8bceb5697197d68838eae2ad55084824992b2bbf77e530e6",
+      "expected_bytes": 411404,
+      "actual_bytes": 411404,
+      "passed": true
+    },
+    {
+      "path": "assets/products/iaqs-sensor-transparent-cutout.png",
+      "expected_sha256": "e6b8c71753eb1b94aa4c21739d3b773d71e59fc5b5395c0419affa5b43f2d927",
+      "actual_sha256": "e6b8c71753eb1b94aa4c21739d3b773d71e59fc5b5395c0419affa5b43f2d927",
+      "expected_bytes": 420423,
+      "actual_bytes": 420423,
+      "passed": true
+    },
+    {
+      "path": "assets/products/ief-filter-cutout.png",
+      "expected_sha256": "cc24e42dcc926d4fb15baf598513c5f2b86c671b84fd9421b07e6c2e33d78540",
+      "actual_sha256": "cc24e42dcc926d4fb15baf598513c5f2b86c671b84fd9421b07e6c2e33d78540",
+      "expected_bytes": 2291553,
+      "actual_bytes": 2291553,
+      "passed": true
+    },
+    {
+      "path": "assets/products/partial-impeller-cutout.png",
+      "expected_sha256": "0a0886d636257ce677cadc50913a6fe3dcd96b65c82dbcf57b9a682f1efe5092",
+      "actual_sha256": "0a0886d636257ce677cadc50913a6fe3dcd96b65c82dbcf57b9a682f1efe5092",
+      "expected_bytes": 1068796,
+      "actual_bytes": 1068796,
+      "passed": true
+    },
+    {
+      "path": "assets/products/pull-out-impeller-cutout.png",
+      "expected_sha256": "c5c89b9f80185bdc5f173c375b0afea825eb97bfd9138e33fa3388fe3286729e",
+      "actual_sha256": "c5c89b9f80185bdc5f173c375b0afea825eb97bfd9138e33fa3388fe3286729e",
+      "expected_bytes": 4411319,
+      "actual_bytes": 4411319,
+      "passed": true
+    },
+    {
+      "path": "assets/recruitment-2026-web-developer.png",
+      "expected_sha256": "7711e0ce791176d4686df12c3d50324703d755b1691a5b5107e4b8a22c7737d9",
+      "actual_sha256": "7711e0ce791176d4686df12c3d50324703d755b1691a5b5107e4b8a22c7737d9",
+      "expected_bytes": 1279892,
+      "actual_bytes": 1279892,
+      "passed": true
+    },
+    {
+      "path": "assets/vendor/model-viewer.min.js",
+      "expected_sha256": "553e9f3e90653bc29418e96e909156c3bfee5f43a0a03822bb32558c96572214",
+      "actual_sha256": "553e9f3e90653bc29418e96e909156c3bfee5f43a0a03822bb32558c96572214",
+      "expected_bytes": 1070021,
+      "actual_bytes": 1070021,
+      "passed": true
+    },
+    {
+      "path": "build-site.mjs",
+      "expected_sha256": "2e1525247cd3dc994306449bc9e2758d04708a9065c040a98030b63f49e178d2",
+      "actual_sha256": "2e1525247cd3dc994306449bc9e2758d04708a9065c040a98030b63f49e178d2",
+      "expected_bytes": 1400,
+      "actual_bytes": 1400,
+      "passed": true
+    },
+    {
+      "path": "company.html",
+      "expected_sha256": "8ee44af5620c85abfe76105c2f273649bd7f0c8d1c0763051276378124f151b0",
+      "actual_sha256": "8ee44af5620c85abfe76105c2f273649bd7f0c8d1c0763051276378124f151b0",
+      "expected_bytes": 9968,
+      "actual_bytes": 9968,
+      "passed": true
+    },
+    {
+      "path": "contact.html",
+      "expected_sha256": "540426eb3e21bc4b47c0aa423e0a49084c8006c532d0e707dda94c2d1174c733",
+      "actual_sha256": "540426eb3e21bc4b47c0aa423e0a49084c8006c532d0e707dda94c2d1174c733",
+      "expected_bytes": 5593,
+      "actual_bytes": 5593,
+      "passed": true
+    },
+    {
+      "path": "edim.html",
+      "expected_sha256": "79fa4fb1a628cb37156e836da84d76d7e15a4714c1830e8355b9dd40c64f8cda",
+      "actual_sha256": "79fa4fb1a628cb37156e836da84d76d7e15a4714c1830e8355b9dd40c64f8cda",
+      "expected_bytes": 8809,
+      "actual_bytes": 8809,
+      "passed": true
+    },
+    {
+      "path": "hvac.html",
+      "expected_sha256": "fa4957726f662eb55c96d7de3596a7c992d589b9d489c68fe7e4005ef5d24dd2",
+      "actual_sha256": "fa4957726f662eb55c96d7de3596a7c992d589b9d489c68fe7e4005ef5d24dd2",
+      "expected_bytes": 8110,
+      "actual_bytes": 8110,
+      "passed": true
+    },
+    {
+      "path": "index.html",
+      "expected_sha256": "a6a21404f3d4aff98aecbe266b9c4b2a3a7cf8af2c6bfff061b538c01902b314",
+      "actual_sha256": "a6a21404f3d4aff98aecbe266b9c4b2a3a7cf8af2c6bfff061b538c01902b314",
+      "expected_bytes": 9955,
+      "actual_bytes": 9955,
+      "passed": true
+    },
+    {
+      "path": "novaweb.code-workspace",
+      "expected_sha256": "e560bb14f524d4d4d9e5f2c1e5de42bb392c1e768366d43e5f7a5918e59cb047",
+      "actual_sha256": "e560bb14f524d4d4d9e5f2c1e5de42bb392c1e768366d43e5f7a5918e59cb047",
+      "expected_bytes": 202,
+      "actual_bytes": 202,
+      "passed": true
+    },
+    {
+      "path": "partials/footer.html",
+      "expected_sha256": "6e232dacce8dea6b18cd2457e9dfbf409566d34357cd889b29ea28b50414a596",
+      "actual_sha256": "6e232dacce8dea6b18cd2457e9dfbf409566d34357cd889b29ea28b50414a596",
+      "expected_bytes": 484,
+      "actual_bytes": 484,
+      "passed": true
+    },
+    {
+      "path": "partials/header.html",
+      "expected_sha256": "52bfb40d39a04bba6a940c527b2c9f1ebb21e74ff11187546182bdcdfa945e03",
+      "actual_sha256": "52bfb40d39a04bba6a940c527b2c9f1ebb21e74ff11187546182bdcdfa945e03",
+      "expected_bytes": 1072,
+      "actual_bytes": 1072,
+      "passed": true
+    },
+    {
+      "path": "parts-control.html",
+      "expected_sha256": "a1cb6f72168c06ea40c2418cb09a710174249c094d61e3b2420d438713e36d09",
+      "actual_sha256": "a1cb6f72168c06ea40c2418cb09a710174249c094d61e3b2420d438713e36d09",
+      "expected_bytes": 51678,
+      "actual_bytes": 51678,
+      "passed": true
+    },
+    {
+      "path": "resources.html",
+      "expected_sha256": "5c4e97868096f4c8792aa3d16cdc92fe588b179a7b0539508b3a7a64b862a208",
+      "actual_sha256": "5c4e97868096f4c8792aa3d16cdc92fe588b179a7b0539508b3a7a64b862a208",
+      "expected_bytes": 5362,
+      "actual_bytes": 5362,
+      "passed": true
+    },
+    {
+      "path": "script.js",
+      "expected_sha256": "3bcd23141a81803e9fe8329753385033be381b8a5deced0f38be5f6a67d2490c",
+      "actual_sha256": "3bcd23141a81803e9fe8329753385033be381b8a5deced0f38be5f6a67d2490c",
+      "expected_bytes": 41989,
+      "actual_bytes": 41989,
+      "passed": true
+    },
+    {
+      "path": "scripts/build-pages.mjs",
+      "expected_sha256": "aef5c83a97716a485b8df20ee52b8c3ece074a8b3b99a0d054996d29fcf05779",
+      "actual_sha256": "aef5c83a97716a485b8df20ee52b8c3ece074a8b3b99a0d054996d29fcf05779",
+      "expected_bytes": 4281,
+      "actual_bytes": 4281,
+      "passed": true
+    },
+    {
+      "path": "scripts/make-pullout-transparent.swift",
+      "expected_sha256": "969d472df93a41e62bad98f896e8532c1582659303f9a9990275f62a7d819af4",
+      "actual_sha256": "969d472df93a41e62bad98f896e8532c1582659303f9a9990275f62a7d819af4",
+      "expected_bytes": 2367,
+      "actual_bytes": 2367,
+      "passed": true
+    },
+    {
+      "path": "scripts/step-to-glb.mjs",
+      "expected_sha256": "f861762b617ef3c860c23ba31e2b81586c3549a670b61f8ee80ab68ad955e0d4",
+      "actual_sha256": "f861762b617ef3c860c23ba31e2b81586c3549a670b61f8ee80ab68ad955e0d4",
+      "expected_bytes": 3659,
+      "actual_bytes": 3659,
+      "passed": true
+    },
+    {
+      "path": "solutions.html",
+      "expected_sha256": "ef3a9f963a389f554a121baec3aafd4879a38366035314b831f887c87b1ef724",
+      "actual_sha256": "ef3a9f963a389f554a121baec3aafd4879a38366035314b831f887c87b1ef724",
+      "expected_bytes": 8311,
+      "actual_bytes": 8311,
+      "passed": true
+    },
+    {
+      "path": "styles.css",
+      "expected_sha256": "6336535ec2491af719b286f13f3309e6230b6ebeb05a81564068c471cdcb563c",
+      "actual_sha256": "6336535ec2491af719b286f13f3309e6230b6ebeb05a81564068c471cdcb563c",
+      "expected_bytes": 246914,
+      "actual_bytes": 246914,
+      "passed": true
+    },
+    {
+      "path": "technology.html",
+      "expected_sha256": "7eef83299697d7c1d9bfb1efa06aafc7b775d92139069476f6fc5cb6d7f33307",
+      "actual_sha256": "7eef83299697d7c1d9bfb1efa06aafc7b775d92139069476f6fc5cb6d7f33307",
+      "expected_bytes": 7201,
+      "actual_bytes": 7201,
+      "passed": true
+    },
+    {
+      "path": "ventilation.html",
+      "expected_sha256": "aecc5c540d41236844de3a619707b081895ce5b84de2afc6ca2cb628967d8684",
+      "actual_sha256": "aecc5c540d41236844de3a619707b081895ce5b84de2afc6ca2cb628967d8684",
+      "expected_bytes": 19364,
+      "actual_bytes": 19364,
+      "passed": true
+    }
+  ],
+  "note": "Read-only comparison of preserved snapshot bytes against the existing baseline manifest. Current renewal sources are expected to differ from this baseline. Syntax results record source hashes at the verification time; no script was executed."
+}
