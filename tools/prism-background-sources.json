@@ -1,5 +1,6 @@
 {
   "generator": "built-in image_gen",
+  "source_path_convention": "Logical docs/... paths resolve beneath NOVA_DOCS_DIR (default: the repository's sibling docs directory). Other relative paths resolve beneath the repository root.",
   "target": [
     3840,
     2160

@@ -5,7 +5,7 @@
       "label": "NOVA: 로컬 서버 실행",
       "type": "shell",
       "command": "python3",
-      "args": ["-m", "http.server", "4173"],
+      "args": ["tools/serve_preview.py", "--port", "4173"],
       "options": {
         "cwd": "${workspaceFolder}"
       },

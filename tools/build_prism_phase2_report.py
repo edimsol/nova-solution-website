@@ -1,9 +1,9 @@
 """Build the local renewal handoff from recorded asset and verification results."""
 from pathlib import Path
 import html, json
+from reference_paths import ROOT, DOCS_ROOT
 
-ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'docs/renewal/prism-phase-2'
+OUT=DOCS_ROOT/'renewal/prism-phase-2'
 manifest=json.loads((OUT/'background-manifest.json').read_text(encoding='utf-8'))
 names={'hero':'첫 화면 · Product to Data','solutions':'솔루션 · 공기의 흐름','company':'회사 · 연결되는 모듈','technology':'기술 · 데이터 경로','industries':'적용 산업 · 확장 구조','contact':'문의 · 새로운 연결'}
 gallery=[]

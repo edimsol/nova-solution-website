@@ -13,9 +13,9 @@ from pathlib import Path
 import cv2
 import numpy as np
 from PIL import Image, ImageDraw
+from reference_paths import ROOT, DOCS_ROOT, manifest_path
 
-ROOT = Path(__file__).resolve().parents[1]
-REPORT = ROOT / 'docs/renewal/motion-backgrounds'
+REPORT = DOCS_ROOT / 'renewal/motion-backgrounds'
 OUTPUT = ROOT / 'assets/backgrounds/prism/video'
 SCENES = ('hero', 'solutions', 'company', 'technology', 'industries', 'contact')
 
@@ -87,8 +87,8 @@ def main():
     parser.add_argument('--duration', type=float, default=10, help='Requested input and output duration in seconds')
     args = parser.parse_args()
     OUTPUT.mkdir(parents=True, exist_ok=True)
-    manifest_path = REPORT / 'video-manifest.json'
-    manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {
+    manifest_file = REPORT / 'video-manifest.json'
+    manifest = json.loads(manifest_file.read_text()) if manifest_file.exists() else {
         'date': '2026-10-09', 'generator': 'Higgsfield / FLUX 3 Video',
         'processing': '24 fps; last/first 0.5 second overlap with ease-in-out dissolve; silent H.264 Main 3.1; faststart',
         'batterySavingsMeasured': False, 'scenes': {}}
@@ -120,11 +120,11 @@ def main():
             weight = phase - before
             loop.append(cv2.addWeighted(joined[before], 1-weight, joined[(before+1) % len(joined)], weight, 0))
         output = [encode(args.ffmpeg, OUTPUT / f'{name}-{width}.mp4', loop, width) for width in (720, 1280)]
-        record = {'source': path.relative_to(ROOT).as_posix(), 'sourceSha256': sha(path),
+        record = {'source': manifest_path(path), 'sourceSha256': sha(path),
                   'sourceWidth': frames[0].shape[1], 'sourceHeight': frames[0].shape[0],
                   'sourceFps': fps, 'sourceFrames': len(frames), 'outputs': output}
         manifest['scenes'][name] = record
-        manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
+        manifest_file.write_text(json.dumps(manifest, indent=2) + '\n')
         sheet = Image.new('RGB', (480*4, 295), '#151619')
         draw = ImageDraw.Draw(sheet)
         for column, index in enumerate((0, len(loop)//3, 2*len(loop)//3, len(loop)-1)):

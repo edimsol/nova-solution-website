@@ -2,7 +2,8 @@
 """Verify Prism phase 2 content against the immutable 2026-10-08 snapshot.
 
 This script only reads production HTML and the preservation archive. It writes
-docs/renewal/prism-phase-2/content-verification.json and exits nonzero on failure.
+renewal/prism-phase-2/content-verification.json beneath the external DOCS_ROOT
+(NOVA_DOCS_DIR or the sibling docs directory) and exits nonzero on failure.
 It does not run JavaScript, contact external services, or submit inquiry forms.
 """
 
@@ -15,12 +16,12 @@ from pathlib import Path
 import re
 import sys
 from urllib.parse import unquote, urlsplit
+from reference_paths import ROOT, DOCS_ROOT
 
 
-ROOT = Path(__file__).resolve().parents[1]
-ARCHIVE = ROOT / "docs/preservation/2026-10-08"
+ARCHIVE = DOCS_ROOT / "preservation/2026-10-08"
 SNAPSHOT = ARCHIVE / "snapshot"
-OUTPUT = ROOT / "docs/renewal/prism-phase-2/content-verification.json"
+OUTPUT = DOCS_ROOT / "renewal/prism-phase-2/content-verification.json"
 PAGES = (
     "company", "ventilation", "air-system", "parts-control",
     "edim", "technology", "resources", "contact",
@@ -362,5 +363,5 @@ if __name__ == "__main__":
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     sys.stdout.reconfigure(encoding="utf-8")
-    print(json.dumps({"status": report["status"], **report.get("summary", {}), "report": OUTPUT.relative_to(ROOT).as_posix(), "findings": report["failures"]}, ensure_ascii=False, indent=2))
+    print(json.dumps({"status": report["status"], **report.get("summary", {}), "report": str(OUTPUT), "findings": report["failures"]}, ensure_ascii=False, indent=2))
     sys.exit(report["status"] != "pass")

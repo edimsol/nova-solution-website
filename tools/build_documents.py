@@ -16,9 +16,9 @@ from dataclasses import dataclass, field
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+from reference_paths import ROOT, DOCS_ROOT
 
-ROOT = Path(__file__).resolve().parents[1]
-BASE = ROOT / "docs" / "preservation" / "2026-10-08"
+BASE = DOCS_ROOT / "preservation" / "2026-10-08"
 SNAPSHOT = BASE / "snapshot"
 PAGES = BASE / "pages"
 COMMIT = "17940aeff93b3ea17179a9a9048886e3b8ee6ed8"
