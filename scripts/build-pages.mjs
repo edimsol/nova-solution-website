@@ -29,6 +29,7 @@ const rootAssetAllowlist = new Set([
 ]);
 const referencedAssets = new Set([
   'assets/recruitment-2026-web-developer.png',
+  'assets/jobkorea-web-developer-2026.png',
   'assets/fonts/pretendard/PretendardVariable.woff2',
   'assets/fonts/pretendard/LICENSE.txt',
   'assets/fonts/pretendard/source.json',
