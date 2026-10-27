@@ -123,7 +123,7 @@ body.prism-detail #main .control-flow > div > span { color: var(--pd-subtle); }
 body.prism-detail #main .control-hero img { width: 100%; height: 260px; object-fit: contain; }
 body.prism-detail #main .control-hero .control-flow { grid-column: 1 / -1; }
 body.prism-detail #main .iaqs-arch-card { padding: 0; }
-body.prism-detail #main .iaqs-arch-visual { height: 275px; min-height: 0; padding: 28px; background: #272a30; border-color: var(--pd-line); }
+body.prism-detail #main .iaqs-arch-visual { height: 300px; min-height: 0; padding: 28px; row-gap: 12px; background: #272a30; border-color: var(--pd-line); }
 body.prism-detail #main .iaqs-arch-visual img { width: 100%; height: 200px; object-fit: contain; }
 body.prism-detail #main .iaqs-arch-body { padding: 28px; }
 body.prism-detail #main :is(.arch-tag,.int-tag,.mod-num) { color: var(--pd-accent); font-size: 11px; }
