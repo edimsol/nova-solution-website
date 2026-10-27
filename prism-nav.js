@@ -98,7 +98,7 @@
       key: 'resources', label: 'Resources', heading: 'NOVA Library', overview: 'View All Resources', href: './resources.html',
       image: './assets/menu-resources-catalogues.png', alt: '기술 카탈로그와 엔지니어링 문서 이미지',
       caption: '제품과 기술을 위한<br>자료와 소식.',
-      links: [['Product Catalogues', '제품 카탈로그 · 준비 중', './resources.html#product-catalogues'], ['Technical Documents', '기술 문서 · 준비 중', './resources.html#technical-documents'], ['Company Profile', '회사 소개서 · 준비 중', './resources.html#company-profile'], ['EDIM Brochure', 'EDIM 브로슈어 · 개발 중', './resources.html#edim-brochure'], ['News &amp; Updates', '뉴스 및 업데이트 · 준비 중', './resources.html#news-updates']],
+      links: [['Product Catalogues', '제품 카탈로그 · 요청 시 제공', './resources.html#product-catalogues'], ['Technical Documents', '기술 문서 · 요청 시 제공', './resources.html#technical-documents'], ['Company Profile', '회사 소개서 · 준비 중', './resources.html#company-profile'], ['EDIM Brochure', 'EDIM 브로슈어 · 개발 중', './resources.html#edim-brochure'], ['News &amp; Updates', '뉴스 및 업데이트 · 준비 중', './resources.html#news-updates']],
     },
   ];
   const trigger = (key, label) => `<button class="prism-nav-trigger" id="prism-nav-trigger-${key}" type="button" data-prism-nav-trigger="${key}" aria-expanded="false" aria-controls="prism-nav-panel-${key}"><span>${label}</span><span class="prism-nav-chevron" aria-hidden="true"></span></button>`;
